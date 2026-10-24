@@ -1,0 +1,15 @@
+*.iml
+.gradle/
+.kotlin/
+/.idea/
+.DS_Store
+/captures
+.externalNativeBuild
+.cxx
+**/build/
+*.log
+
+# Machine-specific config and secrets: never commit
+/local.properties
+*.jks
+*.keystore

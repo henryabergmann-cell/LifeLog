@@ -1,0 +1,26 @@
+# Copy this file to local.properties (git-ignored) and fill in the values.
+# CI can set environment variables instead: upper-case key with dots replaced
+# by underscores, e.g. LIFELOG_BILLING_PRODUCTID.
+
+sdk.dir=C\:\\Users\\you\\AppData\\Local\\Android\\Sdk
+
+# --- Google Play Billing (Play Console > Monetize > Subscriptions) ---
+lifelog.billing.productId=life_log_premium
+lifelog.billing.basePlan.monthly=monthly
+lifelog.billing.basePlan.yearly=yearly
+# Offer ID of the 7-day free trial on the yearly base plan.
+lifelog.billing.offer.yearlyTrial=yearly-free-trial
+# Play Console > Monetize > Monetization setup > Licensing: Base64 RSA public key.
+# Optional for debug builds, required for release builds.
+lifelog.billing.licenseKey=
+
+# --- Legal links shown on the paywall and in Settings ---
+# Release builds refuse example.com placeholders.
+lifelog.url.privacy=https://example.com/privacy
+lifelog.url.terms=https://example.com/terms
+
+# --- Release signing (release builds only). storeFile is relative to the project root. ---
+lifelog.signing.storeFile=
+lifelog.signing.storePassword=
+lifelog.signing.keyAlias=
+lifelog.signing.keyPassword=

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Debug builds only. -->
+<resources>
+    <string name="developer_options">Developer options (debug builds only)</string>
+    <string name="developer_simulate_premium">Simulate Premium</string>
+    <string name="developer_simulate_premium_summary">Unlocks Premium features for testing. Not available in release builds.</string>
+</resources>

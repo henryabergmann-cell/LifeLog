@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="developer_options">Entwickleroptionen (nur Debug-Builds)</string>
+    <string name="developer_simulate_premium">Premium simulieren</string>
+    <string name="developer_simulate_premium_summary">Schaltet Premium-Funktionen zum Testen frei. In Release-Builds nicht vorhanden.</string>
+</resources>

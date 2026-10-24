@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Window theme only; all UI is themed in Compose (LifeLogTheme). AppCompat is required
+         for per-app language support on Android 8-12. -->
+    <style name="Theme.LifeLog" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/window_background</item>
+    </style>
+</resources>
