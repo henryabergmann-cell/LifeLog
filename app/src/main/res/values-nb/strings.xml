@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_calendar">Kalender</string>
+    <string name="nav_journal">Dagbok</string>
+    <string name="nav_insights">Innsikt</string>
+    <string name="nav_settings">Innstillinger</string>
+
+    <string name="action_save">Lagre</string>
+    <string name="action_cancel">Avbryt</string>
+    <string name="action_ok">OK</string>
+    <string name="action_delete">Slett</string>
+    <string name="action_edit">Rediger</string>
+    <string name="action_duplicate">Dupliser</string>
+    <string name="action_undo">Angre</string>
+    <string name="action_back">Tilbake</string>
+    <string name="action_close">Lukk</string>
+    <string name="action_discard">Forkast</string>
+    <string name="action_keep_editing">Fortsett redigering</string>
+    <string name="state_selected">Valgt</string>
+
+    <string name="calendar_today">I dag</string>
+    <string name="calendar_search">Søk</string>
+    <string name="calendar_new_event">Ny avtale</string>
+    <string name="calendar_change_view">Bytt visning, gjeldende visning: %1$s</string>
+    <string name="calendar_view_month">Måned</string>
+    <string name="calendar_view_week">Uke</string>
+    <string name="calendar_view_day">Dag</string>
+    <string name="calendar_view_agenda">Liste</string>
+    <string name="calendar_previous_month">Forrige måned</string>
+    <string name="calendar_next_month">Neste måned</string>
+    <string name="calendar_previous_week">Forrige uke</string>
+    <string name="calendar_next_week">Neste uke</string>
+    <string name="calendar_previous_day">Forrige dag</string>
+    <string name="calendar_next_day">Neste dag</string>
+    <string name="calendar_more_count">+%1$d</string>
+    <string name="calendar_day_no_appointments">%1$s, ingen avtaler</string>
+    <plurals name="calendar_day_appointments">
+        <item quantity="one">%1$s, %2$d avtale</item>
+        <item quantity="other">%1$s, %2$d avtaler</item>
+    </plurals>
+    <string name="calendar_today_prefix">I dag, %1$s</string>
+    <string name="calendar_open_day">Åpne dag</string>
+    <string name="calendar_all_day">Hele dagen</string>
+    <string name="agenda_show_earlier">Vis tidligere</string>
+    <string name="agenda_show_later">Vis senere</string>
+    <string name="agenda_empty">Ingen avtaler i denne perioden.</string>
+
+    <string name="event_not_found">Denne avtalen finnes ikke lenger.</string>
+    <string name="event_deleted">«%1$s» slettet</string>
+    <string name="event_location">Sted</string>
+    <string name="event_notes">Notater</string>
+    <string name="event_category">Kategori</string>
+    <string name="event_reminder">Påminnelse</string>
+    <string name="event_no_category">Ingen kategori</string>
+    <string name="event_time_zone">Tidssone: %1$s</string>
+
+    <string name="editor_title_edit">Rediger avtale</string>
+    <string name="editor_field_title">Tittel</string>
+    <string name="editor_error_title">Skriv inn en tittel</string>
+    <string name="editor_error_end">Slutten må være etter starten</string>
+    <string name="editor_starts">Starter</string>
+    <string name="editor_ends">Slutter</string>
+    <string name="editor_start_date">Startdato: %1$s</string>
+    <string name="editor_start_time">Starttid: %1$s</string>
+    <string name="editor_end_date">Sluttdato: %1$s</string>
+    <string name="editor_end_time">Sluttid: %1$s</string>
+    <string name="editor_manage_categories">Administrer kategorier</string>
+    <string name="editor_more_reminders">+%1$d til</string>
+    <string name="editor_discard_title">Forkaste endringene?</string>
+    <string name="editor_discard_message">Endringene dine i denne avtalen går tapt.</string>
+
+    <string name="reminder_none">Ingen påminnelse</string>
+    <string name="reminder_at_start">Ved start</string>
+    <string name="reminder_on_the_day">Samme dag</string>
+    <plurals name="reminder_minutes_before">
+        <item quantity="one">%d minutt før</item>
+        <item quantity="other">%d minutter før</item>
+    </plurals>
+    <plurals name="reminder_hours_before">
+        <item quantity="one">%d time før</item>
+        <item quantity="other">%d timer før</item>
+    </plurals>
+    <plurals name="reminder_days_before">
+        <item quantity="one">%d dag før</item>
+        <item quantity="other">%d dager før</item>
+    </plurals>
+
+    <string name="search_hint">Søk i avtaler</string>
+    <string name="search_prompt">Søk etter tittel, sted eller notater.</string>
+    <string name="search_no_results">Fant ingen avtaler for «%1$s».</string>
+    <string name="search_clear">Tøm søket</string>
+
+    <string name="categories_title">Kategorier</string>
+    <string name="categories_add">Legg til kategori</string>
+    <string name="categories_edit">Rediger kategori</string>
+    <string name="categories_edit_named">Rediger %1$s</string>
+    <string name="categories_delete_named">Slett %1$s</string>
+    <string name="categories_name">Navn</string>
+    <string name="categories_error_name">Skriv inn et navn</string>
+    <string name="categories_color">Farge</string>
+    <string name="categories_empty">Ingen kategorier ennå. Kategorier gir avtalene dine en farge.</string>
+    <string name="categories_free_limit">Gratisversjon: %1$d av %2$d kategorier brukt. Premium gir ubegrenset antall kategorier.</string>
+    <string name="categories_limit_reached">Gratisversjonen har opptil %1$d kategorier. Premium fjerner denne grensen.</string>
+    <string name="categories_delete_title">Slette «%1$s»?</string>
+    <string name="categories_delete_message">Avtaler i denne kategorien beholdes, men mister kategorien.</string>
+
+    <string name="settings_categories_summary">Navn og farger for avtalene dine</string>
+    <string name="settings_premium_summary">Dagbok, innsikt, moduler og mer</string>
+    <string name="settings_premium_active">Aktiv</string>
+    <string name="settings_language">Språk</string>
+    <string name="settings_language_system">Systemspråk</string>
+
+    <string name="premium_title">Life Log Premium</string>
+    <string name="premium_headline">Få mer ut av Life Log</string>
+    <string name="premium_subtitle">Før dagbok, se hvor tiden går, og gjør Life Log til din egen.</string>
+    <string name="premium_active_headline">Premium er aktivt</string>
+    <string name="premium_active_subtitle">Takk for at du støtter Life Log. Alt nedenfor er låst opp.</string>
+    <string name="premium_plans_pending">Måneds- og årsabonnement med 7 dagers gratis prøveperiode kommer snart her.</string>
+    <string name="premium_choose_plan">Velg abonnement</string>
+    <string name="premium_unlock">Lås opp med Premium</string>
+    <string name="premium_see_all">Alt som er inkludert i Premium</string>
+    <string name="premium_example">Eksempel</string>
+    <string name="premium_learn_more">Finn ut mer</string>
+    <string name="premium_banner">Dagbok, innsikt og mer med Premium</string>
+    <string name="premium_banner_dismiss">Skjul Premium-tips</string>
+    <string name="premium_benefit_journal">Dagbok</string>
+    <string name="premium_benefit_journal_desc">Et notat og et humør hver dag, med en tidslinje over dagene dine.</string>
+    <string name="premium_benefit_insights">Innsikt</string>
+    <string name="premium_benefit_insights_desc">Se hvor travelt du har det, de travleste dagene dine og hvor tiden går.</string>
+    <string name="premium_benefit_categories">Ubegrenset med kategorier</string>
+    <string name="premium_benefit_categories_desc">Så mange kategorier du vil, i hvilken som helst farge.</string>
+    <string name="premium_benefit_reminders">Flere påminnelser</string>
+    <string name="premium_benefit_reminders_desc">Opptil 5 påminnelser per avtale.</string>
+    <string name="premium_benefit_widgets">Moduler på startskjermen</string>
+    <string name="premium_benefit_widgets_desc">Dagens avtaler og måneden på et blikk.</string>
+    <string name="premium_benefit_sync">Synkronisering med enhetens kalender</string>
+    <string name="premium_benefit_sync_desc">Se de andre kalenderne dine i Life Log, og kopier avtaler til dem.</string>
+    <string name="premium_benefit_backup">Sikkerhetskopi og gjenoppretting</string>
+    <string name="premium_benefit_backup_desc">Lagre alt i en fil du styrer selv, og gjenopprett når du vil.</string>
+    <string name="premium_benefit_no_ads">Ingen oppgraderingstips</string>
+    <string name="premium_benefit_no_ads_desc">En rolig app uten påminnelser om å oppgradere.</string>
+
+    <string name="journal_teaser_title">Dagene dine, med dine ord</string>
+    <string name="journal_teaser_description">Skriv et kort notat og velg et humør for hver dag. Tidslinjen viser hvordan ukene dine faktisk var.</string>
+    <string name="journal_teaser_preview_description">Eksempeldagbok med notater og humør for tre dager</string>
+    <string name="journal_timeline">Tidslinje</string>
+    <string name="journal_timeline_empty">Dagboknotatene dine vises her.</string>
+    <string name="journal_mood_question">Hvordan var dagen din?</string>
+    <string name="journal_note">Notat</string>
+    <string name="journal_note_hint">Hva skjedde i dag?</string>
+    <string name="journal_saving">Lagrer…</string>
+    <string name="journal_saved">Lagret</string>
+    <string name="journal_read_only">Uten Premium er dagboken skrivebeskyttet. Notatene dine er trygge og fortsatt synlige.</string>
+    <string name="journal_sample_1">Lang tur ved vannet, deretter middag med Anna.</string>
+    <string name="journal_sample_2">Travelt på jobben, men presentasjonen gikk bra.</string>
+    <string name="journal_sample_3">Rolig dag. Leste ut boken min.</string>
+    <string name="mood_awful">Forferdelig</string>
+    <string name="mood_bad">Dårlig</string>
+    <string name="mood_okay">Grei</string>
+    <string name="mood_good">Bra</string>
+    <string name="mood_great">Supert</string>
+
+    <string name="insights_teaser_title">Se hvor tiden går</string>
+    <string name="insights_teaser_description">Diagrammer over avtalene dine per uke og måned, de travleste dagene og hvordan kategoriene fordeler seg.</string>
+    <string name="insights_teaser_preview_description">Eksempeldiagram over avtaler per ukedag; torsdag er travlest</string>
+    <string name="insights_range_4_weeks">4 uker</string>
+    <string name="insights_range_12_weeks">12 uker</string>
+    <string name="insights_range_12_months">12 måneder</string>
+    <string name="insights_appointments">Avtaler</string>
+    <string name="insights_hours">Timer</string>
+    <string name="insights_per_week">Per uke</string>
+    <string name="insights_per_week_chart">Avtaler per uke</string>
+    <string name="insights_per_month_chart">Avtaler per måned</string>
+    <string name="insights_chart_week_item">uke fra %1$s: %2$d</string>
+    <string name="insights_chart_month_item">%1$s: %2$d</string>
+    <string name="insights_weekdays">Travleste ukedager</string>
+    <string name="insights_busiest_weekday">Den travleste ukedagen din er %1$s.</string>
+    <plurals name="insights_busiest_date">
+        <item quantity="one">Travleste dag: %1$s med %2$d avtale</item>
+        <item quantity="other">Travleste dag: %1$s med %2$d avtaler</item>
+    </plurals>
+    <string name="insights_busiest_hour">De fleste avtalene starter mellom %1$s og %2$s.</string>
+    <string name="insights_categories">Kategorier</string>
+    <string name="insights_empty">Ingen avtaler i denne perioden ennå. Innsikten fylles ut etter hvert som du bruker kalenderen.</string>
+
+    <string name="color_tomato">Tomat</string>
+    <string name="color_flamingo">Flamingo</string>
+    <string name="color_tangerine">Mandarin</string>
+    <string name="color_banana">Banan</string>
+    <string name="color_sage">Salvie</string>
+    <string name="color_basil">Basilikum</string>
+    <string name="color_peacock">Påfugl</string>
+    <string name="color_blueberry">Blåbær</string>
+    <string name="color_lavender">Lavendel</string>
+    <string name="color_grape">Drue</string>
+    <string name="color_graphite">Grafitt</string>
+    <string name="color_teal">Petrol</string>
+</resources>

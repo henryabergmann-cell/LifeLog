@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_calendar">कैलेंडर</string>
+    <string name="nav_journal">डायरी</string>
+    <string name="nav_insights">आँकड़े</string>
+    <string name="nav_settings">सेटिंग</string>
+
+    <string name="action_save">सेव करें</string>
+    <string name="action_cancel">रद्द करें</string>
+    <string name="action_ok">ठीक है</string>
+    <string name="action_delete">मिटाएँ</string>
+    <string name="action_edit">बदलाव करें</string>
+    <string name="action_duplicate">डुप्लिकेट बनाएँ</string>
+    <string name="action_undo">पहले जैसा करें</string>
+    <string name="action_back">वापस जाएँ</string>
+    <string name="action_close">बंद करें</string>
+    <string name="action_discard">छोड़ें</string>
+    <string name="action_keep_editing">बदलाव जारी रखें</string>
+    <string name="state_selected">चुना गया</string>
+
+    <string name="calendar_today">आज</string>
+    <string name="calendar_search">खोजें</string>
+    <string name="calendar_new_event">नया अपॉइंटमेंट</string>
+    <string name="calendar_change_view">व्यू बदलें, मौजूदा व्यू: %1$s</string>
+    <string name="calendar_view_month">महीना</string>
+    <string name="calendar_view_week">हफ़्ता</string>
+    <string name="calendar_view_day">दिन</string>
+    <string name="calendar_view_agenda">सूची</string>
+    <string name="calendar_previous_month">पिछला महीना</string>
+    <string name="calendar_next_month">अगला महीना</string>
+    <string name="calendar_previous_week">पिछला हफ़्ता</string>
+    <string name="calendar_next_week">अगला हफ़्ता</string>
+    <string name="calendar_previous_day">पिछला दिन</string>
+    <string name="calendar_next_day">अगला दिन</string>
+    <string name="calendar_more_count">+%1$d</string>
+    <string name="calendar_day_no_appointments">%1$s, कोई अपॉइंटमेंट नहीं</string>
+    <plurals name="calendar_day_appointments">
+        <item quantity="one">%1$s, %2$d अपॉइंटमेंट</item>
+        <item quantity="other">%1$s, %2$d अपॉइंटमेंट</item>
+    </plurals>
+    <string name="calendar_today_prefix">आज, %1$s</string>
+    <string name="calendar_open_day">दिन खोलें</string>
+    <string name="calendar_all_day">पूरे दिन</string>
+    <string name="agenda_show_earlier">पहले के दिखाएँ</string>
+    <string name="agenda_show_later">बाद के दिखाएँ</string>
+    <string name="agenda_empty">इस अवधि में कोई अपॉइंटमेंट नहीं है।</string>
+
+    <string name="event_not_found">यह अपॉइंटमेंट अब मौजूद नहीं है।</string>
+    <string name="event_deleted">“%1$s” मिटाया गया</string>
+    <string name="event_location">जगह</string>
+    <string name="event_notes">नोट</string>
+    <string name="event_category">कैटगरी</string>
+    <string name="event_reminder">रिमाइंडर</string>
+    <string name="event_no_category">कोई कैटगरी नहीं</string>
+    <string name="event_time_zone">टाइम ज़ोन: %1$s</string>
+
+    <string name="editor_title_edit">अपॉइंटमेंट में बदलाव करें</string>
+    <string name="editor_field_title">टाइटल</string>
+    <string name="editor_error_title">टाइटल डालें</string>
+    <string name="editor_error_end">खत्म होने का समय शुरू होने के बाद का होना चाहिए</string>
+    <string name="editor_starts">शुरू</string>
+    <string name="editor_ends">खत्म</string>
+    <string name="editor_start_date">शुरू होने की तारीख: %1$s</string>
+    <string name="editor_start_time">शुरू होने का समय: %1$s</string>
+    <string name="editor_end_date">खत्म होने की तारीख: %1$s</string>
+    <string name="editor_end_time">खत्म होने का समय: %1$s</string>
+    <string name="editor_manage_categories">कैटगरी मैनेज करें</string>
+    <string name="editor_more_reminders">+%1$d और</string>
+    <string name="editor_discard_title">बदलाव छोड़ दें?</string>
+    <string name="editor_discard_message">इस अपॉइंटमेंट में किए गए बदलाव मिट जाएँगे।</string>
+
+    <string name="reminder_none">कोई रिमाइंडर नहीं</string>
+    <string name="reminder_at_start">शुरू होने पर</string>
+    <string name="reminder_on_the_day">उसी दिन</string>
+    <plurals name="reminder_minutes_before">
+        <item quantity="one">%d मिनट पहले</item>
+        <item quantity="other">%d मिनट पहले</item>
+    </plurals>
+    <plurals name="reminder_hours_before">
+        <item quantity="one">%d घंटा पहले</item>
+        <item quantity="other">%d घंटे पहले</item>
+    </plurals>
+    <plurals name="reminder_days_before">
+        <item quantity="one">%d दिन पहले</item>
+        <item quantity="other">%d दिन पहले</item>
+    </plurals>
+
+    <string name="search_hint">अपॉइंटमेंट खोजें</string>
+    <string name="search_prompt">टाइटल, जगह या नोट से खोजें।</string>
+    <string name="search_no_results">“%1$s” के लिए कोई अपॉइंटमेंट नहीं मिला।</string>
+    <string name="search_clear">खोज साफ़ करें</string>
+
+    <string name="categories_title">कैटगरी</string>
+    <string name="categories_add">कैटगरी जोड़ें</string>
+    <string name="categories_edit">कैटगरी में बदलाव करें</string>
+    <string name="categories_edit_named">%1$s में बदलाव करें</string>
+    <string name="categories_delete_named">%1$s मिटाएँ</string>
+    <string name="categories_name">नाम</string>
+    <string name="categories_error_name">नाम डालें</string>
+    <string name="categories_color">रंग</string>
+    <string name="categories_empty">अभी कोई कैटगरी नहीं है। कैटगरी से आपके अपॉइंटमेंट को रंग मिलता है।</string>
+    <string name="categories_free_limit">मुफ़्त वर्शन: %2$d में से %1$d कैटगरी इस्तेमाल हुईं। Premium में अनलिमिटेड कैटगरी मिलती हैं।</string>
+    <string name="categories_limit_reached">मुफ़्त वर्शन में ज़्यादा से ज़्यादा %1$d कैटगरी हैं। Premium यह सीमा हटा देता है।</string>
+    <string name="categories_delete_title">“%1$s” मिटाएँ?</string>
+    <string name="categories_delete_message">इस कैटगरी के अपॉइंटमेंट बने रहेंगे, पर उनकी कैटगरी हट जाएगी।</string>
+
+    <string name="settings_categories_summary">आपके अपॉइंटमेंट के नाम और रंग</string>
+    <string name="settings_premium_summary">डायरी, आँकड़े, विजेट और बहुत कुछ</string>
+    <string name="settings_premium_active">चालू है</string>
+    <string name="settings_language">भाषा</string>
+    <string name="settings_language_system">सिस्टम की भाषा</string>
+
+    <string name="premium_title">Life Log Premium</string>
+    <string name="premium_headline">Life Log का पूरा फ़ायदा उठाएँ</string>
+    <string name="premium_subtitle">डायरी लिखें, जानें कि आपका समय कहाँ जाता है, और Life Log को अपने हिसाब से बनाएँ।</string>
+    <string name="premium_active_headline">Premium चालू है</string>
+    <string name="premium_active_subtitle">Life Log को सपोर्ट करने के लिए धन्यवाद। नीचे दी गई सारी सुविधाएँ अनलॉक हैं।</string>
+    <string name="premium_plans_pending">7 दिन के मुफ़्त ट्रायल के साथ मासिक और सालाना प्लान जल्द ही यहाँ मिलेंगे।</string>
+    <string name="premium_choose_plan">प्लान चुनें</string>
+    <string name="premium_unlock">Premium से अनलॉक करें</string>
+    <string name="premium_see_all">Premium में मिलने वाली सारी सुविधाएँ</string>
+    <string name="premium_example">उदाहरण</string>
+    <string name="premium_learn_more">ज़्यादा जानें</string>
+    <string name="premium_banner">Premium के साथ डायरी, आँकड़े और बहुत कुछ</string>
+    <string name="premium_banner_dismiss">Premium की सूचना हटाएँ</string>
+    <string name="premium_benefit_journal">डायरी</string>
+    <string name="premium_benefit_journal_desc">हर दिन एक नोट और मूड, आपके दिनों की टाइमलाइन के साथ।</string>
+    <string name="premium_benefit_insights">आँकड़े</string>
+    <string name="premium_benefit_insights_desc">देखें कि आप कितने व्यस्त हैं, कौन-से दिन सबसे व्यस्त रहे और आपका समय कहाँ जाता है।</string>
+    <string name="premium_benefit_categories">अनलिमिटेड कैटगरी</string>
+    <string name="premium_benefit_categories_desc">जितनी चाहें उतनी कैटगरी, किसी भी रंग में।</string>
+    <string name="premium_benefit_reminders">कई रिमाइंडर</string>
+    <string name="premium_benefit_reminders_desc">हर अपॉइंटमेंट के लिए 5 रिमाइंडर तक।</string>
+    <string name="premium_benefit_widgets">होम स्क्रीन विजेट</string>
+    <string name="premium_benefit_widgets_desc">आज का एजेंडा और पूरा महीना एक नज़र में।</string>
+    <string name="premium_benefit_sync">डिवाइस कैलेंडर सिंक</string>
+    <string name="premium_benefit_sync_desc">अपने दूसरे कैलेंडर Life Log में देखें और उनमें अपॉइंटमेंट कॉपी करें।</string>
+    <string name="premium_benefit_backup">बैकअप और रीस्टोर</string>
+    <string name="premium_benefit_backup_desc">सब कुछ अपनी फ़ाइल में सेव करें और जब चाहें रीस्टोर करें।</string>
+    <string name="premium_benefit_no_ads">अपग्रेड के मैसेज नहीं</string>
+    <string name="premium_benefit_no_ads_desc">एक शांत ऐप, जिसमें अपग्रेड के लिए बार-बार नहीं कहा जाता।</string>
+
+    <string name="journal_teaser_title">आपके दिन, आपके शब्दों में</string>
+    <string name="journal_teaser_description">हर दिन एक छोटा नोट लिखें और मूड चुनें। टाइमलाइन से पता चलता है कि आपके हफ़्ते असल में कैसे बीते।</string>
+    <string name="journal_teaser_preview_description">तीन दिनों के नोट और मूड वाली डायरी का उदाहरण</string>
+    <string name="journal_timeline">टाइमलाइन</string>
+    <string name="journal_timeline_empty">आपकी डायरी की एंट्री यहाँ दिखेंगी।</string>
+    <string name="journal_mood_question">आपका दिन कैसा रहा?</string>
+    <string name="journal_note">नोट</string>
+    <string name="journal_note_hint">आज क्या हुआ?</string>
+    <string name="journal_saving">सेव हो रहा है…</string>
+    <string name="journal_saved">सेव हो गया</string>
+    <string name="journal_read_only">Premium के बिना आपकी डायरी सिर्फ़ पढ़ी जा सकती है। आपकी एंट्री सुरक्षित रहेंगी और दिखती रहेंगी।</string>
+    <string name="journal_sample_1">झील के किनारे लंबी सैर, फिर अन्ना के साथ डिनर।</string>
+    <string name="journal_sample_2">काम बहुत था, पर प्रेज़ेंटेशन अच्छा रहा।</string>
+    <string name="journal_sample_3">शांत दिन। अपनी किताब पूरी कर ली।</string>
+    <string name="mood_awful">बहुत बुरा</string>
+    <string name="mood_bad">बुरा</string>
+    <string name="mood_okay">ठीक-ठाक</string>
+    <string name="mood_good">अच्छा</string>
+    <string name="mood_great">बहुत बढ़िया</string>
+
+    <string name="insights_teaser_title">देखें कि आपका समय कहाँ जाता है</string>
+    <string name="insights_teaser_description">हर हफ़्ते और महीने के अपॉइंटमेंट, सबसे व्यस्त दिन और कैटगरी के हिसाब से बँटवारे के चार्ट।</string>
+    <string name="insights_teaser_preview_description">हफ़्ते के दिन के हिसाब से अपॉइंटमेंट का उदाहरण चार्ट; गुरुवार सबसे व्यस्त है</string>
+    <string name="insights_range_4_weeks">4 हफ़्ते</string>
+    <string name="insights_range_12_weeks">12 हफ़्ते</string>
+    <string name="insights_range_12_months">12 महीने</string>
+    <string name="insights_appointments">अपॉइंटमेंट</string>
+    <string name="insights_hours">घंटे</string>
+    <string name="insights_per_week">हर हफ़्ते</string>
+    <string name="insights_per_week_chart">हर हफ़्ते के अपॉइंटमेंट</string>
+    <string name="insights_per_month_chart">हर महीने के अपॉइंटमेंट</string>
+    <string name="insights_chart_week_item">%1$s वाला हफ़्ता: %2$d</string>
+    <string name="insights_chart_month_item">%1$s: %2$d</string>
+    <string name="insights_weekdays">हफ़्ते के सबसे व्यस्त दिन</string>
+    <string name="insights_busiest_weekday">आपका सबसे व्यस्त दिन %1$s है।</string>
+    <plurals name="insights_busiest_date">
+        <item quantity="one">सबसे व्यस्त दिन: %1$s, %2$d अपॉइंटमेंट</item>
+        <item quantity="other">सबसे व्यस्त दिन: %1$s, %2$d अपॉइंटमेंट</item>
+    </plurals>
+    <string name="insights_busiest_hour">ज़्यादातर अपॉइंटमेंट %1$s से %2$s के बीच शुरू होते हैं।</string>
+    <string name="insights_categories">कैटगरी</string>
+    <string name="insights_empty">इस अवधि में अभी कोई अपॉइंटमेंट नहीं है। कैलेंडर इस्तेमाल करने के साथ आँकड़े भरते जाएँगे।</string>
+
+    <string name="color_tomato">टमाटर</string>
+    <string name="color_flamingo">फ़्लेमिंगो</string>
+    <string name="color_tangerine">संतरी</string>
+    <string name="color_banana">केला</string>
+    <string name="color_sage">सेज</string>
+    <string name="color_basil">तुलसी</string>
+    <string name="color_peacock">मोर</string>
+    <string name="color_blueberry">ब्लूबेरी</string>
+    <string name="color_lavender">लैवेंडर</string>
+    <string name="color_grape">अंगूर</string>
+    <string name="color_graphite">ग्रेफ़ाइट</string>
+    <string name="color_teal">टील</string>
+</resources>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Portuguese (Brazilian wording, also used for other Portuguese locales). -->
+<resources>
+    <string name="nav_calendar">Agenda</string>
+    <string name="nav_journal">Diário</string>
+    <string name="nav_insights">Estatísticas</string>
+    <string name="nav_settings">Configurações</string>
+
+    <string name="action_save">Salvar</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_ok">OK</string>
+    <string name="action_delete">Excluir</string>
+    <string name="action_edit">Editar</string>
+    <string name="action_duplicate">Duplicar</string>
+    <string name="action_undo">Desfazer</string>
+    <string name="action_back">Voltar</string>
+    <string name="action_close">Fechar</string>
+    <string name="action_discard">Descartar</string>
+    <string name="action_keep_editing">Continuar editando</string>
+    <string name="state_selected">Selecionado</string>
+
+    <string name="calendar_today">Hoje</string>
+    <string name="calendar_search">Pesquisar</string>
+    <string name="calendar_new_event">Novo compromisso</string>
+    <string name="calendar_change_view">Mudar visualização, visualização atual: %1$s</string>
+    <string name="calendar_view_month">Mês</string>
+    <string name="calendar_view_week">Semana</string>
+    <string name="calendar_view_day">Dia</string>
+    <string name="calendar_view_agenda">Lista</string>
+    <string name="calendar_previous_month">Mês anterior</string>
+    <string name="calendar_next_month">Próximo mês</string>
+    <string name="calendar_previous_week">Semana anterior</string>
+    <string name="calendar_next_week">Próxima semana</string>
+    <string name="calendar_previous_day">Dia anterior</string>
+    <string name="calendar_next_day">Próximo dia</string>
+    <string name="calendar_more_count">+%1$d</string>
+    <string name="calendar_day_no_appointments">%1$s, nenhum compromisso</string>
+    <plurals name="calendar_day_appointments">
+        <item quantity="one">%1$s, %2$d compromisso</item>
+        <item quantity="many">%1$s, %2$d compromissos</item>
+        <item quantity="other">%1$s, %2$d compromissos</item>
+    </plurals>
+    <string name="calendar_today_prefix">Hoje, %1$s</string>
+    <string name="calendar_open_day">Abrir dia</string>
+    <string name="calendar_all_day">Dia inteiro</string>
+    <string name="agenda_show_earlier">Mostrar anteriores</string>
+    <string name="agenda_show_later">Mostrar posteriores</string>
+    <string name="agenda_empty">Nenhum compromisso neste período.</string>
+
+    <string name="event_not_found">Este compromisso não existe mais.</string>
+    <string name="event_deleted">“%1$s” excluído</string>
+    <string name="event_location">Local</string>
+    <string name="event_notes">Notas</string>
+    <string name="event_category">Categoria</string>
+    <string name="event_reminder">Lembrete</string>
+    <string name="event_no_category">Sem categoria</string>
+    <string name="event_time_zone">Fuso horário: %1$s</string>
+
+    <string name="editor_title_edit">Editar compromisso</string>
+    <string name="editor_field_title">Título</string>
+    <string name="editor_error_title">Digite um título</string>
+    <string name="editor_error_end">O fim deve ser depois do início</string>
+    <string name="editor_starts">Início</string>
+    <string name="editor_ends">Fim</string>
+    <string name="editor_start_date">Data de início: %1$s</string>
+    <string name="editor_start_time">Hora de início: %1$s</string>
+    <string name="editor_end_date">Data de término: %1$s</string>
+    <string name="editor_end_time">Hora de término: %1$s</string>
+    <string name="editor_manage_categories">Gerenciar categorias</string>
+    <string name="editor_more_reminders">+%1$d outros</string>
+    <string name="editor_discard_title">Descartar alterações?</string>
+    <string name="editor_discard_message">Suas alterações neste compromisso serão perdidas.</string>
+
+    <string name="reminder_none">Sem lembrete</string>
+    <string name="reminder_at_start">No início</string>
+    <string name="reminder_on_the_day">No mesmo dia</string>
+    <plurals name="reminder_minutes_before">
+        <item quantity="one">%d minuto antes</item>
+        <item quantity="many">%d minutos antes</item>
+        <item quantity="other">%d minutos antes</item>
+    </plurals>
+    <plurals name="reminder_hours_before">
+        <item quantity="one">%d hora antes</item>
+        <item quantity="many">%d horas antes</item>
+        <item quantity="other">%d horas antes</item>
+    </plurals>
+    <plurals name="reminder_days_before">
+        <item quantity="one">%d dia antes</item>
+        <item quantity="many">%d dias antes</item>
+        <item quantity="other">%d dias antes</item>
+    </plurals>
+
+    <string name="search_hint">Pesquisar compromissos</string>
+    <string name="search_prompt">Pesquise por título, local ou notas.</string>
+    <string name="search_no_results">Nenhum compromisso encontrado para “%1$s”.</string>
+    <string name="search_clear">Limpar pesquisa</string>
+
+    <string name="categories_title">Categorias</string>
+    <string name="categories_add">Adicionar categoria</string>
+    <string name="categories_edit">Editar categoria</string>
+    <string name="categories_edit_named">Editar %1$s</string>
+    <string name="categories_delete_named">Excluir %1$s</string>
+    <string name="categories_name">Nome</string>
+    <string name="categories_error_name">Digite um nome</string>
+    <string name="categories_color">Cor</string>
+    <string name="categories_empty">Ainda não há categorias. As categorias dão cor aos seus compromissos.</string>
+    <string name="categories_free_limit">Versão gratuita: %1$d de %2$d categorias usadas. O Premium permite categorias ilimitadas.</string>
+    <string name="categories_limit_reached">A versão gratuita inclui até %1$d categorias. O Premium remove esse limite.</string>
+    <string name="categories_delete_title">Excluir “%1$s”?</string>
+    <string name="categories_delete_message">Os compromissos desta categoria são mantidos, mas perdem a categoria.</string>
+
+    <string name="settings_categories_summary">Nomes e cores para seus compromissos</string>
+    <string name="settings_premium_summary">Diário, estatísticas, widgets e mais</string>
+    <string name="settings_premium_active">Ativo</string>
+    <string name="settings_language">Idioma</string>
+    <string name="settings_language_system">Idioma do sistema</string>
+
+    <string name="premium_title">Life Log Premium</string>
+    <string name="premium_headline">Aproveite mais o Life Log</string>
+    <string name="premium_subtitle">Mantenha um diário, entenda para onde vai seu tempo e deixe o Life Log do seu jeito.</string>
+    <string name="premium_active_headline">O Premium está ativo</string>
+    <string name="premium_active_subtitle">Obrigado por apoiar o Life Log. Tudo abaixo está desbloqueado.</string>
+    <string name="premium_plans_pending">Planos mensal e anual, com 7 dias de teste grátis, estarão disponíveis aqui em breve.</string>
+    <string name="premium_choose_plan">Escolher um plano</string>
+    <string name="premium_unlock">Desbloquear com Premium</string>
+    <string name="premium_see_all">Tudo o que o Premium inclui</string>
+    <string name="premium_example">Exemplo</string>
+    <string name="premium_learn_more">Saiba mais</string>
+    <string name="premium_banner">Diário, estatísticas e mais com o Premium</string>
+    <string name="premium_banner_dismiss">Dispensar aviso do Premium</string>
+    <string name="premium_benefit_journal">Diário</string>
+    <string name="premium_benefit_journal_desc">Uma nota e um humor por dia, com uma linha do tempo dos seus dias.</string>
+    <string name="premium_benefit_insights">Estatísticas</string>
+    <string name="premium_benefit_insights_desc">Veja o quanto você está ocupado, seus dias mais cheios e para onde vai seu tempo.</string>
+    <string name="premium_benefit_categories">Categorias ilimitadas</string>
+    <string name="premium_benefit_categories_desc">Quantas categorias quiser, em qualquer cor.</string>
+    <string name="premium_benefit_reminders">Vários lembretes</string>
+    <string name="premium_benefit_reminders_desc">Até 5 lembretes por compromisso.</string>
+    <string name="premium_benefit_widgets">Widgets na tela inicial</string>
+    <string name="premium_benefit_widgets_desc">Os compromissos de hoje e o mês num relance.</string>
+    <string name="premium_benefit_sync">Sincronização com a agenda do aparelho</string>
+    <string name="premium_benefit_sync_desc">Veja suas outras agendas no Life Log e copie compromissos para elas.</string>
+    <string name="premium_benefit_backup">Backup e restauração</string>
+    <string name="premium_benefit_backup_desc">Salve tudo em um arquivo que você controla e restaure quando quiser.</string>
+    <string name="premium_benefit_no_ads">Sem avisos de upgrade</string>
+    <string name="premium_benefit_no_ads_desc">Um app tranquilo, sem lembretes para assinar.</string>
+
+    <string name="journal_teaser_title">Seus dias, com suas palavras</string>
+    <string name="journal_teaser_description">Escreva uma nota curta e escolha um humor para cada dia. Sua linha do tempo mostra como suas semanas realmente foram.</string>
+    <string name="journal_teaser_preview_description">Diário de exemplo com notas e humores de três dias</string>
+    <string name="journal_timeline">Linha do tempo</string>
+    <string name="journal_timeline_empty">Suas entradas do diário aparecerão aqui.</string>
+    <string name="journal_mood_question">Como foi o seu dia?</string>
+    <string name="journal_note">Nota</string>
+    <string name="journal_note_hint">O que aconteceu hoje?</string>
+    <string name="journal_saving">Salvando…</string>
+    <string name="journal_saved">Salvo</string>
+    <string name="journal_read_only">Sem o Premium, seu diário fica somente para leitura. Suas entradas continuam seguras e visíveis.</string>
+    <string name="journal_sample_1">Longa caminhada à beira do lago, depois jantar com a Anna.</string>
+    <string name="journal_sample_2">Muito trabalho, mas a apresentação foi bem.</string>
+    <string name="journal_sample_3">Dia tranquilo. Terminei meu livro.</string>
+    <string name="mood_awful">Péssimo</string>
+    <string name="mood_bad">Ruim</string>
+    <string name="mood_okay">Normal</string>
+    <string name="mood_good">Bom</string>
+    <string name="mood_great">Ótimo</string>
+
+    <string name="insights_teaser_title">Veja para onde vai seu tempo</string>
+    <string name="insights_teaser_description">Gráficos dos seus compromissos por semana e por mês, seus dias mais cheios e como suas categorias se distribuem.</string>
+    <string name="insights_teaser_preview_description">Gráfico de exemplo de compromissos por dia da semana; quinta-feira é o mais cheio</string>
+    <string name="insights_range_4_weeks">4 semanas</string>
+    <string name="insights_range_12_weeks">12 semanas</string>
+    <string name="insights_range_12_months">12 meses</string>
+    <string name="insights_appointments">Compromissos</string>
+    <string name="insights_hours">Horas</string>
+    <string name="insights_per_week">Por semana</string>
+    <string name="insights_per_week_chart">Compromissos por semana</string>
+    <string name="insights_per_month_chart">Compromissos por mês</string>
+    <string name="insights_chart_week_item">semana de %1$s: %2$d</string>
+    <string name="insights_chart_month_item">%1$s: %2$d</string>
+    <string name="insights_weekdays">Dias mais cheios da semana</string>
+    <string name="insights_busiest_weekday">Seu dia mais cheio é %1$s.</string>
+    <plurals name="insights_busiest_date">
+        <item quantity="one">Dia mais cheio: %1$s com %2$d compromisso</item>
+        <item quantity="many">Dia mais cheio: %1$s com %2$d compromissos</item>
+        <item quantity="other">Dia mais cheio: %1$s com %2$d compromissos</item>
+    </plurals>
+    <string name="insights_busiest_hour">A maioria dos compromissos começa entre %1$s e %2$s.</string>
+    <string name="insights_categories">Categorias</string>
+    <string name="insights_empty">Ainda não há compromissos neste período. As estatísticas se completam conforme você usa a agenda.</string>
+
+    <string name="color_tomato">Tomate</string>
+    <string name="color_flamingo">Flamingo</string>
+    <string name="color_tangerine">Tangerina</string>
+    <string name="color_banana">Banana</string>
+    <string name="color_sage">Sálvia</string>
+    <string name="color_basil">Manjericão</string>
+    <string name="color_peacock">Pavão</string>
+    <string name="color_blueberry">Mirtilo</string>
+    <string name="color_lavender">Lavanda</string>
+    <string name="color_grape">Uva</string>
+    <string name="color_graphite">Grafite</string>
+    <string name="color_teal">Verde-azulado</string>
+</resources>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_calendar">Kalenteri</string>
+    <string name="nav_journal">Päiväkirja</string>
+    <string name="nav_insights">Tilastot</string>
+    <string name="nav_settings">Asetukset</string>
+
+    <string name="action_save">Tallenna</string>
+    <string name="action_cancel">Peruuta</string>
+    <string name="action_ok">OK</string>
+    <string name="action_delete">Poista</string>
+    <string name="action_edit">Muokkaa</string>
+    <string name="action_duplicate">Monista</string>
+    <string name="action_undo">Kumoa</string>
+    <string name="action_back">Takaisin</string>
+    <string name="action_close">Sulje</string>
+    <string name="action_discard">Hylkää</string>
+    <string name="action_keep_editing">Jatka muokkausta</string>
+    <string name="state_selected">Valittu</string>
+
+    <string name="calendar_today">Tänään</string>
+    <string name="calendar_search">Hae</string>
+    <string name="calendar_new_event">Uusi tapahtuma</string>
+    <string name="calendar_change_view">Vaihda näkymää, nykyinen näkymä: %1$s</string>
+    <string name="calendar_view_month">Kuukausi</string>
+    <string name="calendar_view_week">Viikko</string>
+    <string name="calendar_view_day">Päivä</string>
+    <string name="calendar_view_agenda">Luettelo</string>
+    <string name="calendar_previous_month">Edellinen kuukausi</string>
+    <string name="calendar_next_month">Seuraava kuukausi</string>
+    <string name="calendar_previous_week">Edellinen viikko</string>
+    <string name="calendar_next_week">Seuraava viikko</string>
+    <string name="calendar_previous_day">Edellinen päivä</string>
+    <string name="calendar_next_day">Seuraava päivä</string>
+    <string name="calendar_more_count">+%1$d</string>
+    <string name="calendar_day_no_appointments">%1$s, ei tapahtumia</string>
+    <plurals name="calendar_day_appointments">
+        <item quantity="one">%1$s, %2$d tapahtuma</item>
+        <item quantity="other">%1$s, %2$d tapahtumaa</item>
+    </plurals>
+    <string name="calendar_today_prefix">Tänään, %1$s</string>
+    <string name="calendar_open_day">Avaa päivä</string>
+    <string name="calendar_all_day">Koko päivä</string>
+    <string name="agenda_show_earlier">Näytä aiemmat</string>
+    <string name="agenda_show_later">Näytä myöhemmät</string>
+    <string name="agenda_empty">Ei tapahtumia tällä aikavälillä.</string>
+
+    <string name="event_not_found">Tätä tapahtumaa ei enää ole.</string>
+    <string name="event_deleted">”%1$s” poistettu</string>
+    <string name="event_location">Paikka</string>
+    <string name="event_notes">Muistiinpanot</string>
+    <string name="event_category">Luokka</string>
+    <string name="event_reminder">Muistutus</string>
+    <string name="event_no_category">Ei luokkaa</string>
+    <string name="event_time_zone">Aikavyöhyke: %1$s</string>
+
+    <string name="editor_title_edit">Muokkaa tapahtumaa</string>
+    <string name="editor_field_title">Otsikko</string>
+    <string name="editor_error_title">Anna otsikko</string>
+    <string name="editor_error_end">Lopun on oltava alun jälkeen</string>
+    <string name="editor_starts">Alkaa</string>
+    <string name="editor_ends">Päättyy</string>
+    <string name="editor_start_date">Alkamispäivä: %1$s</string>
+    <string name="editor_start_time">Alkamisaika: %1$s</string>
+    <string name="editor_end_date">Päättymispäivä: %1$s</string>
+    <string name="editor_end_time">Päättymisaika: %1$s</string>
+    <string name="editor_manage_categories">Hallitse luokkia</string>
+    <string name="editor_more_reminders">+%1$d lisää</string>
+    <string name="editor_discard_title">Hylätäänkö muutokset?</string>
+    <string name="editor_discard_message">Tähän tapahtumaan tehdyt muutokset menetetään.</string>
+
+    <string name="reminder_none">Ei muistutusta</string>
+    <string name="reminder_at_start">Alkaessa</string>
+    <string name="reminder_on_the_day">Samana päivänä</string>
+    <plurals name="reminder_minutes_before">
+        <item quantity="one">%d minuutti ennen</item>
+        <item quantity="other">%d minuuttia ennen</item>
+    </plurals>
+    <plurals name="reminder_hours_before">
+        <item quantity="one">%d tunti ennen</item>
+        <item quantity="other">%d tuntia ennen</item>
+    </plurals>
+    <plurals name="reminder_days_before">
+        <item quantity="one">%d päivä ennen</item>
+        <item quantity="other">%d päivää ennen</item>
+    </plurals>
+
+    <string name="search_hint">Hae tapahtumia</string>
+    <string name="search_prompt">Hae otsikon, paikan tai muistiinpanojen perusteella.</string>
+    <string name="search_no_results">Haulla ”%1$s” ei löytynyt tapahtumia.</string>
+    <string name="search_clear">Tyhjennä haku</string>
+
+    <string name="categories_title">Luokat</string>
+    <string name="categories_add">Lisää luokka</string>
+    <string name="categories_edit">Muokkaa luokkaa</string>
+    <string name="categories_edit_named">Muokkaa: %1$s</string>
+    <string name="categories_delete_named">Poista: %1$s</string>
+    <string name="categories_name">Nimi</string>
+    <string name="categories_error_name">Anna nimi</string>
+    <string name="categories_color">Väri</string>
+    <string name="categories_empty">Ei vielä luokkia. Luokat antavat tapahtumillesi värin.</string>
+    <string name="categories_free_limit">Ilmaisversio: %1$d/%2$d luokkaa käytössä. Premiumilla luokkia voi olla rajattomasti.</string>
+    <string name="categories_limit_reached">Ilmaisversiossa voi olla enintään %1$d luokkaa. Premium poistaa rajoituksen.</string>
+    <string name="categories_delete_title">Poistetaanko ”%1$s”?</string>
+    <string name="categories_delete_message">Tämän luokan tapahtumat säilyvät, mutta niiltä poistuu luokka.</string>
+
+    <string name="settings_categories_summary">Tapahtumiesi nimet ja värit</string>
+    <string name="settings_premium_summary">Päiväkirja, tilastot, widgetit ja muuta</string>
+    <string name="settings_premium_active">Käytössä</string>
+    <string name="settings_language">Kieli</string>
+    <string name="settings_language_system">Järjestelmän kieli</string>
+
+    <string name="premium_title">Life Log Premium</string>
+    <string name="premium_headline">Saa Life Logista enemmän irti</string>
+    <string name="premium_subtitle">Pidä päiväkirjaa, näe mihin aikasi kuluu ja tee Life Logista omasi.</string>
+    <string name="premium_active_headline">Premium on käytössä</string>
+    <string name="premium_active_subtitle">Kiitos, että tuet Life Logia. Kaikki alla oleva on avattu.</string>
+    <string name="premium_plans_pending">Kuukausi- ja vuositilaukset sekä 7 päivän ilmainen kokeilu tulevat tähän pian.</string>
+    <string name="premium_choose_plan">Valitse tilaus</string>
+    <string name="premium_unlock">Avaa Premiumilla</string>
+    <string name="premium_see_all">Kaikki, mitä Premium sisältää</string>
+    <string name="premium_example">Esimerkki</string>
+    <string name="premium_learn_more">Lue lisää</string>
+    <string name="premium_banner">Päiväkirja, tilastot ja muuta Premiumilla</string>
+    <string name="premium_banner_dismiss">Piilota Premium-vinkki</string>
+    <string name="premium_benefit_journal">Päiväkirja</string>
+    <string name="premium_benefit_journal_desc">Päivittäinen muistiinpano ja mieliala sekä aikajana päivistäsi.</string>
+    <string name="premium_benefit_insights">Tilastot</string>
+    <string name="premium_benefit_insights_desc">Näe, kuinka kiireinen olet, kiireisimmät päiväsi ja mihin aikasi kuluu.</string>
+    <string name="premium_benefit_categories">Rajattomasti luokkia</string>
+    <string name="premium_benefit_categories_desc">Niin monta luokkaa kuin haluat, missä värissä tahansa.</string>
+    <string name="premium_benefit_reminders">Useita muistutuksia</string>
+    <string name="premium_benefit_reminders_desc">Jopa 5 muistutusta tapahtumaa kohden.</string>
+    <string name="premium_benefit_widgets">Aloitusnäytön widgetit</string>
+    <string name="premium_benefit_widgets_desc">Päivän tapahtumat ja kuukausi yhdellä silmäyksellä.</string>
+    <string name="premium_benefit_sync">Laitteen kalenterin synkronointi</string>
+    <string name="premium_benefit_sync_desc">Näe muut kalenterisi Life Logissa ja kopioi tapahtumia niihin.</string>
+    <string name="premium_benefit_backup">Varmuuskopiointi ja palautus</string>
+    <string name="premium_benefit_backup_desc">Tallenna kaikki hallitsemaasi tiedostoon ja palauta milloin tahansa.</string>
+    <string name="premium_benefit_no_ads">Ei päivityskehotuksia</string>
+    <string name="premium_benefit_no_ads_desc">Rauhallinen sovellus ilman kehotuksia siirtyä Premiumiin.</string>
+
+    <string name="journal_teaser_title">Päiväsi omin sanoin</string>
+    <string name="journal_teaser_description">Kirjoita lyhyt muistiinpano ja valitse mieliala jokaiselle päivälle. Aikajana näyttää, miten viikkosi oikeasti menivät.</string>
+    <string name="journal_teaser_preview_description">Esimerkkipäiväkirja, jossa muistiinpanot ja mielialat kolmelta päivältä</string>
+    <string name="journal_timeline">Aikajana</string>
+    <string name="journal_timeline_empty">Päiväkirjamerkintäsi näkyvät tässä.</string>
+    <string name="journal_mood_question">Millainen päiväsi oli?</string>
+    <string name="journal_note">Muistiinpano</string>
+    <string name="journal_note_hint">Mitä tänään tapahtui?</string>
+    <string name="journal_saving">Tallennetaan…</string>
+    <string name="journal_saved">Tallennettu</string>
+    <string name="journal_read_only">Ilman Premiumia päiväkirjaa voi vain lukea. Merkintäsi säilyvät ja näkyvät edelleen.</string>
+    <string name="journal_sample_1">Pitkä kävely järven rannalla, sitten illallinen Annan kanssa.</string>
+    <string name="journal_sample_2">Kiireinen työpäivä, mutta esitys meni hyvin.</string>
+    <string name="journal_sample_3">Rauhallinen päivä. Luin kirjan loppuun.</string>
+    <string name="mood_awful">Kamala</string>
+    <string name="mood_bad">Huono</string>
+    <string name="mood_okay">Ihan ok</string>
+    <string name="mood_good">Hyvä</string>
+    <string name="mood_great">Mahtava</string>
+
+    <string name="insights_teaser_title">Näe, mihin aikasi kuluu</string>
+    <string name="insights_teaser_description">Kaavioita tapahtumistasi viikoittain ja kuukausittain, kiireisimmät päiväsi ja luokkien jakautuminen.</string>
+    <string name="insights_teaser_preview_description">Esimerkkikaavio tapahtumista viikonpäivittäin; torstai on kiireisin</string>
+    <string name="insights_range_4_weeks">4 viikkoa</string>
+    <string name="insights_range_12_weeks">12 viikkoa</string>
+    <string name="insights_range_12_months">12 kuukautta</string>
+    <string name="insights_appointments">Tapahtumat</string>
+    <string name="insights_hours">Tunnit</string>
+    <string name="insights_per_week">Viikossa</string>
+    <string name="insights_per_week_chart">Tapahtumat viikoittain</string>
+    <string name="insights_per_month_chart">Tapahtumat kuukausittain</string>
+    <string name="insights_chart_week_item">viikko alkaen %1$s: %2$d</string>
+    <string name="insights_chart_month_item">%1$s: %2$d</string>
+    <string name="insights_weekdays">Viikon kiireisimmät päivät</string>
+    <string name="insights_busiest_weekday">Kiireisin viikonpäiväsi on %1$s.</string>
+    <plurals name="insights_busiest_date">
+        <item quantity="one">Kiireisin päivä: %1$s, %2$d tapahtuma</item>
+        <item quantity="other">Kiireisin päivä: %1$s, %2$d tapahtumaa</item>
+    </plurals>
+    <string name="insights_busiest_hour">Useimmat tapahtumat alkavat välillä %1$s–%2$s.</string>
+    <string name="insights_categories">Luokat</string>
+    <string name="insights_empty">Tällä aikavälillä ei vielä ole tapahtumia. Tilastot täyttyvät, kun käytät kalenteria.</string>
+
+    <string name="color_tomato">Tomaatti</string>
+    <string name="color_flamingo">Flamingo</string>
+    <string name="color_tangerine">Mandariini</string>
+    <string name="color_banana">Banaani</string>
+    <string name="color_sage">Salvia</string>
+    <string name="color_basil">Basilika</string>
+    <string name="color_peacock">Riikinkukko</string>
+    <string name="color_blueberry">Mustikka</string>
+    <string name="color_lavender">Laventeli</string>
+    <string name="color_grape">Viinirypäle</string>
+    <string name="color_graphite">Grafiitti</string>
+    <string name="color_teal">Petrooli</string>
+</resources>

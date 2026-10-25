@@ -170,14 +170,14 @@ private fun WeekdayCard(stats: Statistics, formats: DateTimeFormats) {
     ChartCard(title) {
         BarChart(
             values = stats.weekdayCounts.map { it.second },
-            labels = stats.weekdayCounts.map { it.first.getDisplayName(TextStyle.SHORT, locale) },
+            labels = stats.weekdayCounts.map { it.first.getDisplayName(TextStyle.SHORT_STANDALONE, locale) },
             description = title + ": " + stats.weekdayCounts.joinToString("; ") {
-                "${it.first.getDisplayName(TextStyle.FULL, locale)}: ${it.second}"
+                "${it.first.getDisplayName(TextStyle.FULL_STANDALONE, locale)}: ${it.second}"
             },
             highlightIndex = stats.weekdayCounts.indexOfFirst { it.first == busiest }.takeIf { it >= 0 },
         )
         busiest?.let { day: DayOfWeek ->
-            InsightLine(stringResource(R.string.insights_busiest_weekday, day.getDisplayName(TextStyle.FULL, locale)))
+            InsightLine(stringResource(R.string.insights_busiest_weekday, day.getDisplayName(TextStyle.FULL_STANDALONE, locale)))
         }
         stats.busiestDate?.let { date ->
             InsightLine(
@@ -259,12 +259,12 @@ private fun InsightsPreview() {
         Text(stringResource(R.string.insights_weekdays), style = MaterialTheme.typography.titleSmall)
         BarChart(
             values = listOf(4, 6, 3, 7, 5, 2, 1),
-            labels = days.map { it.getDisplayName(TextStyle.SHORT, locale) },
+            labels = days.map { it.getDisplayName(TextStyle.SHORT_STANDALONE, locale) },
             description = "",
             highlightIndex = 3,
             chartHeight = 100.dp,
         )
-        InsightLine(stringResource(R.string.insights_busiest_weekday, DayOfWeek.THURSDAY.getDisplayName(TextStyle.FULL, locale)))
+        InsightLine(stringResource(R.string.insights_busiest_weekday, DayOfWeek.THURSDAY.getDisplayName(TextStyle.FULL_STANDALONE, locale)))
     }
 }
 

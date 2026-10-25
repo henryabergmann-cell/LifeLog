@@ -118,6 +118,8 @@
     <string name="settings_categories_summary">Names and colors for your appointments</string>
     <string name="settings_premium_summary">Journal, insights, widgets and more</string>
     <string name="settings_premium_active">Active</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_language_system">System default</string>
 
     <!-- Premium -->
     <string name="premium_title">Life Log Premium</string>

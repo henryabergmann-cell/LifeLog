@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_calendar">カレンダー</string>
+    <string name="nav_journal">ジャーナル</string>
+    <string name="nav_insights">統計</string>
+    <string name="nav_settings">設定</string>
+
+    <string name="action_save">保存</string>
+    <string name="action_cancel">キャンセル</string>
+    <string name="action_ok">OK</string>
+    <string name="action_delete">削除</string>
+    <string name="action_edit">編集</string>
+    <string name="action_duplicate">複製</string>
+    <string name="action_undo">元に戻す</string>
+    <string name="action_back">戻る</string>
+    <string name="action_close">閉じる</string>
+    <string name="action_discard">破棄</string>
+    <string name="action_keep_editing">編集を続ける</string>
+    <string name="state_selected">選択済み</string>
+
+    <string name="calendar_today">今日</string>
+    <string name="calendar_search">検索</string>
+    <string name="calendar_new_event">新しい予定</string>
+    <string name="calendar_change_view">表示を切り替え（現在の表示: %1$s）</string>
+    <string name="calendar_view_month">月</string>
+    <string name="calendar_view_week">週</string>
+    <string name="calendar_view_day">日</string>
+    <string name="calendar_view_agenda">予定リスト</string>
+    <string name="calendar_previous_month">前の月</string>
+    <string name="calendar_next_month">次の月</string>
+    <string name="calendar_previous_week">前の週</string>
+    <string name="calendar_next_week">次の週</string>
+    <string name="calendar_previous_day">前の日</string>
+    <string name="calendar_next_day">次の日</string>
+    <string name="calendar_more_count">+%1$d</string>
+    <string name="calendar_day_no_appointments">%1$s、予定なし</string>
+    <plurals name="calendar_day_appointments">
+        <item quantity="other">%1$s、予定 %2$d 件</item>
+    </plurals>
+    <string name="calendar_today_prefix">今日、%1$s</string>
+    <string name="calendar_open_day">日を開く</string>
+    <string name="calendar_all_day">終日</string>
+    <string name="agenda_show_earlier">以前を表示</string>
+    <string name="agenda_show_later">以降を表示</string>
+    <string name="agenda_empty">この期間に予定はありません。</string>
+
+    <string name="event_not_found">この予定はもう存在しません。</string>
+    <string name="event_deleted">「%1$s」を削除しました</string>
+    <string name="event_location">場所</string>
+    <string name="event_notes">メモ</string>
+    <string name="event_category">カテゴリ</string>
+    <string name="event_reminder">リマインダー</string>
+    <string name="event_no_category">カテゴリなし</string>
+    <string name="event_time_zone">タイムゾーン: %1$s</string>
+
+    <string name="editor_title_edit">予定を編集</string>
+    <string name="editor_field_title">タイトル</string>
+    <string name="editor_error_title">タイトルを入力してください</string>
+    <string name="editor_error_end">終了は開始より後にしてください</string>
+    <string name="editor_starts">開始</string>
+    <string name="editor_ends">終了</string>
+    <string name="editor_start_date">開始日: %1$s</string>
+    <string name="editor_start_time">開始時刻: %1$s</string>
+    <string name="editor_end_date">終了日: %1$s</string>
+    <string name="editor_end_time">終了時刻: %1$s</string>
+    <string name="editor_manage_categories">カテゴリを管理</string>
+    <string name="editor_more_reminders">他 %1$d 件</string>
+    <string name="editor_discard_title">変更を破棄しますか？</string>
+    <string name="editor_discard_message">この予定への変更は失われます。</string>
+
+    <string name="reminder_none">リマインダーなし</string>
+    <string name="reminder_at_start">開始時</string>
+    <string name="reminder_on_the_day">当日</string>
+    <plurals name="reminder_minutes_before">
+        <item quantity="other">%d 分前</item>
+    </plurals>
+    <plurals name="reminder_hours_before">
+        <item quantity="other">%d 時間前</item>
+    </plurals>
+    <plurals name="reminder_days_before">
+        <item quantity="other">%d 日前</item>
+    </plurals>
+
+    <string name="search_hint">予定を検索</string>
+    <string name="search_prompt">タイトル、場所、メモで検索できます。</string>
+    <string name="search_no_results">「%1$s」に一致する予定はありません。</string>
+    <string name="search_clear">検索をクリア</string>
+
+    <string name="categories_title">カテゴリ</string>
+    <string name="categories_add">カテゴリを追加</string>
+    <string name="categories_edit">カテゴリを編集</string>
+    <string name="categories_edit_named">%1$s を編集</string>
+    <string name="categories_delete_named">%1$s を削除</string>
+    <string name="categories_name">名前</string>
+    <string name="categories_error_name">名前を入力してください</string>
+    <string name="categories_color">色</string>
+    <string name="categories_empty">カテゴリはまだありません。カテゴリで予定に色を付けられます。</string>
+    <string name="categories_free_limit">無料版: %2$d 個中 %1$d 個のカテゴリを使用中。Premium ならカテゴリは無制限です。</string>
+    <string name="categories_limit_reached">無料版のカテゴリは最大 %1$d 個です。Premium ならこの制限はありません。</string>
+    <string name="categories_delete_title">「%1$s」を削除しますか？</string>
+    <string name="categories_delete_message">このカテゴリの予定は残りますが、カテゴリは外れます。</string>
+
+    <string name="settings_categories_summary">予定の名前と色</string>
+    <string name="settings_premium_summary">ジャーナル、統計、ウィジェットなど</string>
+    <string name="settings_premium_active">有効</string>
+    <string name="settings_language">言語</string>
+    <string name="settings_language_system">システムの言語</string>
+
+    <string name="premium_title">Life Log Premium</string>
+    <string name="premium_headline">Life Log をもっと活用</string>
+    <string name="premium_subtitle">ジャーナルをつけ、時間の使い方を把握し、Life Log を自分好みに。</string>
+    <string name="premium_active_headline">Premium は有効です</string>
+    <string name="premium_active_subtitle">Life Log を応援していただきありがとうございます。以下のすべての機能をご利用いただけます。</string>
+    <string name="premium_plans_pending">7 日間の無料トライアル付きの月額・年額プランをまもなくご利用いただけます。</string>
+    <string name="premium_choose_plan">プランを選択</string>
+    <string name="premium_unlock">Premium で利用可能にする</string>
+    <string name="premium_see_all">Premium のすべての機能</string>
+    <string name="premium_example">例</string>
+    <string name="premium_learn_more">詳細</string>
+    <string name="premium_banner">ジャーナルや統計などは Premium で</string>
+    <string name="premium_banner_dismiss">Premium の案内を閉じる</string>
+    <string name="premium_benefit_journal">ジャーナル</string>
+    <string name="premium_benefit_journal_desc">毎日のメモと気分を記録し、タイムラインで振り返れます。</string>
+    <string name="premium_benefit_insights">統計</string>
+    <string name="premium_benefit_insights_desc">どれだけ忙しいか、忙しい日、時間の使い道がわかります。</string>
+    <string name="premium_benefit_categories">カテゴリ無制限</string>
+    <string name="premium_benefit_categories_desc">好きな色で、いくつでもカテゴリを作れます。</string>
+    <string name="premium_benefit_reminders">複数のリマインダー</string>
+    <string name="premium_benefit_reminders_desc">1 件の予定に最大 5 つのリマインダー。</string>
+    <string name="premium_benefit_widgets">ホーム画面ウィジェット</string>
+    <string name="premium_benefit_widgets_desc">今日の予定と月間カレンダーをひと目で。</string>
+    <string name="premium_benefit_sync">端末のカレンダーと同期</string>
+    <string name="premium_benefit_sync_desc">他のカレンダーを Life Log に表示し、予定をコピーできます。</string>
+    <string name="premium_benefit_backup">バックアップと復元</string>
+    <string name="premium_benefit_backup_desc">すべてを自分で管理するファイルに保存し、いつでも復元できます。</string>
+    <string name="premium_benefit_no_ads">アップグレードの案内なし</string>
+    <string name="premium_benefit_no_ads_desc">アップグレードを促す表示のない、落ち着いたアプリ。</string>
+
+    <string name="journal_teaser_title">あなたの毎日を、あなたの言葉で</string>
+    <string name="journal_teaser_description">毎日、短いメモを書いて気分を選びましょう。タイムラインで、毎週が本当はどうだったかがわかります。</string>
+    <string name="journal_teaser_preview_description">3 日分のメモと気分が入ったジャーナルの例</string>
+    <string name="journal_timeline">タイムライン</string>
+    <string name="journal_timeline_empty">ジャーナルの記録はここに表示されます。</string>
+    <string name="journal_mood_question">今日はどんな一日でしたか？</string>
+    <string name="journal_note">メモ</string>
+    <string name="journal_note_hint">今日は何がありましたか？</string>
+    <string name="journal_saving">保存中…</string>
+    <string name="journal_saved">保存しました</string>
+    <string name="journal_read_only">Premium がない場合、ジャーナルは閲覧のみです。記録は安全に保存され、引き続き表示されます。</string>
+    <string name="journal_sample_1">湖畔を長く散歩して、アンナと夕食。</string>
+    <string name="journal_sample_2">仕事は忙しかったけれど、プレゼンはうまくいった。</string>
+    <string name="journal_sample_3">静かな一日。本を読み終えた。</string>
+    <string name="mood_awful">最悪</string>
+    <string name="mood_bad">いまいち</string>
+    <string name="mood_okay">ふつう</string>
+    <string name="mood_good">よい</string>
+    <string name="mood_great">最高</string>
+
+    <string name="insights_teaser_title">時間の使い道を知ろう</string>
+    <string name="insights_teaser_description">週ごと・月ごとの予定数、忙しい日、カテゴリの内訳をグラフで確認できます。</string>
+    <string name="insights_teaser_preview_description">曜日別の予定数のグラフの例。木曜日がいちばん忙しい</string>
+    <string name="insights_range_4_weeks">4 週間</string>
+    <string name="insights_range_12_weeks">12 週間</string>
+    <string name="insights_range_12_months">12 か月</string>
+    <string name="insights_appointments">予定</string>
+    <string name="insights_hours">時間</string>
+    <string name="insights_per_week">週あたり</string>
+    <string name="insights_per_week_chart">週ごとの予定</string>
+    <string name="insights_per_month_chart">月ごとの予定</string>
+    <string name="insights_chart_week_item">%1$s の週: %2$d</string>
+    <string name="insights_chart_month_item">%1$s: %2$d</string>
+    <string name="insights_weekdays">忙しい曜日</string>
+    <string name="insights_busiest_weekday">いちばん忙しい曜日は%1$sです。</string>
+    <plurals name="insights_busiest_date">
+        <item quantity="other">いちばん忙しかった日: %1$s（%2$d 件）</item>
+    </plurals>
+    <string name="insights_busiest_hour">ほとんどの予定は %1$s〜%2$s に始まります。</string>
+    <string name="insights_categories">カテゴリ</string>
+    <string name="insights_empty">この期間の予定はまだありません。カレンダーを使うほど統計が充実します。</string>
+
+    <string name="color_tomato">トマト</string>
+    <string name="color_flamingo">フラミンゴ</string>
+    <string name="color_tangerine">タンジェリン</string>
+    <string name="color_banana">バナナ</string>
+    <string name="color_sage">セージ</string>
+    <string name="color_basil">バジル</string>
+    <string name="color_peacock">ピーコック</string>
+    <string name="color_blueberry">ブルーベリー</string>
+    <string name="color_lavender">ラベンダー</string>
+    <string name="color_grape">グレープ</string>
+    <string name="color_graphite">グラファイト</string>
+    <string name="color_teal">ティール</string>
+</resources>

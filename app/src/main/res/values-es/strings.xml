@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_calendar">Calendario</string>
+    <string name="nav_journal">Diario</string>
+    <string name="nav_insights">Estadísticas</string>
+    <string name="nav_settings">Ajustes</string>
+
+    <string name="action_save">Guardar</string>
+    <string name="action_cancel">Cancelar</string>
+    <string name="action_ok">Aceptar</string>
+    <string name="action_delete">Eliminar</string>
+    <string name="action_edit">Editar</string>
+    <string name="action_duplicate">Duplicar</string>
+    <string name="action_undo">Deshacer</string>
+    <string name="action_back">Atrás</string>
+    <string name="action_close">Cerrar</string>
+    <string name="action_discard">Descartar</string>
+    <string name="action_keep_editing">Seguir editando</string>
+    <string name="state_selected">Seleccionado</string>
+
+    <string name="calendar_today">Hoy</string>
+    <string name="calendar_search">Buscar</string>
+    <string name="calendar_new_event">Nueva cita</string>
+    <string name="calendar_change_view">Cambiar vista, vista actual: %1$s</string>
+    <string name="calendar_view_month">Mes</string>
+    <string name="calendar_view_week">Semana</string>
+    <string name="calendar_view_day">Día</string>
+    <string name="calendar_view_agenda">Agenda</string>
+    <string name="calendar_previous_month">Mes anterior</string>
+    <string name="calendar_next_month">Mes siguiente</string>
+    <string name="calendar_previous_week">Semana anterior</string>
+    <string name="calendar_next_week">Semana siguiente</string>
+    <string name="calendar_previous_day">Día anterior</string>
+    <string name="calendar_next_day">Día siguiente</string>
+    <string name="calendar_more_count">+%1$d</string>
+    <string name="calendar_day_no_appointments">%1$s, sin citas</string>
+    <plurals name="calendar_day_appointments">
+        <item quantity="one">%1$s, %2$d cita</item>
+        <item quantity="many">%1$s, %2$d citas</item>
+        <item quantity="other">%1$s, %2$d citas</item>
+    </plurals>
+    <string name="calendar_today_prefix">Hoy, %1$s</string>
+    <string name="calendar_open_day">Abrir día</string>
+    <string name="calendar_all_day">Todo el día</string>
+    <string name="agenda_show_earlier">Mostrar anteriores</string>
+    <string name="agenda_show_later">Mostrar posteriores</string>
+    <string name="agenda_empty">No hay citas en este periodo.</string>
+
+    <string name="event_not_found">Esta cita ya no existe.</string>
+    <string name="event_deleted">«%1$s» eliminada</string>
+    <string name="event_location">Ubicación</string>
+    <string name="event_notes">Notas</string>
+    <string name="event_category">Categoría</string>
+    <string name="event_reminder">Recordatorio</string>
+    <string name="event_no_category">Sin categoría</string>
+    <string name="event_time_zone">Zona horaria: %1$s</string>
+
+    <string name="editor_title_edit">Editar cita</string>
+    <string name="editor_field_title">Título</string>
+    <string name="editor_error_title">Introduce un título</string>
+    <string name="editor_error_end">El final debe ser posterior al inicio</string>
+    <string name="editor_starts">Empieza</string>
+    <string name="editor_ends">Termina</string>
+    <string name="editor_start_date">Fecha de inicio: %1$s</string>
+    <string name="editor_start_time">Hora de inicio: %1$s</string>
+    <string name="editor_end_date">Fecha de fin: %1$s</string>
+    <string name="editor_end_time">Hora de fin: %1$s</string>
+    <string name="editor_manage_categories">Gestionar categorías</string>
+    <string name="editor_more_reminders">+%1$d más</string>
+    <string name="editor_discard_title">¿Descartar cambios?</string>
+    <string name="editor_discard_message">Se perderán los cambios en esta cita.</string>
+
+    <string name="reminder_none">Sin recordatorio</string>
+    <string name="reminder_at_start">Al empezar</string>
+    <string name="reminder_on_the_day">El mismo día</string>
+    <plurals name="reminder_minutes_before">
+        <item quantity="one">%d minuto antes</item>
+        <item quantity="many">%d minutos antes</item>
+        <item quantity="other">%d minutos antes</item>
+    </plurals>
+    <plurals name="reminder_hours_before">
+        <item quantity="one">%d hora antes</item>
+        <item quantity="many">%d horas antes</item>
+        <item quantity="other">%d horas antes</item>
+    </plurals>
+    <plurals name="reminder_days_before">
+        <item quantity="one">%d día antes</item>
+        <item quantity="many">%d días antes</item>
+        <item quantity="other">%d días antes</item>
+    </plurals>
+
+    <string name="search_hint">Buscar citas</string>
+    <string name="search_prompt">Busca por título, ubicación o notas.</string>
+    <string name="search_no_results">No se encontraron citas para «%1$s».</string>
+    <string name="search_clear">Borrar búsqueda</string>
+
+    <string name="categories_title">Categorías</string>
+    <string name="categories_add">Añadir categoría</string>
+    <string name="categories_edit">Editar categoría</string>
+    <string name="categories_edit_named">Editar %1$s</string>
+    <string name="categories_delete_named">Eliminar %1$s</string>
+    <string name="categories_name">Nombre</string>
+    <string name="categories_error_name">Introduce un nombre</string>
+    <string name="categories_color">Color</string>
+    <string name="categories_empty">Aún no hay categorías. Las categorías dan color a tus citas.</string>
+    <string name="categories_free_limit">Versión gratuita: %1$d de %2$d categorías usadas. Premium permite categorías ilimitadas.</string>
+    <string name="categories_limit_reached">La versión gratuita incluye hasta %1$d categorías. Premium elimina este límite.</string>
+    <string name="categories_delete_title">¿Eliminar «%1$s»?</string>
+    <string name="categories_delete_message">Las citas de esta categoría se conservan, pero pierden la categoría.</string>
+
+    <string name="settings_categories_summary">Nombres y colores para tus citas</string>
+    <string name="settings_premium_summary">Diario, estadísticas, widgets y más</string>
+    <string name="settings_premium_active">Activo</string>
+    <string name="settings_language">Idioma</string>
+    <string name="settings_language_system">Idioma del sistema</string>
+
+    <string name="premium_title">Life Log Premium</string>
+    <string name="premium_headline">Saca más partido a Life Log</string>
+    <string name="premium_subtitle">Lleva un diario, descubre en qué empleas tu tiempo y haz que Life Log sea tuyo.</string>
+    <string name="premium_active_headline">Premium está activo</string>
+    <string name="premium_active_subtitle">Gracias por apoyar Life Log. Todo lo de abajo está desbloqueado.</string>
+    <string name="premium_plans_pending">Pronto habrá aquí planes mensuales y anuales, con 7 días de prueba gratis.</string>
+    <string name="premium_choose_plan">Elegir un plan</string>
+    <string name="premium_unlock">Desbloquear con Premium</string>
+    <string name="premium_see_all">Todo lo que incluye Premium</string>
+    <string name="premium_example">Ejemplo</string>
+    <string name="premium_learn_more">Más información</string>
+    <string name="premium_banner">Diario, estadísticas y más con Premium</string>
+    <string name="premium_banner_dismiss">Ocultar aviso de Premium</string>
+    <string name="premium_benefit_journal">Diario</string>
+    <string name="premium_benefit_journal_desc">Una nota y un estado de ánimo cada día, con una línea de tiempo de tus días.</string>
+    <string name="premium_benefit_insights">Estadísticas</string>
+    <string name="premium_benefit_insights_desc">Mira lo ocupado que estás, tus días más ajetreados y en qué se va tu tiempo.</string>
+    <string name="premium_benefit_categories">Categorías ilimitadas</string>
+    <string name="premium_benefit_categories_desc">Tantas categorías como quieras, en cualquier color.</string>
+    <string name="premium_benefit_reminders">Varios recordatorios</string>
+    <string name="premium_benefit_reminders_desc">Hasta 5 recordatorios por cita.</string>
+    <string name="premium_benefit_widgets">Widgets de pantalla de inicio</string>
+    <string name="premium_benefit_widgets_desc">La agenda de hoy y el mes de un vistazo.</string>
+    <string name="premium_benefit_sync">Sincronización con el calendario</string>
+    <string name="premium_benefit_sync_desc">Ve tus otros calendarios en Life Log y copia citas en ellos.</string>
+    <string name="premium_benefit_backup">Copia de seguridad y restauración</string>
+    <string name="premium_benefit_backup_desc">Guarda todo en un archivo que tú controlas y restáuralo cuando quieras.</string>
+    <string name="premium_benefit_no_ads">Sin avisos para mejorar</string>
+    <string name="premium_benefit_no_ads_desc">Una app tranquila, sin recordatorios para pasarte a Premium.</string>
+
+    <string name="journal_teaser_title">Tus días, con tus palabras</string>
+    <string name="journal_teaser_description">Escribe una nota breve y elige un estado de ánimo para cada día. Tu línea de tiempo muestra cómo fueron de verdad tus semanas.</string>
+    <string name="journal_teaser_preview_description">Diario de ejemplo con notas y estados de ánimo de tres días</string>
+    <string name="journal_timeline">Línea de tiempo</string>
+    <string name="journal_timeline_empty">Tus entradas del diario aparecerán aquí.</string>
+    <string name="journal_mood_question">¿Qué tal tu día?</string>
+    <string name="journal_note">Nota</string>
+    <string name="journal_note_hint">¿Qué ha pasado hoy?</string>
+    <string name="journal_saving">Guardando…</string>
+    <string name="journal_saved">Guardado</string>
+    <string name="journal_read_only">Sin Premium, tu diario es de solo lectura. Tus entradas se conservan y siguen visibles.</string>
+    <string name="journal_sample_1">Un largo paseo junto al lago y luego cena con Anna.</string>
+    <string name="journal_sample_2">Mucho trabajo, pero la presentación salió bien.</string>
+    <string name="journal_sample_3">Día tranquilo. Terminé mi libro.</string>
+    <string name="mood_awful">Fatal</string>
+    <string name="mood_bad">Mal</string>
+    <string name="mood_okay">Normal</string>
+    <string name="mood_good">Bien</string>
+    <string name="mood_great">Genial</string>
+
+    <string name="insights_teaser_title">Descubre en qué se va tu tiempo</string>
+    <string name="insights_teaser_description">Gráficos de tus citas por semana y por mes, tus días más ajetreados y cómo se reparten tus categorías.</string>
+    <string name="insights_teaser_preview_description">Gráfico de ejemplo de citas por día de la semana; el jueves es el más ajetreado</string>
+    <string name="insights_range_4_weeks">4 semanas</string>
+    <string name="insights_range_12_weeks">12 semanas</string>
+    <string name="insights_range_12_months">12 meses</string>
+    <string name="insights_appointments">Citas</string>
+    <string name="insights_hours">Horas</string>
+    <string name="insights_per_week">Por semana</string>
+    <string name="insights_per_week_chart">Citas por semana</string>
+    <string name="insights_per_month_chart">Citas por mes</string>
+    <string name="insights_chart_week_item">semana del %1$s: %2$d</string>
+    <string name="insights_chart_month_item">%1$s: %2$d</string>
+    <string name="insights_weekdays">Días más ajetreados de la semana</string>
+    <string name="insights_busiest_weekday">Tu día más ajetreado es el %1$s.</string>
+    <plurals name="insights_busiest_date">
+        <item quantity="one">Día más ajetreado: %1$s con %2$d cita</item>
+        <item quantity="many">Día más ajetreado: %1$s con %2$d citas</item>
+        <item quantity="other">Día más ajetreado: %1$s con %2$d citas</item>
+    </plurals>
+    <string name="insights_busiest_hour">La mayoría de las citas empiezan entre las %1$s y las %2$s.</string>
+    <string name="insights_categories">Categorías</string>
+    <string name="insights_empty">Aún no hay citas en este periodo. Las estadísticas se llenan a medida que usas el calendario.</string>
+
+    <string name="color_tomato">Tomate</string>
+    <string name="color_flamingo">Flamenco</string>
+    <string name="color_tangerine">Mandarina</string>
+    <string name="color_banana">Plátano</string>
+    <string name="color_sage">Salvia</string>
+    <string name="color_basil">Albahaca</string>
+    <string name="color_peacock">Pavo real</string>
+    <string name="color_blueberry">Arándano</string>
+    <string name="color_lavender">Lavanda</string>
+    <string name="color_grape">Uva</string>
+    <string name="color_graphite">Grafito</string>
+    <string name="color_teal">Verde azulado</string>
+</resources>

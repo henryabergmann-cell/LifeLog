@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_calendar">Kalendář</string>
+    <string name="nav_journal">Deník</string>
+    <string name="nav_insights">Statistiky</string>
+    <string name="nav_settings">Nastavení</string>
+
+    <string name="action_save">Uložit</string>
+    <string name="action_cancel">Zrušit</string>
+    <string name="action_ok">OK</string>
+    <string name="action_delete">Smazat</string>
+    <string name="action_edit">Upravit</string>
+    <string name="action_duplicate">Duplikovat</string>
+    <string name="action_undo">Vrátit zpět</string>
+    <string name="action_back">Zpět</string>
+    <string name="action_close">Zavřít</string>
+    <string name="action_discard">Zahodit</string>
+    <string name="action_keep_editing">Pokračovat v úpravách</string>
+    <string name="state_selected">Vybráno</string>
+
+    <string name="calendar_today">Dnes</string>
+    <string name="calendar_search">Hledat</string>
+    <string name="calendar_new_event">Nová schůzka</string>
+    <string name="calendar_change_view">Změnit zobrazení, aktuální zobrazení: %1$s</string>
+    <string name="calendar_view_month">Měsíc</string>
+    <string name="calendar_view_week">Týden</string>
+    <string name="calendar_view_day">Den</string>
+    <string name="calendar_view_agenda">Seznam</string>
+    <string name="calendar_previous_month">Předchozí měsíc</string>
+    <string name="calendar_next_month">Další měsíc</string>
+    <string name="calendar_previous_week">Předchozí týden</string>
+    <string name="calendar_next_week">Další týden</string>
+    <string name="calendar_previous_day">Předchozí den</string>
+    <string name="calendar_next_day">Další den</string>
+    <string name="calendar_more_count">+%1$d</string>
+    <string name="calendar_day_no_appointments">%1$s, žádné schůzky</string>
+    <plurals name="calendar_day_appointments">
+        <item quantity="one">%1$s, %2$d schůzka</item>
+        <item quantity="few">%1$s, %2$d schůzky</item>
+        <item quantity="many">%1$s, %2$d schůzky</item>
+        <item quantity="other">%1$s, %2$d schůzek</item>
+    </plurals>
+    <string name="calendar_today_prefix">Dnes, %1$s</string>
+    <string name="calendar_open_day">Otevřít den</string>
+    <string name="calendar_all_day">Celý den</string>
+    <string name="agenda_show_earlier">Zobrazit dřívější</string>
+    <string name="agenda_show_later">Zobrazit pozdější</string>
+    <string name="agenda_empty">V tomto období nejsou žádné schůzky.</string>
+
+    <string name="event_not_found">Tato schůzka už neexistuje.</string>
+    <string name="event_deleted">„%1$s“ smazáno</string>
+    <string name="event_location">Místo</string>
+    <string name="event_notes">Poznámky</string>
+    <string name="event_category">Kategorie</string>
+    <string name="event_reminder">Připomenutí</string>
+    <string name="event_no_category">Bez kategorie</string>
+    <string name="event_time_zone">Časové pásmo: %1$s</string>
+
+    <string name="editor_title_edit">Upravit schůzku</string>
+    <string name="editor_field_title">Název</string>
+    <string name="editor_error_title">Zadejte název</string>
+    <string name="editor_error_end">Konec musí být po začátku</string>
+    <string name="editor_starts">Začátek</string>
+    <string name="editor_ends">Konec</string>
+    <string name="editor_start_date">Datum začátku: %1$s</string>
+    <string name="editor_start_time">Čas začátku: %1$s</string>
+    <string name="editor_end_date">Datum konce: %1$s</string>
+    <string name="editor_end_time">Čas konce: %1$s</string>
+    <string name="editor_manage_categories">Spravovat kategorie</string>
+    <string name="editor_more_reminders">+%1$d další</string>
+    <string name="editor_discard_title">Zahodit změny?</string>
+    <string name="editor_discard_message">Změny této schůzky budou ztraceny.</string>
+
+    <string name="reminder_none">Bez připomenutí</string>
+    <string name="reminder_at_start">Na začátku</string>
+    <string name="reminder_on_the_day">V den události</string>
+    <plurals name="reminder_minutes_before">
+        <item quantity="one">%d minutu předem</item>
+        <item quantity="few">%d minuty předem</item>
+        <item quantity="many">%d minuty předem</item>
+        <item quantity="other">%d minut předem</item>
+    </plurals>
+    <plurals name="reminder_hours_before">
+        <item quantity="one">%d hodinu předem</item>
+        <item quantity="few">%d hodiny předem</item>
+        <item quantity="many">%d hodiny předem</item>
+        <item quantity="other">%d hodin předem</item>
+    </plurals>
+    <plurals name="reminder_days_before">
+        <item quantity="one">%d den předem</item>
+        <item quantity="few">%d dny předem</item>
+        <item quantity="many">%d dne předem</item>
+        <item quantity="other">%d dní předem</item>
+    </plurals>
+
+    <string name="search_hint">Hledat schůzky</string>
+    <string name="search_prompt">Hledejte podle názvu, místa nebo poznámek.</string>
+    <string name="search_no_results">Pro „%1$s“ nebyly nalezeny žádné schůzky.</string>
+    <string name="search_clear">Vymazat hledání</string>
+
+    <string name="categories_title">Kategorie</string>
+    <string name="categories_add">Přidat kategorii</string>
+    <string name="categories_edit">Upravit kategorii</string>
+    <string name="categories_edit_named">Upravit: %1$s</string>
+    <string name="categories_delete_named">Smazat: %1$s</string>
+    <string name="categories_name">Název</string>
+    <string name="categories_error_name">Zadejte název</string>
+    <string name="categories_color">Barva</string>
+    <string name="categories_empty">Zatím žádné kategorie. Kategorie dávají schůzkám barvu.</string>
+    <string name="categories_free_limit">Bezplatná verze: použito %1$d z %2$d kategorií. Premium umožňuje neomezený počet kategorií.</string>
+    <string name="categories_limit_reached">Bezplatná verze obsahuje nejvýše %1$d kategorie. Premium tento limit ruší.</string>
+    <string name="categories_delete_title">Smazat „%1$s“?</string>
+    <string name="categories_delete_message">Schůzky v této kategorii zůstanou, ale přijdou o kategorii.</string>
+
+    <string name="settings_categories_summary">Názvy a barvy pro vaše schůzky</string>
+    <string name="settings_premium_summary">Deník, statistiky, widgety a další</string>
+    <string name="settings_premium_active">Aktivní</string>
+    <string name="settings_language">Jazyk</string>
+    <string name="settings_language_system">Jazyk systému</string>
+
+    <string name="premium_title">Life Log Premium</string>
+    <string name="premium_headline">Získejte z Life Log víc</string>
+    <string name="premium_subtitle">Pište si deník, zjistěte, kam mizí váš čas, a přizpůsobte si Life Log.</string>
+    <string name="premium_active_headline">Premium je aktivní</string>
+    <string name="premium_active_subtitle">Děkujeme, že podporujete Life Log. Vše níže je odemčeno.</string>
+    <string name="premium_plans_pending">Měsíční a roční předplatné včetně 7denní zkušební verze zdarma tu bude brzy k dispozici.</string>
+    <string name="premium_choose_plan">Vybrat předplatné</string>
+    <string name="premium_unlock">Odemknout s Premium</string>
+    <string name="premium_see_all">Vše, co Premium obsahuje</string>
+    <string name="premium_example">Příklad</string>
+    <string name="premium_learn_more">Další informace</string>
+    <string name="premium_banner">Deník, statistiky a další s Premium</string>
+    <string name="premium_banner_dismiss">Skrýt tip na Premium</string>
+    <string name="premium_benefit_journal">Deník</string>
+    <string name="premium_benefit_journal_desc">Každodenní poznámka a nálada s časovou osou vašich dnů.</string>
+    <string name="premium_benefit_insights">Statistiky</string>
+    <string name="premium_benefit_insights_desc">Podívejte se, jak moc jste vytížení, které dny jsou nejrušnější a kam mizí váš čas.</string>
+    <string name="premium_benefit_categories">Neomezené kategorie</string>
+    <string name="premium_benefit_categories_desc">Kolik kategorií chcete, v libovolné barvě.</string>
+    <string name="premium_benefit_reminders">Více připomenutí</string>
+    <string name="premium_benefit_reminders_desc">Až 5 připomenutí ke každé schůzce.</string>
+    <string name="premium_benefit_widgets">Widgety na plochu</string>
+    <string name="premium_benefit_widgets_desc">Dnešní program a celý měsíc na první pohled.</string>
+    <string name="premium_benefit_sync">Synchronizace s kalendářem zařízení</string>
+    <string name="premium_benefit_sync_desc">Zobrazte si další kalendáře v Life Log a kopírujte do nich schůzky.</string>
+    <string name="premium_benefit_backup">Záloha a obnovení</string>
+    <string name="premium_benefit_backup_desc">Uložte vše do souboru pod vaší kontrolou a kdykoli ho obnovte.</string>
+    <string name="premium_benefit_no_ads">Žádné výzvy k upgradu</string>
+    <string name="premium_benefit_no_ads_desc">Klidná aplikace bez upozornění na přechod na Premium.</string>
+
+    <string name="journal_teaser_title">Vaše dny, vašimi slovy</string>
+    <string name="journal_teaser_description">Napište krátkou poznámku a vyberte náladu pro každý den. Časová osa ukáže, jak vaše týdny opravdu probíhaly.</string>
+    <string name="journal_teaser_preview_description">Ukázkový deník s poznámkami a náladami za tři dny</string>
+    <string name="journal_timeline">Časová osa</string>
+    <string name="journal_timeline_empty">Zde se zobrazí záznamy deníku.</string>
+    <string name="journal_mood_question">Jaký byl váš den?</string>
+    <string name="journal_note">Poznámka</string>
+    <string name="journal_note_hint">Co se dnes stalo?</string>
+    <string name="journal_saving">Ukládání…</string>
+    <string name="journal_saved">Uloženo</string>
+    <string name="journal_read_only">Bez Premium je deník jen pro čtení. Vaše záznamy zůstávají v bezpečí a viditelné.</string>
+    <string name="journal_sample_1">Dlouhá procházka u jezera, pak večeře s Annou.</string>
+    <string name="journal_sample_2">Hodně práce, ale prezentace dopadla dobře.</string>
+    <string name="journal_sample_3">Klidný den. Dočtená kniha.</string>
+    <string name="mood_awful">Hrozný</string>
+    <string name="mood_bad">Špatný</string>
+    <string name="mood_okay">Ujde to</string>
+    <string name="mood_good">Dobrý</string>
+    <string name="mood_great">Skvělý</string>
+
+    <string name="insights_teaser_title">Zjistěte, kam mizí váš čas</string>
+    <string name="insights_teaser_description">Grafy schůzek po týdnech a měsících, nejrušnější dny a rozdělení podle kategorií.</string>
+    <string name="insights_teaser_preview_description">Ukázkový graf schůzek podle dne v týdnu; nejrušnější je čtvrtek</string>
+    <string name="insights_range_4_weeks">4 týdny</string>
+    <string name="insights_range_12_weeks">12 týdnů</string>
+    <string name="insights_range_12_months">12 měsíců</string>
+    <string name="insights_appointments">Schůzky</string>
+    <string name="insights_hours">Hodiny</string>
+    <string name="insights_per_week">Za týden</string>
+    <string name="insights_per_week_chart">Schůzky za týden</string>
+    <string name="insights_per_month_chart">Schůzky za měsíc</string>
+    <string name="insights_chart_week_item">týden od %1$s: %2$d</string>
+    <string name="insights_chart_month_item">%1$s: %2$d</string>
+    <string name="insights_weekdays">Nejrušnější dny v týdnu</string>
+    <string name="insights_busiest_weekday">Váš nejrušnější den v týdnu je %1$s.</string>
+    <plurals name="insights_busiest_date">
+        <item quantity="one">Nejrušnější den: %1$s, %2$d schůzka</item>
+        <item quantity="few">Nejrušnější den: %1$s, %2$d schůzky</item>
+        <item quantity="many">Nejrušnější den: %1$s, %2$d schůzky</item>
+        <item quantity="other">Nejrušnější den: %1$s, %2$d schůzek</item>
+    </plurals>
+    <string name="insights_busiest_hour">Většina schůzek začíná mezi %1$s a %2$s.</string>
+    <string name="insights_categories">Kategorie</string>
+    <string name="insights_empty">V tomto období zatím nejsou žádné schůzky. Statistiky se plní, jak kalendář používáte.</string>
+
+    <string name="color_tomato">Rajčatová</string>
+    <string name="color_flamingo">Plameňáková</string>
+    <string name="color_tangerine">Mandarinková</string>
+    <string name="color_banana">Banánová</string>
+    <string name="color_sage">Šalvějová</string>
+    <string name="color_basil">Bazalková</string>
+    <string name="color_peacock">Pávová</string>
+    <string name="color_blueberry">Borůvková</string>
+    <string name="color_lavender">Levandulová</string>
+    <string name="color_grape">Hroznová</string>
+    <string name="color_graphite">Grafitová</string>
+    <string name="color_teal">Petrolejová</string>
+</resources>

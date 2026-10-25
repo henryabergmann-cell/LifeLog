@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_calendar">Calendrier</string>
+    <string name="nav_journal">Journal</string>
+    <string name="nav_insights">Statistiques</string>
+    <string name="nav_settings">Paramètres</string>
+
+    <string name="action_save">Enregistrer</string>
+    <string name="action_cancel">Annuler</string>
+    <string name="action_ok">OK</string>
+    <string name="action_delete">Supprimer</string>
+    <string name="action_edit">Modifier</string>
+    <string name="action_duplicate">Dupliquer</string>
+    <string name="action_undo">Annuler</string>
+    <string name="action_back">Retour</string>
+    <string name="action_close">Fermer</string>
+    <string name="action_discard">Abandonner</string>
+    <string name="action_keep_editing">Continuer</string>
+    <string name="state_selected">Sélectionné</string>
+
+    <string name="calendar_today">Aujourd’hui</string>
+    <string name="calendar_search">Rechercher</string>
+    <string name="calendar_new_event">Nouveau rendez-vous</string>
+    <string name="calendar_change_view">Changer de vue, vue actuelle : %1$s</string>
+    <string name="calendar_view_month">Mois</string>
+    <string name="calendar_view_week">Semaine</string>
+    <string name="calendar_view_day">Jour</string>
+    <string name="calendar_view_agenda">Agenda</string>
+    <string name="calendar_previous_month">Mois précédent</string>
+    <string name="calendar_next_month">Mois suivant</string>
+    <string name="calendar_previous_week">Semaine précédente</string>
+    <string name="calendar_next_week">Semaine suivante</string>
+    <string name="calendar_previous_day">Jour précédent</string>
+    <string name="calendar_next_day">Jour suivant</string>
+    <string name="calendar_more_count">+%1$d</string>
+    <string name="calendar_day_no_appointments">%1$s, aucun rendez-vous</string>
+    <plurals name="calendar_day_appointments">
+        <item quantity="one">%1$s, %2$d rendez-vous</item>
+        <item quantity="many">%1$s, %2$d rendez-vous</item>
+        <item quantity="other">%1$s, %2$d rendez-vous</item>
+    </plurals>
+    <string name="calendar_today_prefix">Aujourd’hui, %1$s</string>
+    <string name="calendar_open_day">Ouvrir le jour</string>
+    <string name="calendar_all_day">Toute la journée</string>
+    <string name="agenda_show_earlier">Afficher plus tôt</string>
+    <string name="agenda_show_later">Afficher plus tard</string>
+    <string name="agenda_empty">Aucun rendez-vous sur cette période.</string>
+
+    <string name="event_not_found">Ce rendez-vous n’existe plus.</string>
+    <string name="event_deleted">« %1$s » supprimé</string>
+    <string name="event_location">Lieu</string>
+    <string name="event_notes">Notes</string>
+    <string name="event_category">Catégorie</string>
+    <string name="event_reminder">Rappel</string>
+    <string name="event_no_category">Aucune catégorie</string>
+    <string name="event_time_zone">Fuseau horaire : %1$s</string>
+
+    <string name="editor_title_edit">Modifier le rendez-vous</string>
+    <string name="editor_field_title">Titre</string>
+    <string name="editor_error_title">Saisissez un titre</string>
+    <string name="editor_error_end">La fin doit être après le début</string>
+    <string name="editor_starts">Début</string>
+    <string name="editor_ends">Fin</string>
+    <string name="editor_start_date">Date de début : %1$s</string>
+    <string name="editor_start_time">Heure de début : %1$s</string>
+    <string name="editor_end_date">Date de fin : %1$s</string>
+    <string name="editor_end_time">Heure de fin : %1$s</string>
+    <string name="editor_manage_categories">Gérer les catégories</string>
+    <string name="editor_more_reminders">+%1$d de plus</string>
+    <string name="editor_discard_title">Abandonner les modifications ?</string>
+    <string name="editor_discard_message">Vos modifications de ce rendez-vous seront perdues.</string>
+
+    <string name="reminder_none">Aucun rappel</string>
+    <string name="reminder_at_start">Au début</string>
+    <string name="reminder_on_the_day">Le jour même</string>
+    <plurals name="reminder_minutes_before">
+        <item quantity="one">%d minute avant</item>
+        <item quantity="many">%d minutes avant</item>
+        <item quantity="other">%d minutes avant</item>
+    </plurals>
+    <plurals name="reminder_hours_before">
+        <item quantity="one">%d heure avant</item>
+        <item quantity="many">%d heures avant</item>
+        <item quantity="other">%d heures avant</item>
+    </plurals>
+    <plurals name="reminder_days_before">
+        <item quantity="one">%d jour avant</item>
+        <item quantity="many">%d jours avant</item>
+        <item quantity="other">%d jours avant</item>
+    </plurals>
+
+    <string name="search_hint">Rechercher des rendez-vous</string>
+    <string name="search_prompt">Recherchez par titre, lieu ou notes.</string>
+    <string name="search_no_results">Aucun rendez-vous trouvé pour « %1$s ».</string>
+    <string name="search_clear">Effacer la recherche</string>
+
+    <string name="categories_title">Catégories</string>
+    <string name="categories_add">Ajouter une catégorie</string>
+    <string name="categories_edit">Modifier la catégorie</string>
+    <string name="categories_edit_named">Modifier %1$s</string>
+    <string name="categories_delete_named">Supprimer %1$s</string>
+    <string name="categories_name">Nom</string>
+    <string name="categories_error_name">Saisissez un nom</string>
+    <string name="categories_color">Couleur</string>
+    <string name="categories_empty">Aucune catégorie pour l’instant. Les catégories donnent une couleur à vos rendez-vous.</string>
+    <string name="categories_free_limit">Version gratuite : %1$d catégories utilisées sur %2$d. Premium permet un nombre illimité de catégories.</string>
+    <string name="categories_limit_reached">La version gratuite comprend jusqu’à %1$d catégories. Premium supprime cette limite.</string>
+    <string name="categories_delete_title">Supprimer « %1$s » ?</string>
+    <string name="categories_delete_message">Les rendez-vous de cette catégorie sont conservés mais perdent leur catégorie.</string>
+
+    <string name="settings_categories_summary">Noms et couleurs de vos rendez-vous</string>
+    <string name="settings_premium_summary">Journal, statistiques, widgets et plus</string>
+    <string name="settings_premium_active">Actif</string>
+    <string name="settings_language">Langue</string>
+    <string name="settings_language_system">Langue du système</string>
+
+    <string name="premium_title">Life Log Premium</string>
+    <string name="premium_headline">Tirez le meilleur de Life Log</string>
+    <string name="premium_subtitle">Tenez un journal, découvrez où passe votre temps et faites de Life Log votre app.</string>
+    <string name="premium_active_headline">Premium est actif</string>
+    <string name="premium_active_subtitle">Merci de soutenir Life Log. Tout ce qui suit est débloqué.</string>
+    <string name="premium_plans_pending">Des formules mensuelle et annuelle, avec 7 jours d’essai gratuit, seront bientôt disponibles ici.</string>
+    <string name="premium_choose_plan">Choisir une formule</string>
+    <string name="premium_unlock">Débloquer avec Premium</string>
+    <string name="premium_see_all">Tout ce que comprend Premium</string>
+    <string name="premium_example">Exemple</string>
+    <string name="premium_learn_more">En savoir plus</string>
+    <string name="premium_banner">Journal, statistiques et plus avec Premium</string>
+    <string name="premium_banner_dismiss">Masquer l’info Premium</string>
+    <string name="premium_benefit_journal">Journal</string>
+    <string name="premium_benefit_journal_desc">Une note et une humeur chaque jour, avec la chronologie de vos journées.</string>
+    <string name="premium_benefit_insights">Statistiques</string>
+    <string name="premium_benefit_insights_desc">Voyez à quel point vous êtes occupé, vos jours les plus chargés et où passe votre temps.</string>
+    <string name="premium_benefit_categories">Catégories illimitées</string>
+    <string name="premium_benefit_categories_desc">Autant de catégories que vous voulez, dans toutes les couleurs.</string>
+    <string name="premium_benefit_reminders">Rappels multiples</string>
+    <string name="premium_benefit_reminders_desc">Jusqu’à 5 rappels par rendez-vous.</string>
+    <string name="premium_benefit_widgets">Widgets d’écran d’accueil</string>
+    <string name="premium_benefit_widgets_desc">L’agenda du jour et le mois en un coup d’œil.</string>
+    <string name="premium_benefit_sync">Synchronisation du calendrier</string>
+    <string name="premium_benefit_sync_desc">Affichez vos autres calendriers dans Life Log et copiez-y vos rendez-vous.</string>
+    <string name="premium_benefit_backup">Sauvegarde et restauration</string>
+    <string name="premium_benefit_backup_desc">Enregistrez tout dans un fichier que vous contrôlez et restaurez-le à tout moment.</string>
+    <string name="premium_benefit_no_ads">Aucune incitation à passer à Premium</string>
+    <string name="premium_benefit_no_ads_desc">Une app calme, sans rappels pour passer à Premium.</string>
+
+    <string name="journal_teaser_title">Vos journées, avec vos mots</string>
+    <string name="journal_teaser_description">Écrivez une courte note et choisissez une humeur pour chaque jour. Votre chronologie montre comment se sont vraiment passées vos semaines.</string>
+    <string name="journal_teaser_preview_description">Exemple de journal avec des notes et des humeurs sur trois jours</string>
+    <string name="journal_timeline">Chronologie</string>
+    <string name="journal_timeline_empty">Vos entrées de journal apparaîtront ici.</string>
+    <string name="journal_mood_question">Comment s’est passée votre journée ?</string>
+    <string name="journal_note">Note</string>
+    <string name="journal_note_hint">Que s’est-il passé aujourd’hui ?</string>
+    <string name="journal_saving">Enregistrement…</string>
+    <string name="journal_saved">Enregistré</string>
+    <string name="journal_read_only">Sans Premium, votre journal est en lecture seule. Vos entrées sont conservées et restent visibles.</string>
+    <string name="journal_sample_1">Longue promenade au bord du lac, puis dîner avec Anna.</string>
+    <string name="journal_sample_2">Beaucoup de travail, mais la présentation s’est bien passée.</string>
+    <string name="journal_sample_3">Journée calme. Livre terminé.</string>
+    <string name="mood_awful">Horrible</string>
+    <string name="mood_bad">Mauvaise</string>
+    <string name="mood_okay">Correcte</string>
+    <string name="mood_good">Bonne</string>
+    <string name="mood_great">Excellente</string>
+
+    <string name="insights_teaser_title">Voyez où passe votre temps</string>
+    <string name="insights_teaser_description">Des graphiques de vos rendez-vous par semaine et par mois, vos jours les plus chargés et la répartition de vos catégories.</string>
+    <string name="insights_teaser_preview_description">Exemple de graphique des rendez-vous par jour de la semaine ; le jeudi est le plus chargé</string>
+    <string name="insights_range_4_weeks">4 semaines</string>
+    <string name="insights_range_12_weeks">12 semaines</string>
+    <string name="insights_range_12_months">12 mois</string>
+    <string name="insights_appointments">Rendez-vous</string>
+    <string name="insights_hours">Heures</string>
+    <string name="insights_per_week">Par semaine</string>
+    <string name="insights_per_week_chart">Rendez-vous par semaine</string>
+    <string name="insights_per_month_chart">Rendez-vous par mois</string>
+    <string name="insights_chart_week_item">semaine du %1$s : %2$d</string>
+    <string name="insights_chart_month_item">%1$s : %2$d</string>
+    <string name="insights_weekdays">Jours les plus chargés de la semaine</string>
+    <string name="insights_busiest_weekday">Votre jour le plus chargé est le %1$s.</string>
+    <plurals name="insights_busiest_date">
+        <item quantity="one">Jour le plus chargé : %1$s avec %2$d rendez-vous</item>
+        <item quantity="many">Jour le plus chargé : %1$s avec %2$d rendez-vous</item>
+        <item quantity="other">Jour le plus chargé : %1$s avec %2$d rendez-vous</item>
+    </plurals>
+    <string name="insights_busiest_hour">La plupart des rendez-vous commencent entre %1$s et %2$s.</string>
+    <string name="insights_categories">Catégories</string>
+    <string name="insights_empty">Aucun rendez-vous sur cette période pour l’instant. Les statistiques se remplissent au fil de l’utilisation.</string>
+
+    <string name="color_tomato">Tomate</string>
+    <string name="color_flamingo">Flamant</string>
+    <string name="color_tangerine">Mandarine</string>
+    <string name="color_banana">Banane</string>
+    <string name="color_sage">Sauge</string>
+    <string name="color_basil">Basilic</string>
+    <string name="color_peacock">Paon</string>
+    <string name="color_blueberry">Myrtille</string>
+    <string name="color_lavender">Lavande</string>
+    <string name="color_grape">Raisin</string>
+    <string name="color_graphite">Graphite</string>
+    <string name="color_teal">Sarcelle</string>
+</resources>

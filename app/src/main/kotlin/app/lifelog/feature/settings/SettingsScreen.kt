@@ -15,6 +15,11 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
+import app.lifelog.designsystem.component.SingleChoiceDialog
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
@@ -78,8 +83,36 @@ fun SettingsScreen(
                 supportingContent = { Text(stringResource(R.string.settings_categories_summary)) },
                 modifier = Modifier.clickable(role = Role.Button, onClick = onOpenCategories),
             )
+            LanguageItem()
             // Debug builds: "simulate Premium" switch. Release builds: nothing.
             DeveloperOptionsSection()
         }
+    }
+}
+
+@Composable
+private fun LanguageItem() {
+    var showDialog by rememberSaveable { mutableStateOf(false) }
+    val current = remember { AppLanguages.current() }
+    val systemLabel = stringResource(R.string.settings_language_system)
+    ListItem(
+        leadingContent = { Icon(LifeLogIcons.Language, contentDescription = null) },
+        headlineContent = { Text(stringResource(R.string.settings_language)) },
+        supportingContent = { Text(current?.let(AppLanguages::displayName) ?: systemLabel) },
+        modifier = Modifier.clickable(role = Role.Button) { showDialog = true },
+    )
+    if (showDialog) {
+        SingleChoiceDialog(
+            title = stringResource(R.string.settings_language),
+            options = listOf<String?>(null) + AppLanguages.supported,
+            selected = current,
+            label = { tag -> tag?.let(AppLanguages::displayName) ?: systemLabel },
+            onSelect = { tag ->
+                showDialog = false
+                // Recreates the activity in the new language.
+                if (tag != current) AppLanguages.set(tag)
+            },
+            onDismiss = { showDialog = false },
+        )
     }
 }

@@ -11,7 +11,8 @@ A calendar and appointment app for Android, built with Kotlin and Jetpack Compos
 - Create, edit, duplicate and delete appointments (with undo)
 - All-day appointments, locations, notes, a reminder, and up to 3 color categories
 - Fast search across titles, locations and notes
-- English and German, light and dark theme, Material You colors
+- 18 languages, with an in-app language picker: English, German, French, Spanish, Italian, Portuguese, Dutch, Polish, Czech, Swedish, Danish, Norwegian, Finnish, Japanese, Korean, Chinese (Simplified), Indonesian and Hindi
+- Light and dark theme, Material You colors
 
 **Premium** (in progress)
 - Journal: a daily note and mood, with a timeline

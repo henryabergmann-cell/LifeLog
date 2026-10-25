@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_calendar">캘린더</string>
+    <string name="nav_journal">일기</string>
+    <string name="nav_insights">통계</string>
+    <string name="nav_settings">설정</string>
+
+    <string name="action_save">저장</string>
+    <string name="action_cancel">취소</string>
+    <string name="action_ok">확인</string>
+    <string name="action_delete">삭제</string>
+    <string name="action_edit">수정</string>
+    <string name="action_duplicate">복제</string>
+    <string name="action_undo">실행취소</string>
+    <string name="action_back">뒤로</string>
+    <string name="action_close">닫기</string>
+    <string name="action_discard">버리기</string>
+    <string name="action_keep_editing">계속 수정</string>
+    <string name="state_selected">선택됨</string>
+
+    <string name="calendar_today">오늘</string>
+    <string name="calendar_search">검색</string>
+    <string name="calendar_new_event">새 일정</string>
+    <string name="calendar_change_view">보기 변경, 현재 보기: %1$s</string>
+    <string name="calendar_view_month">월</string>
+    <string name="calendar_view_week">주</string>
+    <string name="calendar_view_day">일</string>
+    <string name="calendar_view_agenda">목록</string>
+    <string name="calendar_previous_month">이전 달</string>
+    <string name="calendar_next_month">다음 달</string>
+    <string name="calendar_previous_week">이전 주</string>
+    <string name="calendar_next_week">다음 주</string>
+    <string name="calendar_previous_day">이전 날</string>
+    <string name="calendar_next_day">다음 날</string>
+    <string name="calendar_more_count">+%1$d</string>
+    <string name="calendar_day_no_appointments">%1$s, 일정 없음</string>
+    <plurals name="calendar_day_appointments">
+        <item quantity="other">%1$s, 일정 %2$d개</item>
+    </plurals>
+    <string name="calendar_today_prefix">오늘, %1$s</string>
+    <string name="calendar_open_day">날짜 열기</string>
+    <string name="calendar_all_day">종일</string>
+    <string name="agenda_show_earlier">이전 일정 보기</string>
+    <string name="agenda_show_later">이후 일정 보기</string>
+    <string name="agenda_empty">이 기간에는 일정이 없습니다.</string>
+
+    <string name="event_not_found">이 일정은 더 이상 존재하지 않습니다.</string>
+    <string name="event_deleted">“%1$s” 삭제됨</string>
+    <string name="event_location">위치</string>
+    <string name="event_notes">메모</string>
+    <string name="event_category">카테고리</string>
+    <string name="event_reminder">알림</string>
+    <string name="event_no_category">카테고리 없음</string>
+    <string name="event_time_zone">시간대: %1$s</string>
+
+    <string name="editor_title_edit">일정 수정</string>
+    <string name="editor_field_title">제목</string>
+    <string name="editor_error_title">제목을 입력하세요</string>
+    <string name="editor_error_end">종료는 시작 이후여야 합니다</string>
+    <string name="editor_starts">시작</string>
+    <string name="editor_ends">종료</string>
+    <string name="editor_start_date">시작 날짜: %1$s</string>
+    <string name="editor_start_time">시작 시간: %1$s</string>
+    <string name="editor_end_date">종료 날짜: %1$s</string>
+    <string name="editor_end_time">종료 시간: %1$s</string>
+    <string name="editor_manage_categories">카테고리 관리</string>
+    <string name="editor_more_reminders">+%1$d개 더</string>
+    <string name="editor_discard_title">변경사항을 버릴까요?</string>
+    <string name="editor_discard_message">이 일정의 변경사항이 사라집니다.</string>
+
+    <string name="reminder_none">알림 없음</string>
+    <string name="reminder_at_start">시작 시</string>
+    <string name="reminder_on_the_day">당일</string>
+    <plurals name="reminder_minutes_before">
+        <item quantity="other">%d분 전</item>
+    </plurals>
+    <plurals name="reminder_hours_before">
+        <item quantity="other">%d시간 전</item>
+    </plurals>
+    <plurals name="reminder_days_before">
+        <item quantity="other">%d일 전</item>
+    </plurals>
+
+    <string name="search_hint">일정 검색</string>
+    <string name="search_prompt">제목, 위치 또는 메모로 검색하세요.</string>
+    <string name="search_no_results">“%1$s”에 대한 일정이 없습니다.</string>
+    <string name="search_clear">검색어 지우기</string>
+
+    <string name="categories_title">카테고리</string>
+    <string name="categories_add">카테고리 추가</string>
+    <string name="categories_edit">카테고리 수정</string>
+    <string name="categories_edit_named">%1$s 수정</string>
+    <string name="categories_delete_named">%1$s 삭제</string>
+    <string name="categories_name">이름</string>
+    <string name="categories_error_name">이름을 입력하세요</string>
+    <string name="categories_color">색상</string>
+    <string name="categories_empty">아직 카테고리가 없습니다. 카테고리로 일정에 색을 입힐 수 있습니다.</string>
+    <string name="categories_free_limit">무료 버전: 카테고리 %2$d개 중 %1$d개 사용 중. Premium은 카테고리가 무제한입니다.</string>
+    <string name="categories_limit_reached">무료 버전은 카테고리를 최대 %1$d개까지 만들 수 있습니다. Premium은 이 제한이 없습니다.</string>
+    <string name="categories_delete_title">“%1$s” 카테고리를 삭제할까요?</string>
+    <string name="categories_delete_message">이 카테고리의 일정은 유지되지만 카테고리는 해제됩니다.</string>
+
+    <string name="settings_categories_summary">일정의 이름과 색상</string>
+    <string name="settings_premium_summary">일기, 통계, 위젯 등</string>
+    <string name="settings_premium_active">사용 중</string>
+    <string name="settings_language">언어</string>
+    <string name="settings_language_system">시스템 언어</string>
+
+    <string name="premium_title">Life Log Premium</string>
+    <string name="premium_headline">Life Log를 더 알차게</string>
+    <string name="premium_subtitle">일기를 쓰고, 시간이 어디에 쓰이는지 확인하고, Life Log를 나만의 앱으로 만드세요.</string>
+    <string name="premium_active_headline">Premium이 활성화되었습니다</string>
+    <string name="premium_active_subtitle">Life Log를 응원해 주셔서 감사합니다. 아래 기능을 모두 이용할 수 있습니다.</string>
+    <string name="premium_plans_pending">7일 무료 체험이 포함된 월간·연간 요금제를 곧 이곳에서 이용할 수 있습니다.</string>
+    <string name="premium_choose_plan">요금제 선택</string>
+    <string name="premium_unlock">Premium으로 잠금 해제</string>
+    <string name="premium_see_all">Premium에 포함된 모든 기능</string>
+    <string name="premium_example">예시</string>
+    <string name="premium_learn_more">자세히 알아보기</string>
+    <string name="premium_banner">Premium으로 일기, 통계 등을 이용하세요</string>
+    <string name="premium_banner_dismiss">Premium 안내 닫기</string>
+    <string name="premium_benefit_journal">일기</string>
+    <string name="premium_benefit_journal_desc">매일 메모와 기분을 기록하고 타임라인으로 돌아보세요.</string>
+    <string name="premium_benefit_insights">통계</string>
+    <string name="premium_benefit_insights_desc">얼마나 바쁜지, 가장 바쁜 날, 시간이 어디에 쓰이는지 확인하세요.</string>
+    <string name="premium_benefit_categories">무제한 카테고리</string>
+    <string name="premium_benefit_categories_desc">원하는 색상으로 카테고리를 마음껏 만드세요.</string>
+    <string name="premium_benefit_reminders">여러 개의 알림</string>
+    <string name="premium_benefit_reminders_desc">일정마다 알림을 최대 5개까지.</string>
+    <string name="premium_benefit_widgets">홈 화면 위젯</string>
+    <string name="premium_benefit_widgets_desc">오늘의 일정과 한 달을 한눈에.</string>
+    <string name="premium_benefit_sync">기기 캘린더 동기화</string>
+    <string name="premium_benefit_sync_desc">다른 캘린더를 Life Log에서 보고 일정을 복사하세요.</string>
+    <string name="premium_benefit_backup">백업 및 복원</string>
+    <string name="premium_benefit_backup_desc">모든 데이터를 직접 관리하는 파일로 저장하고 언제든 복원하세요.</string>
+    <string name="premium_benefit_no_ads">업그레이드 안내 없음</string>
+    <string name="premium_benefit_no_ads_desc">업그레이드를 권하지 않는 차분한 앱.</string>
+
+    <string name="journal_teaser_title">나의 하루, 나의 말로</string>
+    <string name="journal_teaser_description">매일 짧은 메모를 쓰고 기분을 고르세요. 타임라인에서 한 주가 실제로 어땠는지 볼 수 있습니다.</string>
+    <string name="journal_teaser_preview_description">3일간의 메모와 기분이 담긴 일기 예시</string>
+    <string name="journal_timeline">타임라인</string>
+    <string name="journal_timeline_empty">일기 기록이 여기에 표시됩니다.</string>
+    <string name="journal_mood_question">오늘 하루는 어땠나요?</string>
+    <string name="journal_note">메모</string>
+    <string name="journal_note_hint">오늘 무슨 일이 있었나요?</string>
+    <string name="journal_saving">저장 중…</string>
+    <string name="journal_saved">저장됨</string>
+    <string name="journal_read_only">Premium이 없으면 일기는 읽기 전용입니다. 기록은 안전하게 보관되며 계속 볼 수 있습니다.</string>
+    <string name="journal_sample_1">호숫가를 오래 걷고 안나와 저녁을 먹었다.</string>
+    <string name="journal_sample_2">일이 바빴지만 발표는 잘 끝났다.</string>
+    <string name="journal_sample_3">조용한 하루. 책을 다 읽었다.</string>
+    <string name="mood_awful">최악</string>
+    <string name="mood_bad">나쁨</string>
+    <string name="mood_okay">보통</string>
+    <string name="mood_good">좋음</string>
+    <string name="mood_great">최고</string>
+
+    <string name="insights_teaser_title">시간이 어디에 쓰이는지 확인하세요</string>
+    <string name="insights_teaser_description">주별·월별 일정, 가장 바쁜 날, 카테고리별 분포를 차트로 보여 줍니다.</string>
+    <string name="insights_teaser_preview_description">요일별 일정 차트 예시. 목요일이 가장 바쁨</string>
+    <string name="insights_range_4_weeks">4주</string>
+    <string name="insights_range_12_weeks">12주</string>
+    <string name="insights_range_12_months">12개월</string>
+    <string name="insights_appointments">일정</string>
+    <string name="insights_hours">시간</string>
+    <string name="insights_per_week">주당</string>
+    <string name="insights_per_week_chart">주별 일정</string>
+    <string name="insights_per_month_chart">월별 일정</string>
+    <string name="insights_chart_week_item">%1$s 주: %2$d</string>
+    <string name="insights_chart_month_item">%1$s: %2$d</string>
+    <string name="insights_weekdays">가장 바쁜 요일</string>
+    <string name="insights_busiest_weekday">가장 바쁜 요일은 %1$s입니다.</string>
+    <plurals name="insights_busiest_date">
+        <item quantity="other">가장 바쁜 날: %1$s, 일정 %2$d개</item>
+    </plurals>
+    <string name="insights_busiest_hour">대부분의 일정은 %1$s에서 %2$s 사이에 시작합니다.</string>
+    <string name="insights_categories">카테고리</string>
+    <string name="insights_empty">이 기간에는 아직 일정이 없습니다. 캘린더를 사용할수록 통계가 채워집니다.</string>
+
+    <string name="color_tomato">토마토</string>
+    <string name="color_flamingo">플라밍고</string>
+    <string name="color_tangerine">귤</string>
+    <string name="color_banana">바나나</string>
+    <string name="color_sage">세이지</string>
+    <string name="color_basil">바질</string>
+    <string name="color_peacock">공작</string>
+    <string name="color_blueberry">블루베리</string>
+    <string name="color_lavender">라벤더</string>
+    <string name="color_grape">포도</string>
+    <string name="color_graphite">그래파이트</string>
+    <string name="color_teal">청록</string>
+</resources>

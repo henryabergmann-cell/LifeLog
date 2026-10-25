@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_calendar">Kalender</string>
+    <string name="nav_journal">Dagbok</string>
+    <string name="nav_insights">Insikter</string>
+    <string name="nav_settings">Inställningar</string>
+
+    <string name="action_save">Spara</string>
+    <string name="action_cancel">Avbryt</string>
+    <string name="action_ok">OK</string>
+    <string name="action_delete">Radera</string>
+    <string name="action_edit">Redigera</string>
+    <string name="action_duplicate">Duplicera</string>
+    <string name="action_undo">Ångra</string>
+    <string name="action_back">Tillbaka</string>
+    <string name="action_close">Stäng</string>
+    <string name="action_discard">Släng</string>
+    <string name="action_keep_editing">Fortsätt redigera</string>
+    <string name="state_selected">Vald</string>
+
+    <string name="calendar_today">Idag</string>
+    <string name="calendar_search">Sök</string>
+    <string name="calendar_new_event">Ny händelse</string>
+    <string name="calendar_change_view">Byt vy, aktuell vy: %1$s</string>
+    <string name="calendar_view_month">Månad</string>
+    <string name="calendar_view_week">Vecka</string>
+    <string name="calendar_view_day">Dag</string>
+    <string name="calendar_view_agenda">Lista</string>
+    <string name="calendar_previous_month">Föregående månad</string>
+    <string name="calendar_next_month">Nästa månad</string>
+    <string name="calendar_previous_week">Föregående vecka</string>
+    <string name="calendar_next_week">Nästa vecka</string>
+    <string name="calendar_previous_day">Föregående dag</string>
+    <string name="calendar_next_day">Nästa dag</string>
+    <string name="calendar_more_count">+%1$d</string>
+    <string name="calendar_day_no_appointments">%1$s, inga händelser</string>
+    <plurals name="calendar_day_appointments">
+        <item quantity="one">%1$s, %2$d händelse</item>
+        <item quantity="other">%1$s, %2$d händelser</item>
+    </plurals>
+    <string name="calendar_today_prefix">Idag, %1$s</string>
+    <string name="calendar_open_day">Öppna dag</string>
+    <string name="calendar_all_day">Heldag</string>
+    <string name="agenda_show_earlier">Visa tidigare</string>
+    <string name="agenda_show_later">Visa senare</string>
+    <string name="agenda_empty">Inga händelser under den här perioden.</string>
+
+    <string name="event_not_found">Den här händelsen finns inte längre.</string>
+    <string name="event_deleted">”%1$s” raderad</string>
+    <string name="event_location">Plats</string>
+    <string name="event_notes">Anteckningar</string>
+    <string name="event_category">Kategori</string>
+    <string name="event_reminder">Påminnelse</string>
+    <string name="event_no_category">Ingen kategori</string>
+    <string name="event_time_zone">Tidszon: %1$s</string>
+
+    <string name="editor_title_edit">Redigera händelse</string>
+    <string name="editor_field_title">Titel</string>
+    <string name="editor_error_title">Ange en titel</string>
+    <string name="editor_error_end">Slutet måste vara efter starten</string>
+    <string name="editor_starts">Börjar</string>
+    <string name="editor_ends">Slutar</string>
+    <string name="editor_start_date">Startdatum: %1$s</string>
+    <string name="editor_start_time">Starttid: %1$s</string>
+    <string name="editor_end_date">Slutdatum: %1$s</string>
+    <string name="editor_end_time">Sluttid: %1$s</string>
+    <string name="editor_manage_categories">Hantera kategorier</string>
+    <string name="editor_more_reminders">+%1$d till</string>
+    <string name="editor_discard_title">Slänga ändringarna?</string>
+    <string name="editor_discard_message">Dina ändringar i den här händelsen går förlorade.</string>
+
+    <string name="reminder_none">Ingen påminnelse</string>
+    <string name="reminder_at_start">Vid start</string>
+    <string name="reminder_on_the_day">Samma dag</string>
+    <plurals name="reminder_minutes_before">
+        <item quantity="one">%d minut innan</item>
+        <item quantity="other">%d minuter innan</item>
+    </plurals>
+    <plurals name="reminder_hours_before">
+        <item quantity="one">%d timme innan</item>
+        <item quantity="other">%d timmar innan</item>
+    </plurals>
+    <plurals name="reminder_days_before">
+        <item quantity="one">%d dag innan</item>
+        <item quantity="other">%d dagar innan</item>
+    </plurals>
+
+    <string name="search_hint">Sök händelser</string>
+    <string name="search_prompt">Sök på titel, plats eller anteckningar.</string>
+    <string name="search_no_results">Inga händelser hittades för ”%1$s”.</string>
+    <string name="search_clear">Rensa sökning</string>
+
+    <string name="categories_title">Kategorier</string>
+    <string name="categories_add">Lägg till kategori</string>
+    <string name="categories_edit">Redigera kategori</string>
+    <string name="categories_edit_named">Redigera %1$s</string>
+    <string name="categories_delete_named">Radera %1$s</string>
+    <string name="categories_name">Namn</string>
+    <string name="categories_error_name">Ange ett namn</string>
+    <string name="categories_color">Färg</string>
+    <string name="categories_empty">Inga kategorier ännu. Kategorier ger dina händelser en färg.</string>
+    <string name="categories_free_limit">Gratisversion: %1$d av %2$d kategorier används. Med Premium får du obegränsat antal kategorier.</string>
+    <string name="categories_limit_reached">Gratisversionen har upp till %1$d kategorier. Premium tar bort gränsen.</string>
+    <string name="categories_delete_title">Radera ”%1$s”?</string>
+    <string name="categories_delete_message">Händelser i den här kategorin finns kvar men förlorar kategorin.</string>
+
+    <string name="settings_categories_summary">Namn och färger för dina händelser</string>
+    <string name="settings_premium_summary">Dagbok, insikter, widgetar och mer</string>
+    <string name="settings_premium_active">Aktiv</string>
+    <string name="settings_language">Språk</string>
+    <string name="settings_language_system">Systemspråk</string>
+
+    <string name="premium_title">Life Log Premium</string>
+    <string name="premium_headline">Få ut mer av Life Log</string>
+    <string name="premium_subtitle">För dagbok, se vart tiden tar vägen och gör Life Log till din egen.</string>
+    <string name="premium_active_headline">Premium är aktivt</string>
+    <string name="premium_active_subtitle">Tack för att du stöder Life Log. Allt nedan är upplåst.</string>
+    <string name="premium_plans_pending">Månads- och årsabonnemang med 7 dagars gratis provperiod kommer snart här.</string>
+    <string name="premium_choose_plan">Välj abonnemang</string>
+    <string name="premium_unlock">Lås upp med Premium</string>
+    <string name="premium_see_all">Allt som ingår i Premium</string>
+    <string name="premium_example">Exempel</string>
+    <string name="premium_learn_more">Läs mer</string>
+    <string name="premium_banner">Dagbok, insikter och mer med Premium</string>
+    <string name="premium_banner_dismiss">Dölj Premium-tips</string>
+    <string name="premium_benefit_journal">Dagbok</string>
+    <string name="premium_benefit_journal_desc">En anteckning och ett humör varje dag, med en tidslinje över dina dagar.</string>
+    <string name="premium_benefit_insights">Insikter</string>
+    <string name="premium_benefit_insights_desc">Se hur upptagen du är, dina mest fullbokade dagar och vart tiden tar vägen.</string>
+    <string name="premium_benefit_categories">Obegränsat med kategorier</string>
+    <string name="premium_benefit_categories_desc">Så många kategorier du vill, i valfri färg.</string>
+    <string name="premium_benefit_reminders">Flera påminnelser</string>
+    <string name="premium_benefit_reminders_desc">Upp till 5 påminnelser per händelse.</string>
+    <string name="premium_benefit_widgets">Widgetar för startskärmen</string>
+    <string name="premium_benefit_widgets_desc">Dagens händelser och månaden i en överblick.</string>
+    <string name="premium_benefit_sync">Synk med enhetens kalender</string>
+    <string name="premium_benefit_sync_desc">Se dina andra kalendrar i Life Log och kopiera händelser till dem.</string>
+    <string name="premium_benefit_backup">Säkerhetskopiering och återställning</string>
+    <string name="premium_benefit_backup_desc">Spara allt i en fil som du styr över och återställ när du vill.</string>
+    <string name="premium_benefit_no_ads">Inga uppgraderingstips</string>
+    <string name="premium_benefit_no_ads_desc">En lugn app utan påminnelser om att uppgradera.</string>
+
+    <string name="journal_teaser_title">Dina dagar, med dina ord</string>
+    <string name="journal_teaser_description">Skriv en kort anteckning och välj ett humör för varje dag. Tidslinjen visar hur dina veckor verkligen var.</string>
+    <string name="journal_teaser_preview_description">Exempeldagbok med anteckningar och humör från tre dagar</string>
+    <string name="journal_timeline">Tidslinje</string>
+    <string name="journal_timeline_empty">Dina dagboksanteckningar visas här.</string>
+    <string name="journal_mood_question">Hur var din dag?</string>
+    <string name="journal_note">Anteckning</string>
+    <string name="journal_note_hint">Vad hände idag?</string>
+    <string name="journal_saving">Sparar…</string>
+    <string name="journal_saved">Sparad</string>
+    <string name="journal_read_only">Utan Premium är dagboken skrivskyddad. Dina anteckningar finns kvar och syns fortfarande.</string>
+    <string name="journal_sample_1">Lång promenad vid sjön, sedan middag med Anna.</string>
+    <string name="journal_sample_2">Mycket på jobbet, men presentationen gick bra.</string>
+    <string name="journal_sample_3">Lugn dag. Läste ut min bok.</string>
+    <string name="mood_awful">Hemsk</string>
+    <string name="mood_bad">Dålig</string>
+    <string name="mood_okay">Okej</string>
+    <string name="mood_good">Bra</string>
+    <string name="mood_great">Toppen</string>
+
+    <string name="insights_teaser_title">Se vart tiden tar vägen</string>
+    <string name="insights_teaser_description">Diagram över dina händelser per vecka och månad, dina mest fullbokade dagar och hur kategorierna fördelas.</string>
+    <string name="insights_teaser_preview_description">Exempeldiagram över händelser per veckodag; torsdag är mest fullbokad</string>
+    <string name="insights_range_4_weeks">4 veckor</string>
+    <string name="insights_range_12_weeks">12 veckor</string>
+    <string name="insights_range_12_months">12 månader</string>
+    <string name="insights_appointments">Händelser</string>
+    <string name="insights_hours">Timmar</string>
+    <string name="insights_per_week">Per vecka</string>
+    <string name="insights_per_week_chart">Händelser per vecka</string>
+    <string name="insights_per_month_chart">Händelser per månad</string>
+    <string name="insights_chart_week_item">vecka från %1$s: %2$d</string>
+    <string name="insights_chart_month_item">%1$s: %2$d</string>
+    <string name="insights_weekdays">Mest fullbokade veckodagar</string>
+    <string name="insights_busiest_weekday">Din mest fullbokade veckodag är %1$s.</string>
+    <plurals name="insights_busiest_date">
+        <item quantity="one">Mest fullbokad dag: %1$s med %2$d händelse</item>
+        <item quantity="other">Mest fullbokad dag: %1$s med %2$d händelser</item>
+    </plurals>
+    <string name="insights_busiest_hour">De flesta händelser börjar mellan %1$s och %2$s.</string>
+    <string name="insights_categories">Kategorier</string>
+    <string name="insights_empty">Inga händelser under den här perioden ännu. Insikterna fylls på när du använder kalendern.</string>
+
+    <string name="color_tomato">Tomat</string>
+    <string name="color_flamingo">Flamingo</string>
+    <string name="color_tangerine">Mandarin</string>
+    <string name="color_banana">Banan</string>
+    <string name="color_sage">Salvia</string>
+    <string name="color_basil">Basilika</string>
+    <string name="color_peacock">Påfågel</string>
+    <string name="color_blueberry">Blåbär</string>
+    <string name="color_lavender">Lavendel</string>
+    <string name="color_grape">Druva</string>
+    <string name="color_graphite">Grafit</string>
+    <string name="color_teal">Petrol</string>
+</resources>

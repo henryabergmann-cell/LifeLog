@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_calendar">Kalendarz</string>
+    <string name="nav_journal">Dziennik</string>
+    <string name="nav_insights">Statystyki</string>
+    <string name="nav_settings">Ustawienia</string>
+
+    <string name="action_save">Zapisz</string>
+    <string name="action_cancel">Anuluj</string>
+    <string name="action_ok">OK</string>
+    <string name="action_delete">Usuń</string>
+    <string name="action_edit">Edytuj</string>
+    <string name="action_duplicate">Duplikuj</string>
+    <string name="action_undo">Cofnij</string>
+    <string name="action_back">Wstecz</string>
+    <string name="action_close">Zamknij</string>
+    <string name="action_discard">Odrzuć</string>
+    <string name="action_keep_editing">Edytuj dalej</string>
+    <string name="state_selected">Zaznaczono</string>
+
+    <string name="calendar_today">Dzisiaj</string>
+    <string name="calendar_search">Szukaj</string>
+    <string name="calendar_new_event">Nowe spotkanie</string>
+    <string name="calendar_change_view">Zmień widok, bieżący widok: %1$s</string>
+    <string name="calendar_view_month">Miesiąc</string>
+    <string name="calendar_view_week">Tydzień</string>
+    <string name="calendar_view_day">Dzień</string>
+    <string name="calendar_view_agenda">Lista</string>
+    <string name="calendar_previous_month">Poprzedni miesiąc</string>
+    <string name="calendar_next_month">Następny miesiąc</string>
+    <string name="calendar_previous_week">Poprzedni tydzień</string>
+    <string name="calendar_next_week">Następny tydzień</string>
+    <string name="calendar_previous_day">Poprzedni dzień</string>
+    <string name="calendar_next_day">Następny dzień</string>
+    <string name="calendar_more_count">+%1$d</string>
+    <string name="calendar_day_no_appointments">%1$s, brak spotkań</string>
+    <plurals name="calendar_day_appointments">
+        <item quantity="one">%1$s, %2$d spotkanie</item>
+        <item quantity="few">%1$s, %2$d spotkania</item>
+        <item quantity="many">%1$s, %2$d spotkań</item>
+        <item quantity="other">%1$s, %2$d spotkania</item>
+    </plurals>
+    <string name="calendar_today_prefix">Dzisiaj, %1$s</string>
+    <string name="calendar_open_day">Otwórz dzień</string>
+    <string name="calendar_all_day">Cały dzień</string>
+    <string name="agenda_show_earlier">Pokaż wcześniejsze</string>
+    <string name="agenda_show_later">Pokaż późniejsze</string>
+    <string name="agenda_empty">Brak spotkań w tym okresie.</string>
+
+    <string name="event_not_found">To spotkanie już nie istnieje.</string>
+    <string name="event_deleted">Usunięto „%1$s”</string>
+    <string name="event_location">Miejsce</string>
+    <string name="event_notes">Notatki</string>
+    <string name="event_category">Kategoria</string>
+    <string name="event_reminder">Przypomnienie</string>
+    <string name="event_no_category">Brak kategorii</string>
+    <string name="event_time_zone">Strefa czasowa: %1$s</string>
+
+    <string name="editor_title_edit">Edytuj spotkanie</string>
+    <string name="editor_field_title">Tytuł</string>
+    <string name="editor_error_title">Wpisz tytuł</string>
+    <string name="editor_error_end">Koniec musi być po początku</string>
+    <string name="editor_starts">Początek</string>
+    <string name="editor_ends">Koniec</string>
+    <string name="editor_start_date">Data rozpoczęcia: %1$s</string>
+    <string name="editor_start_time">Godzina rozpoczęcia: %1$s</string>
+    <string name="editor_end_date">Data zakończenia: %1$s</string>
+    <string name="editor_end_time">Godzina zakończenia: %1$s</string>
+    <string name="editor_manage_categories">Zarządzaj kategoriami</string>
+    <string name="editor_more_reminders">+%1$d więcej</string>
+    <string name="editor_discard_title">Odrzucić zmiany?</string>
+    <string name="editor_discard_message">Zmiany w tym spotkaniu zostaną utracone.</string>
+
+    <string name="reminder_none">Bez przypomnienia</string>
+    <string name="reminder_at_start">Na początku</string>
+    <string name="reminder_on_the_day">W dniu wydarzenia</string>
+    <plurals name="reminder_minutes_before">
+        <item quantity="one">%d minutę wcześniej</item>
+        <item quantity="few">%d minuty wcześniej</item>
+        <item quantity="many">%d minut wcześniej</item>
+        <item quantity="other">%d minuty wcześniej</item>
+    </plurals>
+    <plurals name="reminder_hours_before">
+        <item quantity="one">%d godzinę wcześniej</item>
+        <item quantity="few">%d godziny wcześniej</item>
+        <item quantity="many">%d godzin wcześniej</item>
+        <item quantity="other">%d godziny wcześniej</item>
+    </plurals>
+    <plurals name="reminder_days_before">
+        <item quantity="one">%d dzień wcześniej</item>
+        <item quantity="few">%d dni wcześniej</item>
+        <item quantity="many">%d dni wcześniej</item>
+        <item quantity="other">%d dnia wcześniej</item>
+    </plurals>
+
+    <string name="search_hint">Szukaj spotkań</string>
+    <string name="search_prompt">Szukaj według tytułu, miejsca lub notatek.</string>
+    <string name="search_no_results">Nie znaleziono spotkań dla „%1$s”.</string>
+    <string name="search_clear">Wyczyść wyszukiwanie</string>
+
+    <string name="categories_title">Kategorie</string>
+    <string name="categories_add">Dodaj kategorię</string>
+    <string name="categories_edit">Edytuj kategorię</string>
+    <string name="categories_edit_named">Edytuj: %1$s</string>
+    <string name="categories_delete_named">Usuń: %1$s</string>
+    <string name="categories_name">Nazwa</string>
+    <string name="categories_error_name">Wpisz nazwę</string>
+    <string name="categories_color">Kolor</string>
+    <string name="categories_empty">Nie ma jeszcze kategorii. Kategorie nadają kolor Twoim spotkaniom.</string>
+    <string name="categories_free_limit">Wersja bezpłatna: wykorzystano %1$d z %2$d kategorii. Premium pozwala na nieograniczoną liczbę kategorii.</string>
+    <string name="categories_limit_reached">Wersja bezpłatna obejmuje do %1$d kategorii. Premium znosi ten limit.</string>
+    <string name="categories_delete_title">Usunąć „%1$s”?</string>
+    <string name="categories_delete_message">Spotkania z tej kategorii zostaną zachowane, ale stracą kategorię.</string>
+
+    <string name="settings_categories_summary">Nazwy i kolory Twoich spotkań</string>
+    <string name="settings_premium_summary">Dziennik, statystyki, widżety i więcej</string>
+    <string name="settings_premium_active">Aktywne</string>
+    <string name="settings_language">Język</string>
+    <string name="settings_language_system">Język systemu</string>
+
+    <string name="premium_title">Life Log Premium</string>
+    <string name="premium_headline">Wykorzystaj Life Log w pełni</string>
+    <string name="premium_subtitle">Prowadź dziennik, sprawdzaj, na co idzie Twój czas, i dopasuj Life Log do siebie.</string>
+    <string name="premium_active_headline">Premium jest aktywne</string>
+    <string name="premium_active_subtitle">Dziękujemy za wspieranie Life Log. Wszystko poniżej jest odblokowane.</string>
+    <string name="premium_plans_pending">Wkrótce pojawią się tu plany miesięczny i roczny z 7-dniowym bezpłatnym okresem próbnym.</string>
+    <string name="premium_choose_plan">Wybierz plan</string>
+    <string name="premium_unlock">Odblokuj z Premium</string>
+    <string name="premium_see_all">Wszystko, co obejmuje Premium</string>
+    <string name="premium_example">Przykład</string>
+    <string name="premium_learn_more">Dowiedz się więcej</string>
+    <string name="premium_banner">Dziennik, statystyki i więcej z Premium</string>
+    <string name="premium_banner_dismiss">Ukryj wskazówkę Premium</string>
+    <string name="premium_benefit_journal">Dziennik</string>
+    <string name="premium_benefit_journal_desc">Codzienna notatka i nastrój z osią czasu Twoich dni.</string>
+    <string name="premium_benefit_insights">Statystyki</string>
+    <string name="premium_benefit_insights_desc">Zobacz, jak bardzo jesteś zajęty, które dni są najbardziej zajęte i na co idzie Twój czas.</string>
+    <string name="premium_benefit_categories">Nieograniczone kategorie</string>
+    <string name="premium_benefit_categories_desc">Tyle kategorii, ile chcesz, w dowolnym kolorze.</string>
+    <string name="premium_benefit_reminders">Wiele przypomnień</string>
+    <string name="premium_benefit_reminders_desc">Do 5 przypomnień dla każdego spotkania.</string>
+    <string name="premium_benefit_widgets">Widżety na ekranie głównym</string>
+    <string name="premium_benefit_widgets_desc">Dzisiejsze spotkania i cały miesiąc w jednym spojrzeniu.</string>
+    <string name="premium_benefit_sync">Synchronizacja z kalendarzem urządzenia</string>
+    <string name="premium_benefit_sync_desc">Wyświetlaj inne kalendarze w Life Log i kopiuj do nich spotkania.</string>
+    <string name="premium_benefit_backup">Kopia zapasowa i przywracanie</string>
+    <string name="premium_benefit_backup_desc">Zapisz wszystko w pliku, nad którym masz kontrolę, i przywróć w dowolnym momencie.</string>
+    <string name="premium_benefit_no_ads">Bez zachęt do ulepszenia</string>
+    <string name="premium_benefit_no_ads_desc">Spokojna aplikacja bez przypomnień o przejściu na Premium.</string>
+
+    <string name="journal_teaser_title">Twoje dni, Twoimi słowami</string>
+    <string name="journal_teaser_description">Zapisz krótką notatkę i wybierz nastrój na każdy dzień. Oś czasu pokazuje, jak naprawdę minęły Twoje tygodnie.</string>
+    <string name="journal_teaser_preview_description">Przykładowy dziennik z notatkami i nastrojami z trzech dni</string>
+    <string name="journal_timeline">Oś czasu</string>
+    <string name="journal_timeline_empty">Tutaj pojawią się wpisy z dziennika.</string>
+    <string name="journal_mood_question">Jak minął Ci dzień?</string>
+    <string name="journal_note">Notatka</string>
+    <string name="journal_note_hint">Co się dziś wydarzyło?</string>
+    <string name="journal_saving">Zapisywanie…</string>
+    <string name="journal_saved">Zapisano</string>
+    <string name="journal_read_only">Bez Premium dziennik jest tylko do odczytu. Twoje wpisy są bezpieczne i nadal widoczne.</string>
+    <string name="journal_sample_1">Długi spacer nad jeziorem, potem kolacja z Anną.</string>
+    <string name="journal_sample_2">Dużo pracy, ale prezentacja poszła dobrze.</string>
+    <string name="journal_sample_3">Spokojny dzień. Książka przeczytana.</string>
+    <string name="mood_awful">Okropny</string>
+    <string name="mood_bad">Zły</string>
+    <string name="mood_okay">W porządku</string>
+    <string name="mood_good">Dobry</string>
+    <string name="mood_great">Świetny</string>
+
+    <string name="insights_teaser_title">Zobacz, na co idzie Twój czas</string>
+    <string name="insights_teaser_description">Wykresy spotkań w tygodniach i miesiącach, najbardziej zajęte dni i podział na kategorie.</string>
+    <string name="insights_teaser_preview_description">Przykładowy wykres spotkań według dnia tygodnia; najwięcej jest w czwartek</string>
+    <string name="insights_range_4_weeks">4 tygodnie</string>
+    <string name="insights_range_12_weeks">12 tygodni</string>
+    <string name="insights_range_12_months">12 miesięcy</string>
+    <string name="insights_appointments">Spotkania</string>
+    <string name="insights_hours">Godziny</string>
+    <string name="insights_per_week">Na tydzień</string>
+    <string name="insights_per_week_chart">Spotkania w tygodniu</string>
+    <string name="insights_per_month_chart">Spotkania w miesiącu</string>
+    <string name="insights_chart_week_item">tydzień od %1$s: %2$d</string>
+    <string name="insights_chart_month_item">%1$s: %2$d</string>
+    <string name="insights_weekdays">Najbardziej zajęte dni tygodnia</string>
+    <string name="insights_busiest_weekday">Twój najbardziej zajęty dzień tygodnia to %1$s.</string>
+    <plurals name="insights_busiest_date">
+        <item quantity="one">Najbardziej zajęty dzień: %1$s, %2$d spotkanie</item>
+        <item quantity="few">Najbardziej zajęty dzień: %1$s, %2$d spotkania</item>
+        <item quantity="many">Najbardziej zajęty dzień: %1$s, %2$d spotkań</item>
+        <item quantity="other">Najbardziej zajęty dzień: %1$s, %2$d spotkania</item>
+    </plurals>
+    <string name="insights_busiest_hour">Większość spotkań zaczyna się między %1$s a %2$s.</string>
+    <string name="insights_categories">Kategorie</string>
+    <string name="insights_empty">Brak spotkań w tym okresie. Statystyki uzupełniają się w miarę korzystania z kalendarza.</string>
+
+    <string name="color_tomato">Pomidorowy</string>
+    <string name="color_flamingo">Flamingowy</string>
+    <string name="color_tangerine">Mandarynkowy</string>
+    <string name="color_banana">Bananowy</string>
+    <string name="color_sage">Szałwiowy</string>
+    <string name="color_basil">Bazyliowy</string>
+    <string name="color_peacock">Pawi</string>
+    <string name="color_blueberry">Jagodowy</string>
+    <string name="color_lavender">Lawendowy</string>
+    <string name="color_grape">Winogronowy</string>
+    <string name="color_graphite">Grafitowy</string>
+    <string name="color_teal">Morski</string>
+</resources>

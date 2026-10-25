@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Indonesian. Android resource folders use the legacy code "in" for Indonesian. -->
+<resources>
+    <string name="nav_calendar">Kalender</string>
+    <string name="nav_journal">Jurnal</string>
+    <string name="nav_insights">Statistik</string>
+    <string name="nav_settings">Setelan</string>
+
+    <string name="action_save">Simpan</string>
+    <string name="action_cancel">Batal</string>
+    <string name="action_ok">OK</string>
+    <string name="action_delete">Hapus</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_duplicate">Duplikat</string>
+    <string name="action_undo">Urungkan</string>
+    <string name="action_back">Kembali</string>
+    <string name="action_close">Tutup</string>
+    <string name="action_discard">Buang</string>
+    <string name="action_keep_editing">Lanjutkan mengedit</string>
+    <string name="state_selected">Dipilih</string>
+
+    <string name="calendar_today">Hari ini</string>
+    <string name="calendar_search">Cari</string>
+    <string name="calendar_new_event">Janji temu baru</string>
+    <string name="calendar_change_view">Ubah tampilan, tampilan saat ini: %1$s</string>
+    <string name="calendar_view_month">Bulan</string>
+    <string name="calendar_view_week">Minggu</string>
+    <string name="calendar_view_day">Hari</string>
+    <string name="calendar_view_agenda">Daftar</string>
+    <string name="calendar_previous_month">Bulan sebelumnya</string>
+    <string name="calendar_next_month">Bulan berikutnya</string>
+    <string name="calendar_previous_week">Minggu sebelumnya</string>
+    <string name="calendar_next_week">Minggu berikutnya</string>
+    <string name="calendar_previous_day">Hari sebelumnya</string>
+    <string name="calendar_next_day">Hari berikutnya</string>
+    <string name="calendar_more_count">+%1$d</string>
+    <string name="calendar_day_no_appointments">%1$s, tidak ada janji temu</string>
+    <plurals name="calendar_day_appointments">
+        <item quantity="other">%1$s, %2$d janji temu</item>
+    </plurals>
+    <string name="calendar_today_prefix">Hari ini, %1$s</string>
+    <string name="calendar_open_day">Buka hari</string>
+    <string name="calendar_all_day">Sepanjang hari</string>
+    <string name="agenda_show_earlier">Tampilkan sebelumnya</string>
+    <string name="agenda_show_later">Tampilkan berikutnya</string>
+    <string name="agenda_empty">Tidak ada janji temu pada periode ini.</string>
+
+    <string name="event_not_found">Janji temu ini sudah tidak ada.</string>
+    <string name="event_deleted">“%1$s” dihapus</string>
+    <string name="event_location">Lokasi</string>
+    <string name="event_notes">Catatan</string>
+    <string name="event_category">Kategori</string>
+    <string name="event_reminder">Pengingat</string>
+    <string name="event_no_category">Tanpa kategori</string>
+    <string name="event_time_zone">Zona waktu: %1$s</string>
+
+    <string name="editor_title_edit">Edit janji temu</string>
+    <string name="editor_field_title">Judul</string>
+    <string name="editor_error_title">Masukkan judul</string>
+    <string name="editor_error_end">Waktu selesai harus setelah waktu mulai</string>
+    <string name="editor_starts">Mulai</string>
+    <string name="editor_ends">Selesai</string>
+    <string name="editor_start_date">Tanggal mulai: %1$s</string>
+    <string name="editor_start_time">Waktu mulai: %1$s</string>
+    <string name="editor_end_date">Tanggal selesai: %1$s</string>
+    <string name="editor_end_time">Waktu selesai: %1$s</string>
+    <string name="editor_manage_categories">Kelola kategori</string>
+    <string name="editor_more_reminders">+%1$d lainnya</string>
+    <string name="editor_discard_title">Buang perubahan?</string>
+    <string name="editor_discard_message">Perubahan pada janji temu ini akan hilang.</string>
+
+    <string name="reminder_none">Tanpa pengingat</string>
+    <string name="reminder_at_start">Saat mulai</string>
+    <string name="reminder_on_the_day">Pada hari itu</string>
+    <plurals name="reminder_minutes_before">
+        <item quantity="other">%d menit sebelumnya</item>
+    </plurals>
+    <plurals name="reminder_hours_before">
+        <item quantity="other">%d jam sebelumnya</item>
+    </plurals>
+    <plurals name="reminder_days_before">
+        <item quantity="other">%d hari sebelumnya</item>
+    </plurals>
+
+    <string name="search_hint">Cari janji temu</string>
+    <string name="search_prompt">Cari berdasarkan judul, lokasi, atau catatan.</string>
+    <string name="search_no_results">Tidak ada janji temu untuk “%1$s”.</string>
+    <string name="search_clear">Hapus pencarian</string>
+
+    <string name="categories_title">Kategori</string>
+    <string name="categories_add">Tambah kategori</string>
+    <string name="categories_edit">Edit kategori</string>
+    <string name="categories_edit_named">Edit %1$s</string>
+    <string name="categories_delete_named">Hapus %1$s</string>
+    <string name="categories_name">Nama</string>
+    <string name="categories_error_name">Masukkan nama</string>
+    <string name="categories_color">Warna</string>
+    <string name="categories_empty">Belum ada kategori. Kategori memberi warna pada janji temu Anda.</string>
+    <string name="categories_free_limit">Versi gratis: %1$d dari %2$d kategori digunakan. Premium memungkinkan kategori tanpa batas.</string>
+    <string name="categories_limit_reached">Versi gratis mencakup hingga %1$d kategori. Premium menghapus batas ini.</string>
+    <string name="categories_delete_title">Hapus “%1$s”?</string>
+    <string name="categories_delete_message">Janji temu dalam kategori ini tetap ada, tetapi kehilangan kategorinya.</string>
+
+    <string name="settings_categories_summary">Nama dan warna untuk janji temu Anda</string>
+    <string name="settings_premium_summary">Jurnal, statistik, widget, dan lainnya</string>
+    <string name="settings_premium_active">Aktif</string>
+    <string name="settings_language">Bahasa</string>
+    <string name="settings_language_system">Bahasa sistem</string>
+
+    <string name="premium_title">Life Log Premium</string>
+    <string name="premium_headline">Manfaatkan Life Log lebih jauh</string>
+    <string name="premium_subtitle">Tulis jurnal, pahami ke mana waktu Anda pergi, dan jadikan Life Log milik Anda.</string>
+    <string name="premium_active_headline">Premium aktif</string>
+    <string name="premium_active_subtitle">Terima kasih telah mendukung Life Log. Semua fitur di bawah sudah terbuka.</string>
+    <string name="premium_plans_pending">Paket bulanan dan tahunan, termasuk uji coba gratis 7 hari, akan segera tersedia di sini.</string>
+    <string name="premium_choose_plan">Pilih paket</string>
+    <string name="premium_unlock">Buka dengan Premium</string>
+    <string name="premium_see_all">Semua yang termasuk dalam Premium</string>
+    <string name="premium_example">Contoh</string>
+    <string name="premium_learn_more">Pelajari lebih lanjut</string>
+    <string name="premium_banner">Jurnal, statistik, dan lainnya dengan Premium</string>
+    <string name="premium_banner_dismiss">Tutup info Premium</string>
+    <string name="premium_benefit_journal">Jurnal</string>
+    <string name="premium_benefit_journal_desc">Catatan dan suasana hati setiap hari, dengan linimasa hari-hari Anda.</string>
+    <string name="premium_benefit_insights">Statistik</string>
+    <string name="premium_benefit_insights_desc">Lihat seberapa sibuk Anda, hari tersibuk, dan ke mana waktu Anda pergi.</string>
+    <string name="premium_benefit_categories">Kategori tanpa batas</string>
+    <string name="premium_benefit_categories_desc">Kategori sebanyak yang Anda mau, dengan warna apa pun.</string>
+    <string name="premium_benefit_reminders">Beberapa pengingat</string>
+    <string name="premium_benefit_reminders_desc">Hingga 5 pengingat untuk setiap janji temu.</string>
+    <string name="premium_benefit_widgets">Widget layar utama</string>
+    <string name="premium_benefit_widgets_desc">Agenda hari ini dan sebulan penuh dalam sekilas.</string>
+    <string name="premium_benefit_sync">Sinkronisasi kalender perangkat</string>
+    <string name="premium_benefit_sync_desc">Lihat kalender lain di Life Log dan salin janji temu ke sana.</string>
+    <string name="premium_benefit_backup">Pencadangan dan pemulihan</string>
+    <string name="premium_benefit_backup_desc">Simpan semuanya ke file yang Anda kendalikan dan pulihkan kapan saja.</string>
+    <string name="premium_benefit_no_ads">Tanpa ajakan upgrade</string>
+    <string name="premium_benefit_no_ads_desc">Aplikasi yang tenang tanpa pengingat untuk upgrade.</string>
+
+    <string name="journal_teaser_title">Hari-hari Anda, dengan kata-kata Anda</string>
+    <string name="journal_teaser_description">Tulis catatan singkat dan pilih suasana hati untuk setiap hari. Linimasa menunjukkan bagaimana minggu-minggu Anda sebenarnya berjalan.</string>
+    <string name="journal_teaser_preview_description">Contoh jurnal dengan catatan dan suasana hati selama tiga hari</string>
+    <string name="journal_timeline">Linimasa</string>
+    <string name="journal_timeline_empty">Entri jurnal Anda akan muncul di sini.</string>
+    <string name="journal_mood_question">Bagaimana hari Anda?</string>
+    <string name="journal_note">Catatan</string>
+    <string name="journal_note_hint">Apa yang terjadi hari ini?</string>
+    <string name="journal_saving">Menyimpan…</string>
+    <string name="journal_saved">Tersimpan</string>
+    <string name="journal_read_only">Tanpa Premium, jurnal Anda hanya bisa dibaca. Entri Anda tetap aman dan terlihat.</string>
+    <string name="journal_sample_1">Jalan-jalan panjang di tepi danau, lalu makan malam bersama Anna.</string>
+    <string name="journal_sample_2">Sibuk di kantor, tapi presentasinya lancar.</string>
+    <string name="journal_sample_3">Hari yang tenang. Selesai membaca buku.</string>
+    <string name="mood_awful">Buruk sekali</string>
+    <string name="mood_bad">Buruk</string>
+    <string name="mood_okay">Biasa</string>
+    <string name="mood_good">Baik</string>
+    <string name="mood_great">Luar biasa</string>
+
+    <string name="insights_teaser_title">Lihat ke mana waktu Anda pergi</string>
+    <string name="insights_teaser_description">Grafik janji temu per minggu dan per bulan, hari tersibuk, dan pembagian kategori.</string>
+    <string name="insights_teaser_preview_description">Contoh grafik janji temu per hari; Kamis paling sibuk</string>
+    <string name="insights_range_4_weeks">4 minggu</string>
+    <string name="insights_range_12_weeks">12 minggu</string>
+    <string name="insights_range_12_months">12 bulan</string>
+    <string name="insights_appointments">Janji temu</string>
+    <string name="insights_hours">Jam</string>
+    <string name="insights_per_week">Per minggu</string>
+    <string name="insights_per_week_chart">Janji temu per minggu</string>
+    <string name="insights_per_month_chart">Janji temu per bulan</string>
+    <string name="insights_chart_week_item">minggu %1$s: %2$d</string>
+    <string name="insights_chart_month_item">%1$s: %2$d</string>
+    <string name="insights_weekdays">Hari tersibuk dalam seminggu</string>
+    <string name="insights_busiest_weekday">Hari tersibuk Anda adalah %1$s.</string>
+    <plurals name="insights_busiest_date">
+        <item quantity="other">Hari tersibuk: %1$s dengan %2$d janji temu</item>
+    </plurals>
+    <string name="insights_busiest_hour">Sebagian besar janji temu dimulai antara %1$s dan %2$s.</string>
+    <string name="insights_categories">Kategori</string>
+    <string name="insights_empty">Belum ada janji temu pada periode ini. Statistik akan terisi seiring Anda menggunakan kalender.</string>
+
+    <string name="color_tomato">Tomat</string>
+    <string name="color_flamingo">Flamingo</string>
+    <string name="color_tangerine">Jeruk keprok</string>
+    <string name="color_banana">Pisang</string>
+    <string name="color_sage">Sage</string>
+    <string name="color_basil">Kemangi</string>
+    <string name="color_peacock">Merak</string>
+    <string name="color_blueberry">Bluberi</string>
+    <string name="color_lavender">Lavender</string>
+    <string name="color_grape">Anggur</string>
+    <string name="color_graphite">Grafit</string>
+    <string name="color_teal">Hijau toska</string>
+</resources>

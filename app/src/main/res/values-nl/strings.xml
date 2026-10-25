@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_calendar">Agenda</string>
+    <string name="nav_journal">Dagboek</string>
+    <string name="nav_insights">Inzichten</string>
+    <string name="nav_settings">Instellingen</string>
+
+    <string name="action_save">Opslaan</string>
+    <string name="action_cancel">Annuleren</string>
+    <string name="action_ok">OK</string>
+    <string name="action_delete">Verwijderen</string>
+    <string name="action_edit">Bewerken</string>
+    <string name="action_duplicate">Dupliceren</string>
+    <string name="action_undo">Ongedaan maken</string>
+    <string name="action_back">Terug</string>
+    <string name="action_close">Sluiten</string>
+    <string name="action_discard">Verwerpen</string>
+    <string name="action_keep_editing">Verder bewerken</string>
+    <string name="state_selected">Geselecteerd</string>
+
+    <string name="calendar_today">Vandaag</string>
+    <string name="calendar_search">Zoeken</string>
+    <string name="calendar_new_event">Nieuwe afspraak</string>
+    <string name="calendar_change_view">Weergave wijzigen, huidige weergave: %1$s</string>
+    <string name="calendar_view_month">Maand</string>
+    <string name="calendar_view_week">Week</string>
+    <string name="calendar_view_day">Dag</string>
+    <string name="calendar_view_agenda">Lijst</string>
+    <string name="calendar_previous_month">Vorige maand</string>
+    <string name="calendar_next_month">Volgende maand</string>
+    <string name="calendar_previous_week">Vorige week</string>
+    <string name="calendar_next_week">Volgende week</string>
+    <string name="calendar_previous_day">Vorige dag</string>
+    <string name="calendar_next_day">Volgende dag</string>
+    <string name="calendar_more_count">+%1$d</string>
+    <string name="calendar_day_no_appointments">%1$s, geen afspraken</string>
+    <plurals name="calendar_day_appointments">
+        <item quantity="one">%1$s, %2$d afspraak</item>
+        <item quantity="other">%1$s, %2$d afspraken</item>
+    </plurals>
+    <string name="calendar_today_prefix">Vandaag, %1$s</string>
+    <string name="calendar_open_day">Dag openen</string>
+    <string name="calendar_all_day">Hele dag</string>
+    <string name="agenda_show_earlier">Eerdere tonen</string>
+    <string name="agenda_show_later">Latere tonen</string>
+    <string name="agenda_empty">Geen afspraken in deze periode.</string>
+
+    <string name="event_not_found">Deze afspraak bestaat niet meer.</string>
+    <string name="event_deleted">‘%1$s’ verwijderd</string>
+    <string name="event_location">Locatie</string>
+    <string name="event_notes">Notities</string>
+    <string name="event_category">Categorie</string>
+    <string name="event_reminder">Herinnering</string>
+    <string name="event_no_category">Geen categorie</string>
+    <string name="event_time_zone">Tijdzone: %1$s</string>
+
+    <string name="editor_title_edit">Afspraak bewerken</string>
+    <string name="editor_field_title">Titel</string>
+    <string name="editor_error_title">Voer een titel in</string>
+    <string name="editor_error_end">Het einde moet na het begin liggen</string>
+    <string name="editor_starts">Begint</string>
+    <string name="editor_ends">Eindigt</string>
+    <string name="editor_start_date">Begindatum: %1$s</string>
+    <string name="editor_start_time">Begintijd: %1$s</string>
+    <string name="editor_end_date">Einddatum: %1$s</string>
+    <string name="editor_end_time">Eindtijd: %1$s</string>
+    <string name="editor_manage_categories">Categorieën beheren</string>
+    <string name="editor_more_reminders">+%1$d meer</string>
+    <string name="editor_discard_title">Wijzigingen verwerpen?</string>
+    <string name="editor_discard_message">Je wijzigingen aan deze afspraak gaan verloren.</string>
+
+    <string name="reminder_none">Geen herinnering</string>
+    <string name="reminder_at_start">Bij aanvang</string>
+    <string name="reminder_on_the_day">Op de dag zelf</string>
+    <plurals name="reminder_minutes_before">
+        <item quantity="one">%d minuut van tevoren</item>
+        <item quantity="other">%d minuten van tevoren</item>
+    </plurals>
+    <plurals name="reminder_hours_before">
+        <item quantity="one">%d uur van tevoren</item>
+        <item quantity="other">%d uur van tevoren</item>
+    </plurals>
+    <plurals name="reminder_days_before">
+        <item quantity="one">%d dag van tevoren</item>
+        <item quantity="other">%d dagen van tevoren</item>
+    </plurals>
+
+    <string name="search_hint">Afspraken zoeken</string>
+    <string name="search_prompt">Zoek op titel, locatie of notities.</string>
+    <string name="search_no_results">Geen afspraken gevonden voor ‘%1$s’.</string>
+    <string name="search_clear">Zoekopdracht wissen</string>
+
+    <string name="categories_title">Categorieën</string>
+    <string name="categories_add">Categorie toevoegen</string>
+    <string name="categories_edit">Categorie bewerken</string>
+    <string name="categories_edit_named">%1$s bewerken</string>
+    <string name="categories_delete_named">%1$s verwijderen</string>
+    <string name="categories_name">Naam</string>
+    <string name="categories_error_name">Voer een naam in</string>
+    <string name="categories_color">Kleur</string>
+    <string name="categories_empty">Nog geen categorieën. Categorieën geven je afspraken een kleur.</string>
+    <string name="categories_free_limit">Gratis versie: %1$d van %2$d categorieën gebruikt. Met Premium heb je onbeperkt categorieën.</string>
+    <string name="categories_limit_reached">De gratis versie bevat maximaal %1$d categorieën. Premium heft deze limiet op.</string>
+    <string name="categories_delete_title">‘%1$s’ verwijderen?</string>
+    <string name="categories_delete_message">Afspraken in deze categorie blijven bestaan, maar verliezen de categorie.</string>
+
+    <string name="settings_categories_summary">Namen en kleuren voor je afspraken</string>
+    <string name="settings_premium_summary">Dagboek, inzichten, widgets en meer</string>
+    <string name="settings_premium_active">Actief</string>
+    <string name="settings_language">Taal</string>
+    <string name="settings_language_system">Systeemtaal</string>
+
+    <string name="premium_title">Life Log Premium</string>
+    <string name="premium_headline">Haal meer uit Life Log</string>
+    <string name="premium_subtitle">Houd een dagboek bij, ontdek waar je tijd blijft en maak Life Log helemaal van jou.</string>
+    <string name="premium_active_headline">Premium is actief</string>
+    <string name="premium_active_subtitle">Bedankt voor je steun aan Life Log. Alles hieronder is ontgrendeld.</string>
+    <string name="premium_plans_pending">Maand- en jaarabonnementen, inclusief 7 dagen gratis proberen, zijn hier binnenkort beschikbaar.</string>
+    <string name="premium_choose_plan">Kies een abonnement</string>
+    <string name="premium_unlock">Ontgrendelen met Premium</string>
+    <string name="premium_see_all">Alles wat Premium biedt</string>
+    <string name="premium_example">Voorbeeld</string>
+    <string name="premium_learn_more">Meer informatie</string>
+    <string name="premium_banner">Dagboek, inzichten en meer met Premium</string>
+    <string name="premium_banner_dismiss">Premium-tip verbergen</string>
+    <string name="premium_benefit_journal">Dagboek</string>
+    <string name="premium_benefit_journal_desc">Elke dag een notitie en stemming, met een tijdlijn van je dagen.</string>
+    <string name="premium_benefit_insights">Inzichten</string>
+    <string name="premium_benefit_insights_desc">Zie hoe druk je het hebt, je drukste dagen en waar je tijd blijft.</string>
+    <string name="premium_benefit_categories">Onbeperkt categorieën</string>
+    <string name="premium_benefit_categories_desc">Zoveel categorieën als je wilt, in elke kleur.</string>
+    <string name="premium_benefit_reminders">Meerdere herinneringen</string>
+    <string name="premium_benefit_reminders_desc">Tot 5 herinneringen per afspraak.</string>
+    <string name="premium_benefit_widgets">Widgets voor het startscherm</string>
+    <string name="premium_benefit_widgets_desc">De afspraken van vandaag en de maand in één oogopslag.</string>
+    <string name="premium_benefit_sync">Synchronisatie met apparaatagenda</string>
+    <string name="premium_benefit_sync_desc">Bekijk je andere agenda’s in Life Log en kopieer afspraken ernaar.</string>
+    <string name="premium_benefit_backup">Back-up en herstel</string>
+    <string name="premium_benefit_backup_desc">Bewaar alles in een bestand dat jij beheert en herstel het wanneer je wilt.</string>
+    <string name="premium_benefit_no_ads">Geen upgrade-tips</string>
+    <string name="premium_benefit_no_ads_desc">Een rustige app zonder herinneringen om te upgraden.</string>
+
+    <string name="journal_teaser_title">Je dagen, in je eigen woorden</string>
+    <string name="journal_teaser_description">Schrijf een korte notitie en kies een stemming voor elke dag. Je tijdlijn laat zien hoe je weken echt waren.</string>
+    <string name="journal_teaser_preview_description">Voorbeelddagboek met notities en stemmingen van drie dagen</string>
+    <string name="journal_timeline">Tijdlijn</string>
+    <string name="journal_timeline_empty">Je dagboeknotities verschijnen hier.</string>
+    <string name="journal_mood_question">Hoe was je dag?</string>
+    <string name="journal_note">Notitie</string>
+    <string name="journal_note_hint">Wat is er vandaag gebeurd?</string>
+    <string name="journal_saving">Opslaan…</string>
+    <string name="journal_saved">Opgeslagen</string>
+    <string name="journal_read_only">Zonder Premium is je dagboek alleen-lezen. Je notities blijven bewaard en zichtbaar.</string>
+    <string name="journal_sample_1">Lange wandeling langs het meer, daarna eten met Anna.</string>
+    <string name="journal_sample_2">Druk op het werk, maar de presentatie ging goed.</string>
+    <string name="journal_sample_3">Rustige dag. Mijn boek uitgelezen.</string>
+    <string name="mood_awful">Vreselijk</string>
+    <string name="mood_bad">Slecht</string>
+    <string name="mood_okay">Oké</string>
+    <string name="mood_good">Goed</string>
+    <string name="mood_great">Geweldig</string>
+
+    <string name="insights_teaser_title">Zie waar je tijd blijft</string>
+    <string name="insights_teaser_description">Grafieken van je afspraken per week en per maand, je drukste dagen en hoe je categorieën verdeeld zijn.</string>
+    <string name="insights_teaser_preview_description">Voorbeeldgrafiek van afspraken per weekdag; donderdag is het drukst</string>
+    <string name="insights_range_4_weeks">4 weken</string>
+    <string name="insights_range_12_weeks">12 weken</string>
+    <string name="insights_range_12_months">12 maanden</string>
+    <string name="insights_appointments">Afspraken</string>
+    <string name="insights_hours">Uren</string>
+    <string name="insights_per_week">Per week</string>
+    <string name="insights_per_week_chart">Afspraken per week</string>
+    <string name="insights_per_month_chart">Afspraken per maand</string>
+    <string name="insights_chart_week_item">week van %1$s: %2$d</string>
+    <string name="insights_chart_month_item">%1$s: %2$d</string>
+    <string name="insights_weekdays">Drukste dagen van de week</string>
+    <string name="insights_busiest_weekday">Je drukste weekdag is %1$s.</string>
+    <plurals name="insights_busiest_date">
+        <item quantity="one">Drukste dag: %1$s met %2$d afspraak</item>
+        <item quantity="other">Drukste dag: %1$s met %2$d afspraken</item>
+    </plurals>
+    <string name="insights_busiest_hour">De meeste afspraken beginnen tussen %1$s en %2$s.</string>
+    <string name="insights_categories">Categorieën</string>
+    <string name="insights_empty">Nog geen afspraken in deze periode. Inzichten vullen zich naarmate je je agenda gebruikt.</string>
+
+    <string name="color_tomato">Tomaat</string>
+    <string name="color_flamingo">Flamingo</string>
+    <string name="color_tangerine">Mandarijn</string>
+    <string name="color_banana">Banaan</string>
+    <string name="color_sage">Salie</string>
+    <string name="color_basil">Basilicum</string>
+    <string name="color_peacock">Pauw</string>
+    <string name="color_blueberry">Bosbes</string>
+    <string name="color_lavender">Lavendel</string>
+    <string name="color_grape">Druif</string>
+    <string name="color_graphite">Grafiet</string>
+    <string name="color_teal">Petrol</string>
+</resources>
