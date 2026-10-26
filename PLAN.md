@@ -15,7 +15,7 @@ Native Android calendar/appointment app with a free tier and a Premium subscript
 |---|------|---------|
 | B1 | Build toolchain | Portable install in your user folder, no admin rights: Microsoft OpenJDK 21 (`%USERPROFILE%\.jdks`), Android SDK (`%LOCALAPPDATA%\Android\Sdk`: platform 36, build-tools 36.1.0, platform-tools), MinGit (`%LOCALAPPDATA%\Programs\MinGit`). You accepted the Android SDK license. |
 | B2 | Gradle wrapper | Gradle 9.8.0. The distribution and wrapper-jar checksums were verified against `services.gradle.org`. |
-| B3 | Application ID | **Still open.** The placeholder `com.example.lifelog` is set once, in `gradle.properties` (`lifelog.applicationId`). Play rejects it, so it can't ship by accident. The code namespace is `app.lifelog` and doesn't depend on the store ID. |
+| B3 | Application ID | **Decided (2026-10-26):** `io.github.henryabergmann.lifelog`, set once in `gradle.properties` (`lifelog.applicationId`). It can't change after the first Play upload. The code namespace is `app.lifelog` and doesn't depend on the store ID. |
 | B4 | Project location | `%USERPROFILE%\AndroidStudioProjects\LifeLog` |
 
 **SDK levels (changed 2026-10-07):** `compileSdk 37` with `targetSdk 36` and `minSdk 26`. The current stable AndroidX releases require compileSdk 37. Runtime behaviour is still governed by targetSdk 36, as specified.
@@ -450,7 +450,8 @@ Every milestone ends with `./gradlew assembleDebug test assembleDebugAndroidTest
 - [ ] Compose UI tests: create an appointment end to end; paywall (plans shown, saving %, trial text, restore, error state)
 - [ ] Accessibility pass (semantics audit, 200 % font scale, touch targets, contrast) and a manual TalkBack checklist for you
 - [ ] Tablet and rotation pass
-- [ ] R8 release config, keep rules, `assembleRelease` succeeds, release APK checked for missing debug-only code
+- [ ] R8 release config, keep rules, `assembleRelease` succeeds
+- [x] Release build checked for debug-only code: `verifyReleaseHasNoDebugCode` runs before every release package and fails if developer options or fake Premium are in it (done early, 2026-10-26)
 - [ ] Merged-manifest permission review (`INTERNET` only via RevenueCat; no other network code)
 - [ ] `RELEASE.md`: signing and Play App Signing, subscription product, base plan and offer setup, RevenueCat ↔ Play connection (service account, RTDN), license testers and sandbox purchases, data-safety form (incl. RevenueCat), content rating, store listing (en/de), privacy policy, closed and open test tracks, pre-launch report, rollout
 

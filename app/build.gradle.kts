@@ -131,8 +131,26 @@ val validateReleaseConfig = tasks.register("validateReleaseConfig") {
     }
 }
 
+// Developer options and the fake-Premium switch live in the debug source set only. This guards
+// against them reaching the store build if that code is ever moved to main.
+val verifyReleaseHasNoDebugCode = tasks.register("verifyReleaseHasNoDebugCode") {
+    group = "verification"
+    description = "Fails release packaging when debug-only classes are in the release build."
+    val mapping = layout.buildDirectory.file("outputs/mapping/release/mapping.txt")
+    dependsOn("minifyReleaseWithR8")
+    inputs.file(mapping)
+    doLast {
+        val forbidden = listOf("DebugPremiumOverride", "DebugPremiumModule", "DeveloperOptionsViewModel")
+        val found = mapping.get().asFile.readLines()
+            .filter { line -> !line.startsWith(" ") && forbidden.any { line.contains(it) } }
+        if (found.isNotEmpty()) {
+            throw GradleException("Debug-only code in the release build:\n" + found.joinToString("\n"))
+        }
+    }
+}
+
 tasks.named { it in setOf("packageRelease", "packageReleaseBundle", "assembleRelease", "bundleRelease") }
-    .configureEach { dependsOn(validateReleaseConfig) }
+    .configureEach { dependsOn(validateReleaseConfig, verifyReleaseHasNoDebugCode) }
 
 dependencies {
     implementation(project(":domain"))
