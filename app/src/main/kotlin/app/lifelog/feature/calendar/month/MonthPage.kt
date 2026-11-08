@@ -1,8 +1,9 @@
 package app.lifelog.feature.calendar.month
 
+import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -20,6 +21,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
@@ -28,9 +33,11 @@ import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.onClick
 import androidx.compose.ui.semantics.role
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import app.lifelog.R
+import app.lifelog.designsystem.motion.pressScale
 import app.lifelog.designsystem.component.ColorDot
 import app.lifelog.designsystem.component.EventChip
 import app.lifelog.designsystem.component.eventColor
@@ -80,11 +87,15 @@ fun MonthPage(
                 )
             }
         }
+        // A hairline between weeks instead of a box around every day: the grid stays readable
+        // with far less ink.
+        val divider = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.6f)
         days.chunked(7).forEach { week ->
             Row(
                 Modifier
                     .weight(1f)
-                    .fillMaxWidth(),
+                    .fillMaxWidth()
+                    .drawBehind { drawLine(divider, Offset.Zero, Offset(size.width, 0f), strokeWidth = 1.dp.toPx()) },
             ) {
                 week.forEach { date ->
                     MonthCell(
@@ -127,16 +138,21 @@ private fun MonthCell(
     val description = if (isToday) stringResource(R.string.calendar_today_prefix, countText) else countText
     val openLabel = stringResource(R.string.calendar_open_day)
     val colors = MaterialTheme.colorScheme
+    val interaction = remember { MutableInteractionSource() }
 
     BoxWithConstraints(
         modifier
-            .border(0.5.dp, colors.outlineVariant)
-            .clickable(onClick = onClick)
+            .padding(1.dp)
+            .pressScale(interaction)
+            .clip(MaterialTheme.shapes.small)
+            .clickable(interactionSource = interaction, indication = LocalIndication.current, onClick = onClick)
             .clearAndSetSemantics {
                 contentDescription = description
                 role = Role.Button
                 onClick(label = openLabel) { onClick(); true }
             }
+            // Days from the neighbouring months recede, so the current month reads as one block.
+            .alpha(if (inMonth) 1f else 0.5f)
             .padding(2.dp),
     ) {
         val density = LocalDensity.current
@@ -157,10 +173,11 @@ private fun MonthCell(
                 Text(
                     text = date.dayOfMonth.toString(),
                     style = MaterialTheme.typography.labelMedium,
+                    fontWeight = if (isToday) FontWeight.Bold else FontWeight.Medium,
                     color = when {
                         isToday -> colors.onPrimary
                         inMonth -> colors.onSurface
-                        else -> colors.onSurfaceVariant.copy(alpha = 0.6f)
+                        else -> colors.onSurfaceVariant
                     },
                 )
             }

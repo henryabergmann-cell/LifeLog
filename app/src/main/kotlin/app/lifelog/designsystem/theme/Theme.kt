@@ -3,7 +3,6 @@ package app.lifelog.designsystem.theme
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Typography
 import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.runtime.Composable
@@ -24,10 +23,10 @@ fun LifeLogTheme(
         else -> LightColors
     }
 
-    // Default M3 type scale in sp, so it follows the user's font size setting.
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography(),
+        typography = LifeLogTypography,
+        shapes = LifeLogShapes,
         content = content,
     )
 }

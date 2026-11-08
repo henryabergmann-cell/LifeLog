@@ -1,8 +1,10 @@
 package app.lifelog.feature.calendar.week
 
+import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTapGestures
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -30,6 +32,7 @@ import androidx.compose.runtime.produceState
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.input.pointer.pointerInput
@@ -50,6 +53,7 @@ import app.lifelog.designsystem.component.contentColorOn
 import app.lifelog.designsystem.component.eventColor
 import app.lifelog.designsystem.component.occurrenceTimeText
 import app.lifelog.designsystem.format.DateTimeFormats
+import app.lifelog.designsystem.motion.pressScale
 import app.lifelog.domain.model.Category
 import app.lifelog.domain.model.Occurrence
 import app.lifelog.feature.calendar.layout.EventColumnLayout
@@ -295,7 +299,7 @@ private fun DayColumn(
     val placements = remember(segments) {
         EventColumnLayout.layout(segments.map { TimedItem(it.startMinute, it.endMinute) }, MIN_BLOCK_MINUTES)
     }
-    val lineColor = MaterialTheme.colorScheme.outlineVariant
+    val lineColor = MaterialTheme.colorScheme.outlineVariant.copy(alpha = 0.6f)
     val hourHeightPx = with(LocalDensity.current) { hourHeight.toPx() }
 
     BoxWithConstraints(
@@ -331,12 +335,21 @@ private fun DayColumn(
             )
         }
         if (nowMinute != null) {
+            val nowY = hourHeight * (nowMinute / 60f)
             Box(
                 Modifier
-                    .offset(y = hourHeight * (nowMinute / 60f))
+                    .offset(y = nowY)
                     .fillMaxWidth()
                     .height(2.dp)
                     .background(MaterialTheme.colorScheme.error)
+                    .clearAndSetSemantics {},
+            )
+            // A dot at the start marks the line as "now" rather than another grid line.
+            Box(
+                Modifier
+                    .offset(x = (-4).dp, y = nowY - 3.dp)
+                    .size(8.dp)
+                    .background(MaterialTheme.colorScheme.error, CircleShape)
                     .clearAndSetSemantics {},
             )
         }
@@ -354,10 +367,13 @@ private fun EventBlock(
     val time = occurrenceTimeText(occurrence, formats)
     val description = listOfNotNull(occurrence.event.title, time, occurrence.event.location).joinToString(", ")
     val textColor = contentColorOn(color)
+    val interaction = remember { MutableInteractionSource() }
     Column(
         modifier
-            .background(color, RoundedCornerShape(4.dp))
-            .clickable(onClick = onClick)
+            .pressScale(interaction)
+            .clip(RoundedCornerShape(6.dp))
+            .background(color)
+            .clickable(interactionSource = interaction, indication = LocalIndication.current, onClick = onClick)
             .clearAndSetSemantics {
                 contentDescription = description
                 role = Role.Button

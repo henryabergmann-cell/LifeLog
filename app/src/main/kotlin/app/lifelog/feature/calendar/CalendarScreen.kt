@@ -1,9 +1,24 @@
 package app.lifelog.feature.calendar
 
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.SizeTransform
+import androidx.compose.animation.expandVertically
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
+import androidx.compose.animation.shrinkVertically
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.animation.togetherWith
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.fillMaxWidth
+import app.lifelog.designsystem.motion.Motion
+import app.lifelog.designsystem.motion.pressScale
+import app.lifelog.domain.model.Occurrence
 import app.lifelog.feature.premium.UpgradeBanner
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -107,14 +122,7 @@ fun CalendarScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = {
-                    Text(
-                        text = ready?.let { title(it, formats) }.orEmpty(),
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis,
-                        modifier = Modifier.semantics { heading() },
-                    )
-                },
+                title = { CalendarTitle(ready, formats) },
                 actions = {
                     if (ready != null && ready.viewMode != CalendarViewMode.AGENDA) {
                         IconButton(onClick = onPrevious) {
@@ -136,7 +144,12 @@ fun CalendarScreen(
         },
         floatingActionButton = {
             if (ready != null) {
-                FloatingActionButton(onClick = { onCreateEvent(ready.selectedDate, null) }) {
+                val interaction = remember { MutableInteractionSource() }
+                FloatingActionButton(
+                    onClick = { onCreateEvent(ready.selectedDate, null) },
+                    interactionSource = interaction,
+                    modifier = Modifier.pressScale(interaction, pressedScale = 0.94f),
+                ) {
                     Icon(LifeLogIcons.Add, contentDescription = stringResource(R.string.calendar_new_event))
                 }
             }
@@ -148,7 +161,12 @@ fun CalendarScreen(
                 .fillMaxSize()
                 .padding(padding),
         ) {
-            if (ready?.showUpgradeBanner == true) {
+            // Dismissing folds the banner away rather than letting the calendar jump up.
+            AnimatedVisibility(
+                visible = ready?.showUpgradeBanner == true,
+                enter = fadeIn(Motion.enter(Motion.MEDIUM)) + expandVertically(Motion.move()),
+                exit = fadeOut(Motion.exit(Motion.SHORT)) + shrinkVertically(Motion.move()),
+            ) {
                 UpgradeBanner(onLearnMore = onOpenPremium, onDismiss = onDismissUpgradeBanner)
             }
             CalendarContent(ready, formats, onOpenEvent, onCreateEvent, onPeriodSettled, onDaySelected, onAgendaLoadEarlier, onAgendaLoadLater)
@@ -167,17 +185,28 @@ private fun ColumnScope.CalendarContent(
     onAgendaLoadEarlier: () -> Unit,
     onAgendaLoadLater: () -> Unit,
 ) {
-        Box(
-            Modifier
-                .fillMaxWidth()
-                .weight(1f),
-        ) {
-            if (ready == null) {
-                CircularProgressIndicator(Modifier.align(Alignment.Center))
-                return@Box
-            }
-            val openOccurrence: (app.lifelog.domain.model.Occurrence) -> Unit = { onOpenEvent(it.event.id) }
-            when (ready.viewMode) {
+    Box(
+        Modifier
+            .fillMaxWidth()
+            .weight(1f),
+    ) {
+        if (ready == null) {
+            CircularProgressIndicator(Modifier.align(Alignment.Center))
+            return@Box
+        }
+        val openOccurrence: (Occurrence) -> Unit = { onOpenEvent(it.event.id) }
+        // Switching views (an occasional action) settles in from a hair smaller instead of
+        // swapping in one frame. Swiping between periods is the pager's own motion.
+        AnimatedContent(
+            targetState = ready.viewMode,
+            transitionSpec = {
+                (fadeIn(Motion.enter(Motion.MEDIUM)) + scaleIn(Motion.enter(Motion.MEDIUM), initialScale = 0.97f))
+                    .togetherWith(fadeOut(Motion.exit(Motion.SHORT / 2)))
+            },
+            label = "calendarViewMode",
+            modifier = Modifier.fillMaxSize(),
+        ) { viewMode ->
+            when (viewMode) {
                 CalendarViewMode.AGENDA -> AgendaList(
                     state = ready,
                     formats = formats,
@@ -185,8 +214,8 @@ private fun ColumnScope.CalendarContent(
                     onLoadEarlier = onAgendaLoadEarlier,
                     onLoadLater = onAgendaLoadLater,
                 )
-                else -> CalendarPager(ready, onPeriodSettled) { periodStart ->
-                    when (ready.viewMode) {
+                else -> CalendarPager(viewMode, ready, onPeriodSettled) { periodStart ->
+                    when (viewMode) {
                         CalendarViewMode.MONTH -> MonthPage(
                             month = YearMonth.from(periodStart),
                             firstDayOfWeek = ready.firstDayOfWeek,
@@ -220,16 +249,20 @@ private fun ColumnScope.CalendarContent(
                 }
             }
         }
+    }
 }
 
-/** Swipeable periods. The pager and the selected date in the ViewModel follow each other. */
+/**
+ * Swipeable periods. The pager and the selected date in the ViewModel follow each other.
+ * [mode] is passed separately from [state] so a view that is fading out keeps its own layout.
+ */
 @Composable
 private fun CalendarPager(
+    mode: CalendarViewMode,
     state: CalendarUiState.Ready,
     onPeriodSettled: (LocalDate) -> Unit,
     page: @Composable (periodStart: LocalDate) -> Unit,
 ) {
-    val mode = state.viewMode
     val firstDay = state.firstDayOfWeek
     key(mode, firstDay) {
         val pageCount = remember { CalendarPeriods.pageCount(mode, firstDay) }
@@ -286,6 +319,38 @@ private fun ViewModeMenu(current: CalendarViewMode, onSelected: (CalendarViewMod
         }
     }
 }
+
+/**
+ * The period title. When the period changes the new title slides in a few pixels from the
+ * direction of travel, so a swipe reads as moving through time. Picking another day in the
+ * same month keeps the same text and doesn't animate.
+ */
+@Composable
+private fun CalendarTitle(ready: CalendarUiState.Ready?, formats: DateTimeFormats) {
+    AnimatedContent(
+        targetState = ready?.let { TitleKey(title(it, formats), it.selectedDate) },
+        transitionSpec = {
+            val direction = if ((targetState?.date ?: LocalDate.MIN) >= (initialState?.date ?: LocalDate.MIN)) 1 else -1
+            (fadeIn(Motion.enter(Motion.SHORT)) + slideInHorizontally(Motion.enter(Motion.SHORT)) { direction * it / 8 })
+                .togetherWith(
+                    fadeOut(Motion.exit(Motion.SHORT / 2)) +
+                        slideOutHorizontally(Motion.exit(Motion.SHORT / 2)) { -direction * it / 8 },
+                )
+                .using(SizeTransform(clip = false))
+        },
+        contentKey = { it?.text },
+        label = "calendarTitle",
+    ) { key ->
+        Text(
+            text = key?.text.orEmpty(),
+            maxLines = 1,
+            overflow = TextOverflow.Ellipsis,
+            modifier = Modifier.semantics { heading() },
+        )
+    }
+}
+
+private data class TitleKey(val text: String, val date: LocalDate)
 
 private fun title(state: CalendarUiState.Ready, formats: DateTimeFormats): String {
     val text = when (state.viewMode) {

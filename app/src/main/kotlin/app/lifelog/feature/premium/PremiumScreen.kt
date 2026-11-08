@@ -35,6 +35,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.lifelog.R
 import app.lifelog.designsystem.icon.LifeLogIcons
+import app.lifelog.designsystem.motion.enterOnce
 import app.lifelog.domain.premium.PremiumManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.StateFlow
@@ -76,9 +77,12 @@ fun PremiumScreen(
                 .verticalScroll(rememberScrollState())
                 .padding(horizontal = 24.dp, vertical = 8.dp),
         ) {
+            // The page settles in top to bottom as it opens (a rarely visited screen, so it can
+            // afford a moment of polish).
             Box(
                 contentAlignment = Alignment.Center,
                 modifier = Modifier
+                    .enterOnce(0)
                     .size(72.dp)
                     .background(MaterialTheme.colorScheme.primary, CircleShape),
             ) {
@@ -94,6 +98,7 @@ fun PremiumScreen(
                 style = MaterialTheme.typography.headlineSmall,
                 textAlign = TextAlign.Center,
                 modifier = Modifier
+                    .enterOnce(1)
                     .padding(top = 16.dp)
                     .semantics { heading() },
             )
@@ -102,14 +107,19 @@ fun PremiumScreen(
                 style = MaterialTheme.typography.bodyLarge,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center,
-                modifier = Modifier.padding(top = 8.dp, bottom = 16.dp),
+                modifier = Modifier
+                    .enterOnce(2)
+                    .padding(top = 8.dp, bottom = 16.dp),
             )
-            PREMIUM_BENEFITS.forEach { PremiumBenefitRow(it) }
+            PREMIUM_BENEFITS.forEachIndexed { index, benefit ->
+                PremiumBenefitRow(benefit, Modifier.enterOnce(3 + index))
+            }
 
             if (!isPremium) {
                 Card(
                     colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.secondaryContainer),
                     modifier = Modifier
+                        .enterOnce(3 + PREMIUM_BENEFITS.size)
                         .fillMaxWidth()
                         .padding(vertical = 24.dp),
                 ) {

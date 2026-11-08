@@ -107,7 +107,8 @@ private fun AgendaHeader(date: LocalDate, isToday: Boolean, formats: DateTimeFor
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 4.dp)
+            // Lines up with the color bars inside the appointment tiles below.
+            .padding(start = 24.dp, end = 24.dp, top = 20.dp, bottom = 6.dp)
             .semantics(mergeDescendants = true) { heading() },
     ) {
         Text(

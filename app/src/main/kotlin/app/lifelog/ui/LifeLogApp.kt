@@ -8,7 +8,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.adaptive.currentWindowAdaptiveInfo
 import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteScaffold
 import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteScaffoldDefaults
-import androidx.compose.material3.adaptive.navigationsuite.NavigationSuiteType
+import androidx.compose.material3.adaptive.navigationsuite.rememberNavigationSuiteScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.LaunchedEffect
@@ -29,13 +29,14 @@ import androidx.navigation.compose.rememberNavController
 import app.lifelog.R
 import app.lifelog.navigation.LifeLogNavHost
 import app.lifelog.navigation.TopLevelDestination
+import app.lifelog.navigation.isTopLevel
 
 /** One snackbar host for the whole app, so messages survive navigation between screens. */
 val LocalSnackbarHostState = staticCompositionLocalOf { SnackbarHostState() }
 
 /**
  * App shell: a bottom navigation bar on phones and a navigation rail on wider windows
- * (NavigationSuiteScaffold picks the layout from the window size class). The bar is hidden
+ * (NavigationSuiteScaffold picks the layout from the window size class). The bar slides away
  * on screens below the top level (detail, editor, search).
  */
 @Composable
@@ -45,20 +46,20 @@ fun LifeLogApp(
 ) {
     val backStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = backStackEntry?.destination
-    val isTopLevel = currentDestination == null || TopLevelDestination.entries.any { destination ->
-        currentDestination.hierarchy.any { it.hasRoute(destination.routeClass) }
-    }
+    val isTopLevel = currentDestination?.isTopLevel() ?: true
     val snackbarHostState = remember { SnackbarHostState() }
+    // The bar slides away (and back) with the screen transition instead of vanishing in one frame.
+    val suiteState = rememberNavigationSuiteScaffoldState()
+    LaunchedEffect(isTopLevel) {
+        if (isTopLevel) suiteState.show() else suiteState.hide()
+    }
 
     UndoDeleteSnackbar(shellViewModel, snackbarHostState)
 
     CompositionLocalProvider(LocalSnackbarHostState provides snackbarHostState) {
         NavigationSuiteScaffold(
-            layoutType = if (isTopLevel) {
-                NavigationSuiteScaffoldDefaults.calculateFromAdaptiveInfo(currentWindowAdaptiveInfo())
-            } else {
-                NavigationSuiteType.None
-            },
+            layoutType = NavigationSuiteScaffoldDefaults.calculateFromAdaptiveInfo(currentWindowAdaptiveInfo()),
+            state = suiteState,
             navigationSuiteItems = {
                 TopLevelDestination.entries.forEach { destination ->
                     val selected = currentDestination?.hierarchy?.any { it.hasRoute(destination.routeClass) } == true

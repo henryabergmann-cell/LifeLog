@@ -30,6 +30,10 @@ fun LifeLogNavHost(
         navController = navController,
         startDestination = CalendarRoute,
         modifier = modifier,
+        enterTransition = NavTransitions.enter,
+        exitTransition = NavTransitions.exit,
+        popEnterTransition = NavTransitions.popEnter,
+        popExitTransition = NavTransitions.popExit,
     ) {
         composable<CalendarRoute> {
             CalendarScreenRoute(

@@ -1,7 +1,12 @@
 package app.lifelog.feature.journal
 
+import androidx.compose.animation.Crossfade
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -33,12 +38,17 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.semantics.clearAndSetSemantics
@@ -57,6 +67,8 @@ import app.lifelog.designsystem.component.DatePickerModal
 import app.lifelog.designsystem.format.DateTimeFormats
 import app.lifelog.designsystem.format.rememberDateTimeFormats
 import app.lifelog.designsystem.icon.LifeLogIcons
+import app.lifelog.designsystem.motion.Motion
+import app.lifelog.designsystem.motion.pressScale
 import app.lifelog.domain.model.JournalEntry
 import app.lifelog.domain.model.Mood
 import app.lifelog.feature.premium.PremiumTeaser
@@ -238,7 +250,10 @@ private fun EntryEditor(
                 keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Sentences),
                 supportingText = {
                     Row {
-                        Text(status, modifier = Modifier.weight(1f))
+                        // "Saving…" and "Saved" cross-fade instead of flickering between each other.
+                        Crossfade(status, animationSpec = Motion.enter(Motion.SHORT), label = "saveStatus", modifier = Modifier.weight(1f)) {
+                            Text(it)
+                        }
                         Text("${noteText.length} / ${JournalEntry.MAX_NOTE_LENGTH}")
                     }
                 },
@@ -248,8 +263,13 @@ private fun EntryEditor(
     }
 }
 
+/**
+ * Five moods. The chosen one fills in and its emoji grows a little; a light haptic tick
+ * confirms the choice at the same moment.
+ */
 @Composable
 private fun MoodSelector(selected: Mood?, onSelect: (Mood) -> Unit) {
+    val haptics = LocalHapticFeedback.current
     Row(
         horizontalArrangement = Arrangement.spacedBy(4.dp),
         modifier = Modifier
@@ -258,19 +278,46 @@ private fun MoodSelector(selected: Mood?, onSelect: (Mood) -> Unit) {
     ) {
         Mood.entries.forEach { mood ->
             val isSelected = mood == selected
+            val interaction = remember { MutableInteractionSource() }
+            val background by animateColorAsState(
+                targetValue = if (isSelected) MaterialTheme.colorScheme.primaryContainer else Color.Transparent,
+                animationSpec = Motion.enter(Motion.SHORT),
+                label = "moodBackground",
+            )
+            val emojiScale by animateFloatAsState(
+                targetValue = if (isSelected) 1.15f else 1f,
+                animationSpec = Motion.enter(Motion.MEDIUM),
+                label = "moodEmojiScale",
+            )
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier
                     .weight(1f)
                     .heightIn(min = 64.dp)
-                    .background(
-                        if (isSelected) MaterialTheme.colorScheme.primaryContainer else Color.Transparent,
-                        RoundedCornerShape(12.dp),
-                    )
-                    .selectable(selected = isSelected, role = Role.RadioButton) { onSelect(mood) }
+                    .pressScale(interaction, pressedScale = 0.95f)
+                    .clip(MaterialTheme.shapes.small)
+                    .background(background)
+                    .selectable(
+                        selected = isSelected,
+                        role = Role.RadioButton,
+                        interactionSource = interaction,
+                        indication = LocalIndication.current,
+                    ) {
+                        if (!isSelected) haptics.performHapticFeedback(HapticFeedbackType.SegmentTick)
+                        onSelect(mood)
+                    }
                     .padding(vertical = 6.dp),
             ) {
-                Text(mood.emoji, fontSize = 28.sp, modifier = Modifier.clearAndSetSemantics {})
+                Text(
+                    mood.emoji,
+                    fontSize = 28.sp,
+                    modifier = Modifier
+                        .graphicsLayer {
+                            scaleX = emojiScale
+                            scaleY = emojiScale
+                        }
+                        .clearAndSetSemantics {},
+                )
                 Text(
                     stringResource(mood.label),
                     style = MaterialTheme.typography.labelSmall,
@@ -289,15 +336,22 @@ private fun JournalEntryRow(
     formats: DateTimeFormats,
     onClick: (() -> Unit)?,
 ) {
+    val background by animateColorAsState(
+        targetValue = if (isSelected) MaterialTheme.colorScheme.surfaceContainerHigh else Color.Transparent,
+        animationSpec = Motion.enter(Motion.SHORT),
+        label = "entryBackground",
+    )
     Row(
         horizontalArrangement = Arrangement.spacedBy(16.dp),
         modifier = Modifier
+            .padding(horizontal = 8.dp, vertical = 2.dp)
             .fillMaxWidth()
             .heightIn(min = 56.dp)
-            .background(if (isSelected) MaterialTheme.colorScheme.surfaceContainerHigh else Color.Transparent)
+            .clip(MaterialTheme.shapes.medium)
+            .background(background)
             .then(if (onClick != null) Modifier.clickable(onClick = onClick) else Modifier)
             .semantics(mergeDescendants = true) {}
-            .padding(horizontal = 16.dp, vertical = 10.dp),
+            .padding(horizontal = 8.dp, vertical = 10.dp),
     ) {
         // The mood label below is read instead of the emoji's name.
         Text(entry.mood?.emoji ?: "·", fontSize = 26.sp, modifier = Modifier.clearAndSetSemantics {})

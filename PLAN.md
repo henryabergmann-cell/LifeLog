@@ -363,6 +363,13 @@ interface PremiumManager {
   - charts have text equivalents
   - custom components get correct semantics: headings, `stateDescription`, traversal order
 - **Layout:** edge-to-edge with correct inset handling. Rotation and large screens are supported; on Android 16, large screens ignore orientation locks anyway.
+- **Motion and visual design** (redesign 2026-11-08, following Emil Kowalski's design-engineering skills):
+  - one set of motion tokens in `designsystem/motion/Motion.kt`: strong ease-out for entering/leaving, ease-in-out for movement, nothing over 300 ms, exits faster than entrances, only transform and alpha animate
+  - frequent actions (tab switches, period swipes) get the fastest, subtlest motion; only rare screens (Premium) get a staggered entrance
+  - screens enter and leave along the same path (details from the side, the editor from the bottom), and back gestures scrub them
+  - pressable cards, cells and the add button shrink slightly under the finger (`pressScale`)
+  - type scale with tighter tracking on large text, semibold titles and tabular figures for times; rounder shapes; hairlines instead of boxed grids
+  - the system "Remove animations" setting turns all of it off
 - **Localization:** 18 languages (added 2026-10-25):
   - English (default), German, French, Spanish, Italian, Portuguese (Brazilian wording), Dutch, Polish, Czech, Swedish, Danish, Norwegian Bokmål, Finnish, Japanese, Korean, Chinese (Simplified), Indonesian and Hindi
   - all text in `strings.xml`, with each language's plural rules (one/few/many/other)

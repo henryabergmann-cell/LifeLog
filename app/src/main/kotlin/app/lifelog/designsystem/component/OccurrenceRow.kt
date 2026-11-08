@@ -1,7 +1,9 @@
 package app.lifelog.designsystem.component
 
+import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -15,17 +17,24 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import app.lifelog.R
 import app.lifelog.designsystem.format.DateTimeFormats
+import app.lifelog.designsystem.motion.pressScale
 import app.lifelog.domain.model.Occurrence
 
-/** A list row for an occurrence (agenda, search): color bar, title, time and location. */
+/**
+ * A list row for an occurrence (agenda, search): a rounded tile with a color bar, title, time
+ * and location. The tile shrinks slightly under the finger, like a physical card.
+ */
 @Composable
 fun OccurrenceRow(
     occurrence: Occurrence,
@@ -38,12 +47,17 @@ fun OccurrenceRow(
     val event = occurrence.event
     val time = occurrenceTimeText(occurrence, formats)
     val dateText = if (leadingDate) formats.shortWeekdayDayMonth.format(occurrence.start) else null
+    val interaction = remember { MutableInteractionSource() }
     Row(
         modifier = modifier
+            .padding(horizontal = 12.dp, vertical = 3.dp)
             .fillMaxWidth()
             .heightIn(min = 56.dp)
-            .clickable(onClick = onClick)
-            .padding(horizontal = 16.dp, vertical = 8.dp),
+            .pressScale(interaction)
+            .clip(MaterialTheme.shapes.medium)
+            .background(MaterialTheme.colorScheme.surfaceContainerLow)
+            .clickable(interactionSource = interaction, indication = LocalIndication.current, onClick = onClick)
+            .padding(horizontal = 12.dp, vertical = 10.dp),
         horizontalArrangement = Arrangement.spacedBy(12.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
@@ -57,6 +71,7 @@ fun OccurrenceRow(
             Text(
                 text = event.title,
                 style = MaterialTheme.typography.bodyLarge,
+                fontWeight = FontWeight.Medium,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
             )
