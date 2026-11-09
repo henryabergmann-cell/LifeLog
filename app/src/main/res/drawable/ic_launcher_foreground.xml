@@ -1,16 +1,29 @@
-<!-- Adaptive icon foreground: calendar glyph centred in the 66dp safe zone of a 108dp canvas. -->
+<!--
+    Adaptive icon foreground: a calendar page with a check mark ("logged").
+    Drawn on the 108dp canvas, kept inside the 66dp safe zone so no launcher mask clips it.
+-->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
     android:viewportWidth="108"
     android:viewportHeight="108">
-    <group
-        android:scaleX="2.25"
-        android:scaleY="2.25"
-        android:translateX="27"
-        android:translateY="27">
-        <path
-            android:fillColor="#FFFFFFFF"
-            android:pathData="M19,4h-1V2h-2v2H8V2H6v2H5C3.89,4 3.01,4.9 3.01,6L3,20c0,1.1 0.89,2 2,2h14c1.1,0 2,-0.9 2,-2V6C21,4.9 20.1,4 19,4zM19,20H5V10h14V20zM9,14H7v-2h2V14zM13,14h-2v-2h2V14zM17,14h-2v-2h2V14zM9,18H7v-2h2V18zM13,18h-2v-2h2V18zM17,18h-2v-2h2V18z" />
-    </group>
+    <!-- Page -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M39,35h30a8,8 0,0 1,8 8v28a8,8 0,0 1,-8 8h-30a8,8 0,0 1,-8 -8v-28a8,8 0,0 1,8 -8z" />
+    <!-- Header band -->
+    <path
+        android:fillColor="#FFFF8A65"
+        android:pathData="M39,35h30a8,8 0,0 1,8 8v4h-46v-4a8,8 0,0 1,8 -8z" />
+    <!-- Binder rings -->
+    <path
+        android:fillColor="#FF00393A"
+        android:pathData="M43.5,30a2.5,2.5 0,0 1,2.5 2.5v7a2.5,2.5 0,0 1,-5 0v-7a2.5,2.5 0,0 1,2.5 -2.5zM64.5,30a2.5,2.5 0,0 1,2.5 2.5v7a2.5,2.5 0,0 1,-5 0v-7a2.5,2.5 0,0 1,2.5 -2.5z" />
+    <!-- Check mark -->
+    <path
+        android:strokeColor="#FF006A6A"
+        android:strokeWidth="5.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M43,62L50.5,69.5L65.5,54.5" />
 </vector>
