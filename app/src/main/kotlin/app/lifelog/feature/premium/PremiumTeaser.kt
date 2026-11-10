@@ -1,6 +1,7 @@
 package app.lifelog.feature.premium
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -23,6 +24,7 @@ import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
@@ -36,6 +38,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import app.lifelog.R
 import app.lifelog.designsystem.icon.LifeLogIcons
+import app.lifelog.designsystem.motion.pressScale
 
 /**
  * Shown to free users in place of a Premium feature: what it does, an example preview with
@@ -82,7 +85,8 @@ fun PremiumTeaser(
             textAlign = TextAlign.Center,
             modifier = Modifier.padding(top = 8.dp, bottom = 20.dp),
         )
-        Button(onClick = onUnlock) {
+        val interaction = remember { MutableInteractionSource() }
+        Button(onClick = onUnlock, interactionSource = interaction, modifier = Modifier.pressScale(interaction)) {
             Icon(LifeLogIcons.Lock, contentDescription = null, modifier = Modifier.size(18.dp))
             Spacer(Modifier.width(8.dp))
             Text(stringResource(R.string.premium_unlock))

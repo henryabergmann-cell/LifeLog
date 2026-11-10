@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -30,6 +29,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.lifelog.R
+import app.lifelog.designsystem.component.DelayedProgressIndicator
 import app.lifelog.designsystem.component.ColorDot
 import app.lifelog.designsystem.component.occurrenceTimeText
 import app.lifelog.designsystem.format.rememberDateTimeFormats
@@ -99,7 +99,7 @@ fun EventDetailScreen(
                 .padding(padding),
         ) {
             when (state) {
-                EventDetailUiState.Loading -> CircularProgressIndicator(Modifier.align(Alignment.Center))
+                EventDetailUiState.Loading -> DelayedProgressIndicator(Modifier.align(Alignment.Center))
                 is EventDetailUiState.Gone -> Text(
                     text = stringResource(R.string.event_not_found),
                     style = MaterialTheme.typography.bodyLarge,

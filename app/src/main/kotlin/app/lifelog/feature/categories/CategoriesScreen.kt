@@ -1,7 +1,13 @@
 package app.lifelog.feature.categories
 
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.scaleIn
+import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -30,8 +36,10 @@ import androidx.compose.material3.TextButton
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
@@ -47,6 +55,8 @@ import app.lifelog.designsystem.component.ColorDot
 import app.lifelog.designsystem.component.ConfirmDialog
 import app.lifelog.designsystem.component.contentColorOn
 import app.lifelog.designsystem.icon.LifeLogIcons
+import app.lifelog.designsystem.motion.Motion
+import app.lifelog.designsystem.motion.pressScale
 
 @Composable
 fun CategoriesRoute(
@@ -78,7 +88,12 @@ private fun CategoriesScreen(
             )
         },
         floatingActionButton = {
-            FloatingActionButton(onClick = viewModel::onAdd) {
+            val interaction = remember { MutableInteractionSource() }
+            FloatingActionButton(
+                onClick = viewModel::onAdd,
+                interactionSource = interaction,
+                modifier = Modifier.pressScale(interaction, pressedScale = 0.95f),
+            ) {
                 Icon(LifeLogIcons.Add, contentDescription = stringResource(R.string.categories_add))
             }
         },
@@ -112,7 +127,14 @@ private fun CategoriesScreen(
                 }
             }
             items(state.categories, key = { it.id }) { category ->
+                // Added and deleted categories fade in and out and the rest slide to close the
+                // gap, instead of the list jumping.
                 ListItem(
+                    modifier = Modifier.animateItem(
+                        fadeInSpec = Motion.enter(Motion.SHORT),
+                        placementSpec = Motion.move(),
+                        fadeOutSpec = Motion.exit(Motion.SHORT / 2),
+                    ),
                     leadingContent = { ColorDot(Color(category.colorArgb), size = 24.dp) },
                     headlineContent = { Text(category.name) },
                     trailingContent = {
@@ -198,11 +220,25 @@ private fun CategoryDialog(
                     CategoryPalette.presets.forEach { preset ->
                         val selected = preset.argb == dialog.colorArgb
                         val name = stringResource(preset.name)
+                        val interaction = remember { MutableInteractionSource() }
+                        val ring by animateColorAsState(
+                            targetValue = if (selected) MaterialTheme.colorScheme.onSurface else Color.Transparent,
+                            animationSpec = Motion.enter(Motion.SHORT),
+                            label = "swatchRing",
+                        )
                         Box(
                             contentAlignment = Alignment.Center,
                             modifier = Modifier
                                 .size(48.dp)
-                                .selectable(selected = selected, role = Role.RadioButton) { onColorChange(preset.argb) }
+                                .pressScale(interaction, pressedScale = 0.95f)
+                                // The ripple follows the round swatch instead of a square around it.
+                                .clip(CircleShape)
+                                .selectable(
+                                    selected = selected,
+                                    interactionSource = interaction,
+                                    indication = LocalIndication.current,
+                                    role = Role.RadioButton,
+                                ) { onColorChange(preset.argb) }
                                 .semantics { contentDescription = name },
                         ) {
                             Box(
@@ -210,11 +246,15 @@ private fun CategoryDialog(
                                 modifier = Modifier
                                     .size(36.dp)
                                     .background(Color(preset.argb), CircleShape)
-                                    .then(
-                                        if (selected) Modifier.border(3.dp, MaterialTheme.colorScheme.onSurface, CircleShape) else Modifier,
-                                    ),
+                                    .border(3.dp, ring, CircleShape),
                             ) {
-                                if (selected) {
+                                // The check settles in from slightly smaller, never from nothing.
+                                // (Qualified: inside the FlowRow the RowScope overload would win.)
+                                androidx.compose.animation.AnimatedVisibility(
+                                    visible = selected,
+                                    enter = fadeIn(Motion.enter(Motion.SHORT)) + scaleIn(Motion.enter(Motion.SHORT), initialScale = 0.9f),
+                                    exit = fadeOut(Motion.exit(Motion.SHORT / 2)),
+                                ) {
                                     Icon(LifeLogIcons.Check, contentDescription = null, tint = contentColorOn(Color(preset.argb)))
                                 }
                             }

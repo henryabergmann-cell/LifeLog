@@ -1,7 +1,14 @@
 package app.lifelog.feature.journal
 
+import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.Crossfade
+import androidx.compose.animation.SizeTransform
 import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.animation.togetherWith
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.foundation.LocalIndication
 import androidx.compose.foundation.background
@@ -25,7 +32,6 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -63,6 +69,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.LifecycleResumeEffect
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.lifelog.R
+import app.lifelog.designsystem.component.DelayedProgressIndicator
 import app.lifelog.designsystem.component.DatePickerModal
 import app.lifelog.designsystem.format.DateTimeFormats
 import app.lifelog.designsystem.format.rememberDateTimeFormats
@@ -98,7 +105,7 @@ fun JournalScreen(
                 .padding(padding),
         ) {
             when {
-                state.isLoading -> CircularProgressIndicator(Modifier.align(Alignment.Center))
+                state.isLoading -> DelayedProgressIndicator(Modifier.align(Alignment.Center))
                 !state.isPremium && state.entries.isEmpty() -> PremiumTeaser(
                     icon = LifeLogIcons.Journal,
                     title = stringResource(R.string.journal_teaser_title),
@@ -178,6 +185,12 @@ private fun JournalContent(
                 entry = entry,
                 isSelected = entry.date == state.selectedDate && !state.isReadOnly,
                 formats = formats,
+                // A new day's entry fades in and the timeline makes room, instead of jumping.
+                modifier = Modifier.animateItem(
+                    fadeInSpec = Motion.enter(Motion.SHORT),
+                    placementSpec = Motion.move(),
+                    fadeOutSpec = Motion.exit(Motion.SHORT / 2),
+                ),
                 onClick = if (state.isReadOnly) {
                     null
                 } else {
@@ -216,17 +229,33 @@ private fun EntryEditor(
                 IconButton(onClick = onPreviousDay) {
                     Icon(LifeLogIcons.ChevronLeft, contentDescription = stringResource(R.string.calendar_previous_day))
                 }
-                val dateText = formats.weekdayDayMonth.format(state.selectedDate)
                 TextButton(onClick = onPickDate, modifier = Modifier.weight(1f)) {
-                    Text(
-                        text = if (state.selectedDate == state.today) {
-                            stringResource(R.string.calendar_today_prefix, dateText)
-                        } else {
-                            dateText
+                    // Stepping to another day slides the date in from the direction of travel,
+                    // like the calendar title, so earlier and later read as places.
+                    AnimatedContent(
+                        targetState = state.selectedDate,
+                        transitionSpec = {
+                            val direction = if (targetState >= initialState) 1 else -1
+                            (fadeIn(Motion.enter(Motion.SHORT)) + slideInHorizontally(Motion.enter(Motion.SHORT)) { direction * it / 8 })
+                                .togetherWith(
+                                    fadeOut(Motion.exit(Motion.SHORT / 2)) +
+                                        slideOutHorizontally(Motion.exit(Motion.SHORT / 2)) { -direction * it / 8 },
+                                )
+                                .using(SizeTransform(clip = false))
                         },
-                        style = MaterialTheme.typography.titleMedium,
-                        textAlign = TextAlign.Center,
-                    )
+                        label = "journalDate",
+                    ) { date ->
+                        val dateText = formats.weekdayDayMonth.format(date)
+                        Text(
+                            text = if (date == state.today) {
+                                stringResource(R.string.calendar_today_prefix, dateText)
+                            } else {
+                                dateText
+                            },
+                            style = MaterialTheme.typography.titleMedium,
+                            textAlign = TextAlign.Center,
+                        )
+                    }
                 }
                 IconButton(onClick = onNextDay, enabled = state.canGoForward) {
                     Icon(LifeLogIcons.ChevronRight, contentDescription = stringResource(R.string.calendar_next_day))
@@ -335,21 +364,30 @@ private fun JournalEntryRow(
     isSelected: Boolean,
     formats: DateTimeFormats,
     onClick: (() -> Unit)?,
+    modifier: Modifier = Modifier,
 ) {
     val background by animateColorAsState(
         targetValue = if (isSelected) MaterialTheme.colorScheme.surfaceContainerHigh else Color.Transparent,
         animationSpec = Motion.enter(Motion.SHORT),
         label = "entryBackground",
     )
+    val interaction = remember { MutableInteractionSource() }
     Row(
         horizontalArrangement = Arrangement.spacedBy(16.dp),
-        modifier = Modifier
+        modifier = modifier
             .padding(horizontal = 8.dp, vertical = 2.dp)
             .fillMaxWidth()
             .heightIn(min = 56.dp)
+            .then(if (onClick != null) Modifier.pressScale(interaction) else Modifier)
             .clip(MaterialTheme.shapes.medium)
             .background(background)
-            .then(if (onClick != null) Modifier.clickable(onClick = onClick) else Modifier)
+            .then(
+                if (onClick != null) {
+                    Modifier.clickable(interactionSource = interaction, indication = LocalIndication.current, onClick = onClick)
+                } else {
+                    Modifier
+                },
+            )
             .semantics(mergeDescendants = true) {}
             .padding(horizontal = 8.dp, vertical = 10.dp),
     ) {
@@ -377,7 +415,10 @@ private fun ReadOnlyNotice(onOpenPremium: () -> Unit) {
     ) {
         Column(Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text(stringResource(R.string.journal_read_only), style = MaterialTheme.typography.bodyMedium)
-            Button(onClick = onOpenPremium) { Text(stringResource(R.string.premium_learn_more)) }
+            val interaction = remember { MutableInteractionSource() }
+            Button(onClick = onOpenPremium, interactionSource = interaction, modifier = Modifier.pressScale(interaction)) {
+                Text(stringResource(R.string.premium_learn_more))
+            }
         }
     }
 }

@@ -1,6 +1,13 @@
 package app.lifelog.feature.event.editor
 
 import androidx.activity.compose.BackHandler
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.expandHorizontally
+import androidx.compose.animation.expandVertically
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.shrinkHorizontally
+import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -14,7 +21,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
@@ -49,6 +55,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.lifelog.R
+import app.lifelog.designsystem.component.DelayedProgressIndicator
 import app.lifelog.designsystem.component.ColorDot
 import app.lifelog.designsystem.component.ConfirmDialog
 import app.lifelog.designsystem.component.DatePickerModal
@@ -57,6 +64,7 @@ import app.lifelog.designsystem.component.TimePickerModal
 import app.lifelog.designsystem.format.DateTimeFormats
 import app.lifelog.designsystem.format.rememberDateTimeFormats
 import app.lifelog.designsystem.icon.LifeLogIcons
+import app.lifelog.designsystem.motion.Motion
 import app.lifelog.domain.usecase.EventValidationError
 import app.lifelog.feature.event.REMINDER_OPTIONS
 import app.lifelog.feature.event.reminderLabel
@@ -149,7 +157,7 @@ fun EventEditorScreen(state: EventEditorUiState, actions: EditorActions) {
                         .align(Alignment.Center)
                         .padding(24.dp),
                 )
-                draft == null -> CircularProgressIndicator(Modifier.align(Alignment.Center))
+                draft == null -> DelayedProgressIndicator(Modifier.align(Alignment.Center))
                 else -> EditorForm(state, draft, actions, onOpenDialog = { dialog = it })
             }
         }
@@ -255,7 +263,8 @@ private fun EditorForm(
         DateTimeRow(
             label = stringResource(R.string.editor_starts),
             date = draft.startDate,
-            time = draft.start.toLocalTime().takeUnless { draft.allDay },
+            time = draft.start.toLocalTime(),
+            showTime = !draft.allDay,
             formats = formats,
             dateDescription = R.string.editor_start_date,
             timeDescription = R.string.editor_start_time,
@@ -265,7 +274,8 @@ private fun EditorForm(
         DateTimeRow(
             label = stringResource(R.string.editor_ends),
             date = draft.endDate,
-            time = draft.end.toLocalTime().takeUnless { draft.allDay },
+            time = draft.end.toLocalTime(),
+            showTime = !draft.allDay,
             formats = formats,
             dateDescription = R.string.editor_end_date,
             timeDescription = R.string.editor_end_time,
@@ -273,7 +283,12 @@ private fun EditorForm(
             onTimeClick = { onOpenDialog(EditorDialog.END_TIME) },
             isError = endError,
         )
-        if (endError) {
+        // The error eases in instead of shoving the form down in one frame, and leaves faster.
+        AnimatedVisibility(
+            visible = endError,
+            enter = fadeIn(Motion.enter(Motion.SHORT)) + expandVertically(Motion.move(Motion.SHORT)),
+            exit = fadeOut(Motion.exit(Motion.SHORT / 2)) + shrinkVertically(Motion.move(Motion.SHORT)),
+        ) {
             Text(
                 text = stringResource(R.string.editor_error_end),
                 color = MaterialTheme.colorScheme.error,
@@ -346,7 +361,8 @@ private fun EditorForm(
 private fun DateTimeRow(
     label: String,
     date: LocalDate,
-    time: LocalTime?,
+    time: LocalTime,
+    showTime: Boolean,
     formats: DateTimeFormats,
     dateDescription: Int,
     timeDescription: Int,
@@ -372,7 +388,13 @@ private fun DateTimeRow(
             TextButton(onClick = onDateClick, modifier = Modifier.semantics { contentDescription = dateLabel }) {
                 Text(dateText, color = color)
             }
-            if (time != null) {
+            // Switching "All day" folds the time away (and back) so the change reads as one
+            // action instead of a button vanishing.
+            AnimatedVisibility(
+                visible = showTime,
+                enter = fadeIn(Motion.enter(Motion.SHORT)) + expandHorizontally(Motion.move(Motion.SHORT), expandFrom = Alignment.Start),
+                exit = fadeOut(Motion.exit(Motion.SHORT / 2)) + shrinkHorizontally(Motion.move(Motion.SHORT), shrinkTowards = Alignment.Start),
+            ) {
                 val timeText = formats.time(time)
                 val timeLabel = stringResource(timeDescription, timeText)
                 TextButton(onClick = onTimeClick, modifier = Modifier.semantics { contentDescription = timeLabel }) {

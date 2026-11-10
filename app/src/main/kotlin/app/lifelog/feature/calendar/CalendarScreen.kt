@@ -2,8 +2,8 @@ package app.lifelog.feature.calendar
 
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.EnterTransition
 import androidx.compose.animation.SizeTransform
-import androidx.compose.animation.expandVertically
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.scaleIn
@@ -24,7 +24,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
-import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -56,6 +55,7 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.LifecycleResumeEffect
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import app.lifelog.R
+import app.lifelog.designsystem.component.DelayedProgressIndicator
 import app.lifelog.designsystem.format.DateTimeFormats
 import app.lifelog.designsystem.format.rememberDateTimeFormats
 import app.lifelog.designsystem.icon.LifeLogIcons
@@ -148,7 +148,7 @@ fun CalendarScreen(
                 FloatingActionButton(
                     onClick = { onCreateEvent(ready.selectedDate, null) },
                     interactionSource = interaction,
-                    modifier = Modifier.pressScale(interaction, pressedScale = 0.94f),
+                    modifier = Modifier.pressScale(interaction, pressedScale = 0.95f),
                 ) {
                     Icon(LifeLogIcons.Add, contentDescription = stringResource(R.string.calendar_new_event))
                 }
@@ -161,10 +161,12 @@ fun CalendarScreen(
                 .fillMaxSize()
                 .padding(padding),
         ) {
-            // Dismissing folds the banner away rather than letting the calendar jump up.
+            // Dismissing folds the banner away rather than letting the calendar jump up. It
+            // appears without motion: expanding it on every app start would shove the calendar
+            // down just as the user starts reading it.
             AnimatedVisibility(
                 visible = ready?.showUpgradeBanner == true,
-                enter = fadeIn(Motion.enter(Motion.MEDIUM)) + expandVertically(Motion.move()),
+                enter = EnterTransition.None,
                 exit = fadeOut(Motion.exit(Motion.SHORT)) + shrinkVertically(Motion.move()),
             ) {
                 UpgradeBanner(onLearnMore = onOpenPremium, onDismiss = onDismissUpgradeBanner)
@@ -191,7 +193,7 @@ private fun ColumnScope.CalendarContent(
             .weight(1f),
     ) {
         if (ready == null) {
-            CircularProgressIndicator(Modifier.align(Alignment.Center))
+            DelayedProgressIndicator(Modifier.align(Alignment.Center))
             return@Box
         }
         val openOccurrence: (Occurrence) -> Unit = { onOpenEvent(it.event.id) }

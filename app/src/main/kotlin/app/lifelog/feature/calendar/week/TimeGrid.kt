@@ -152,12 +152,16 @@ private fun DayHeaderRow(
             val description = formats.weekdayDayMonth.format(day).let {
                 if (isToday) stringResource(R.string.calendar_today_prefix, it) else it
             }
+            val interaction = remember { MutableInteractionSource() }
             Column(
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier
                     .weight(1f)
                     .heightIn(min = 48.dp)
-                    .clickable { onDayHeaderClick(day) }
+                    .padding(horizontal = 1.dp)
+                    .pressScale(interaction)
+                    .clip(MaterialTheme.shapes.small)
+                    .clickable(interactionSource = interaction, indication = LocalIndication.current) { onDayHeaderClick(day) }
                     .clearAndSetSemantics {
                         contentDescription = description
                         role = Role.Button
